@@ -26,7 +26,7 @@ const AboutCourseSection = () => (
         {blocks.map((b) => (
           <article key={b.label} className="card-refined border-accent-left p-6 md:p-8">
             <div className="label-section mb-3">{b.label}</div>
-            <h3 className="font-display text-xl md:text-2xl text-foreground mb-3 font-medium">{b.title}</h3>
+            <h3 className="font-display text-xl md:text-2xl text-foreground mb-3 font-semibold tracking-tight">{b.title}</h3>
             <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light">{b.body}</p>
           </article>
         ))}

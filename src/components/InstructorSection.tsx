@@ -20,7 +20,7 @@ const InstructorSection = () => (
       </div>
       <div className="order-1 md:order-2">
         <div className="label-section mb-3">Aprenda com quem já chegou lá</div>
-        <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4 font-medium leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4 font-semibold leading-tight tracking-tight">
           Jonas Peres
         </h2>
         <p className="text-muted-foreground text-sm uppercase tracking-wider mb-6 font-body" style={{ textAlign: "left" }}>
@@ -33,7 +33,7 @@ const InstructorSection = () => (
         <div className="grid grid-cols-3 gap-4 border-t border-border pt-6">
           {stats.map((s) => (
             <div key={s.l}>
-              <div className="font-display text-2xl md:text-3xl text-accent font-medium">{s.n}</div>
+              <div className="font-display text-2xl md:text-3xl text-accent font-semibold">{s.n}</div>
               <div className="text-xs text-muted-foreground mt-1 font-body" style={{ textAlign: "left" }}>{s.l}</div>
             </div>
           ))}
