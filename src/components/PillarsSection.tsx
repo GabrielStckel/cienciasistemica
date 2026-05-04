@@ -30,8 +30,8 @@ const PillarsSection = () => (
       <div className="grid md:grid-cols-3 gap-5 md:gap-6 mt-12">
         {pillars.map((p) => (
           <div key={p.n} className="border-l-2 border-accent/60 pl-5 py-2">
-            <div className="font-display text-xl text-accent/80 mb-3">{p.n}</div>
-            <h3 className="font-display text-lg text-primary-foreground mb-3 font-medium">{p.title}</h3>
+            <div className="font-display text-xl text-accent/80 mb-3 font-semibold">{p.n}</div>
+            <h3 className="font-display text-lg text-primary-foreground mb-3 font-semibold tracking-tight">{p.title}</h3>
             <p className="text-primary-foreground/70 text-sm leading-[1.85] font-body font-light">{p.body}</p>
           </div>
         ))}

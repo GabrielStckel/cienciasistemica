@@ -1,107 +1,116 @@
-import { useEffect, useState } from "react";
-
-const ALL_PARTICLES = [
-  { endX: "-30vw", delay: "0s", dur: "12s", size: "3px" },
-  { endX: "28vw", delay: "2s", dur: "11s", size: "3px" },
-  { endX: "-22vw", delay: "4s", dur: "14s", size: "4px" },
-  { endX: "18vw", delay: "1.5s", dur: "13s", size: "3px" },
-  { endX: "-35vw", delay: "5s", dur: "14s", size: "3px" },
-  { endX: "35vw", delay: "3s", dur: "11.5s", size: "3px" },
-  { endX: "-15vw", delay: "6s", dur: "13s", size: "3px" },
-  { endX: "25vw", delay: "1.5s", dur: "12s", size: "3px" },
-];
+import jonas from "@/assets/jonas-peres.jpg";
 
 const HeroSection = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 768px)");
-    const rm = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setIsMobile(mq.matches);
-    setReducedMotion(rm.matches);
-    const onMq = () => setIsMobile(mq.matches);
-    const onRm = () => setReducedMotion(rm.matches);
-    mq.addEventListener("change", onMq);
-    rm.addEventListener("change", onRm);
-    return () => {
-      mq.removeEventListener("change", onMq);
-      rm.removeEventListener("change", onRm);
-    };
-  }, []);
-
-  const particles = reducedMotion ? [] : isMobile ? ALL_PARTICLES.slice(0, 4) : ALL_PARTICLES;
-
   return (
     <section className="relative gradient-hero overflow-hidden">
-      {!reducedMotion && (
-        <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ filter: "blur(4px)" }}>
-          <div
-            className="absolute left-1/2 -translate-x-1/2 top-0 w-[340px] md:w-[500px] h-full opacity-[0.20] animate-[beam-pulse_8s_ease-in-out_infinite]"
-            style={{
-              background: "linear-gradient(180deg, hsl(220 90% 70% / 0.5) 0%, hsl(220 86% 56% / 0.2) 40%, transparent 100%)",
-              clipPath: "polygon(35% 0%, 65% 0%, 90% 100%, 10% 100%)",
-            }}
-          />
-          <div
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] md:w-[900px] h-[120px] opacity-[0.15] animate-[beam-pulse_10s_ease-in-out_infinite]"
-            style={{
-              background: "radial-gradient(ellipse at 50% 100%, hsl(220 90% 60% / 0.5) 0%, hsl(220 80% 50% / 0.15) 40%, transparent 70%)",
-            }}
-          />
-        </div>
-      )}
-
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {particles.map((p, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              width: p.size,
-              height: p.size,
-              left: "50%",
-              top: "-5%",
-              opacity: 0,
-              background: "hsl(220 90% 80%)",
-              boxShadow: "0 0 8px 3px hsl(220 90% 70% / 0.4)",
-              animation: `diagonal-fall ${p.dur} ease-out infinite ${p.delay}`,
-              willChange: "transform, opacity",
-              ["--end-x" as string]: p.endX,
-            }}
-          />
-        ))}
+      {/* Ambient glows */}
+      <div className="pointer-events-none absolute inset-0">
+        <div
+          className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full opacity-40"
+          style={{ background: "radial-gradient(circle, hsl(220 86% 56% / 0.45) 0%, transparent 65%)" }}
+        />
+        <div
+          className="absolute -bottom-40 -right-32 w-[600px] h-[600px] rounded-full opacity-30"
+          style={{ background: "radial-gradient(circle, hsl(220 90% 70% / 0.35) 0%, transparent 65%)" }}
+        />
+        <div
+          className="absolute inset-0 opacity-[0.07]"
+          style={{
+            backgroundImage:
+              "linear-gradient(hsl(0 0% 100% / 0.5) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 100% / 0.5) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+            maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+          }}
+        />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-[80vh] px-6 py-32">
-        <div
-          className="animate-[fade-up_0.8s_cubic-bezier(0.16,1,0.3,1)_forwards] text-center"
-          style={{ textShadow: "0 2px 12px hsl(220 90% 10% / 0.6), 0 0 30px hsl(220 86% 56% / 0.15)" }}
-        >
-          <div className="inline-block mb-8">
-            <span className="font-body text-[11px] font-medium tracking-[0.35em] uppercase text-primary-foreground/50">
-              Turma 2026 · Jonas Peres
+      {/* Top bar */}
+      <div className="relative z-10 container max-w-6xl flex items-center justify-between pt-7">
+        <div className="font-display text-primary-foreground text-lg font-semibold tracking-tight">
+          Jonas Peres
+        </div>
+        <span className="hidden md:inline-flex items-center gap-2 text-[11px] font-body font-medium tracking-[0.25em] uppercase text-primary-foreground/60">
+          <span className="w-6 h-px bg-primary-foreground/40" />
+          Turma 2026
+        </span>
+      </div>
+
+      <div className="relative z-10 container max-w-6xl grid md:grid-cols-12 gap-10 md:gap-12 items-center pt-16 md:pt-24 pb-24 md:pb-32">
+        {/* Left: copy */}
+        <div className="md:col-span-7 animate-[fade-up_0.8s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+          <div className="inline-flex items-center gap-3 mb-7">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+            <span className="font-body text-[11px] font-semibold tracking-[0.3em] uppercase text-primary-foreground/70">
+              Formação 2026 · 10 módulos
             </span>
           </div>
 
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-medium text-primary-foreground leading-[1.15] mb-6 tracking-wide">
-            Formação em
+          <h1 className="font-display text-primary-foreground leading-[1.05] tracking-tight font-semibold text-[2.75rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] mb-7">
+            Ciência Sistêmica<span className="text-accent">.</span>
             <br />
-            <span>Ciência Sistêmica</span>
+            <span className="italic font-medium text-primary-foreground/85">Uma forma de viver.</span>
           </h1>
 
-          <p className="font-body text-sm md:text-base text-primary-foreground/60 max-w-md mx-auto leading-relaxed text-center">
-            Segundo Bert Hellinger.
-            <br />
-            Viva sem repetir padrões, torne-se sua melhor versão e contribua com o mundo através do seu propósito.
+          <p
+            className="font-body text-base md:text-lg text-primary-foreground/75 max-w-xl leading-relaxed mb-10"
+            style={{ textAlign: "left" }}
+          >
+            Uma formação para quem quer parar de repetir padrões, organizar suas inteligências
+            emocional, mental e espiritual — e tomar a vida com leveza e propósito, segundo
+            Bert Hellinger.
           </p>
 
-          <a
-            href="#inscricao"
-            className="inline-block mt-10 px-8 py-3 bg-accent text-accent-foreground font-body text-sm font-medium tracking-wide rounded-sm hover:bg-accent/90 transition-colors"
-          >
-            Quero me inscrever
-          </a>
+          <div className="flex flex-wrap items-center gap-4">
+            <a href="#inscricao" className="btn-primary">
+              Garantir minha vaga
+              <span aria-hidden>→</span>
+            </a>
+            <a href="#sobre" className="btn-ghost-light">
+              Conhecer o curso
+            </a>
+          </div>
+
+          <div className="mt-12 grid grid-cols-3 gap-6 max-w-md border-t border-primary-foreground/15 pt-6">
+            <div>
+              <div className="font-display text-2xl font-semibold text-primary-foreground">10</div>
+              <div className="text-[11px] font-body uppercase tracking-wider text-primary-foreground/55 mt-1">Módulos</div>
+            </div>
+            <div>
+              <div className="font-display text-2xl font-semibold text-primary-foreground">10 meses</div>
+              <div className="text-[11px] font-body uppercase tracking-wider text-primary-foreground/55 mt-1">Imersão</div>
+            </div>
+            <div>
+              <div className="font-display text-2xl font-semibold text-primary-foreground">2026</div>
+              <div className="text-[11px] font-body uppercase tracking-wider text-primary-foreground/55 mt-1">Início</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right: portrait */}
+        <div className="md:col-span-5 relative animate-[fade-up_1s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+          <div className="relative mx-auto max-w-sm">
+            <div
+              className="absolute -inset-6 rounded-[2rem] opacity-60"
+              style={{ background: "radial-gradient(circle at 50% 30%, hsl(220 86% 56% / 0.5), transparent 70%)" }}
+            />
+            <div className="relative overflow-hidden rounded-[1.25rem] border border-primary-foreground/10 shadow-2xl">
+              <img
+                src={jonas}
+                alt="Jonas Peres, constelador e terapeuta"
+                className="w-full aspect-[4/5] object-cover"
+              />
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{ background: "linear-gradient(180deg, transparent 55%, hsl(214 67% 8% / 0.75) 100%)" }}
+              />
+              <div className="absolute bottom-5 left-5 right-5">
+                <div className="font-display text-primary-foreground text-xl font-semibold">Jonas Peres</div>
+                <div className="text-[11px] uppercase tracking-[0.25em] text-primary-foreground/70 font-body">
+                  Constelador · há 10+ anos
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
