@@ -52,7 +52,7 @@ const ComparisonSection = () => (
             <div className="text-xs uppercase tracking-widest text-muted-foreground font-body mb-1">
               Pré-inscrição
             </div>
-            <div className="font-display text-2xl text-foreground font-medium">
+            <div className="font-display text-2xl text-foreground font-semibold tracking-tight">
               R$ 6.000 <span className="text-sm text-muted-foreground font-body font-light">à vista</span>
             </div>
             <div className="text-sm text-muted-foreground font-body mt-1">

@@ -26,7 +26,7 @@ const ModulesSection = () => (
           <li key={m.n} className="pl-6 md:pl-8 pb-8 relative">
             <span className="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-accent ring-4 ring-background" />
             <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-              <h3 className="font-display text-lg text-foreground font-medium">
+              <h3 className="font-display text-lg text-foreground font-semibold tracking-tight">
                 <span className="text-accent mr-3">{m.n}.</span>
                 {m.title}
               </h3>
