@@ -1,16 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import AboutCourseSection from "@/components/AboutCourseSection";
+import InstructorSection from "@/components/InstructorSection";
+import PillarsSection from "@/components/PillarsSection";
+import ModulesSection from "@/components/ModulesSection";
+import ComparisonSection from "@/components/ComparisonSection";
+import CtaSection from "@/components/CtaSection";
+import { Instagram } from "lucide-react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
-  return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
-  );
-};
+const Index = () => (
+  <main className="min-h-screen">
+    <HeroSection />
+    <AboutCourseSection />
+    <InstructorSection />
+    <PillarsSection />
+    <ModulesSection />
+    <ComparisonSection />
+    <CtaSection />
 
-const Index = PlaceholderIndex;
+    <footer className="bg-primary py-10">
+      <div className="container max-w-2xl flex flex-col items-center gap-4">
+        <p className="font-display text-base font-medium text-primary-foreground tracking-wide">
+          Jonas Peres
+        </p>
+        <a
+          href="https://www.instagram.com/jonas_peress/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+          aria-label="Instagram"
+        >
+          <Instagram size={22} />
+        </a>
+        <p className="text-primary-foreground/40 text-xs font-body text-center" style={{ hyphens: "none" }}>
+          © {new Date().getFullYear()} Jonas Peres · Formação em Ciência Sistêmica
+        </p>
+      </div>
+    </footer>
+  </main>
+);
 
 export default Index;
