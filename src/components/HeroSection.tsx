@@ -50,15 +50,14 @@ const HeroSection = () => {
           Ciência Sistêmica<span className="text-accent">.</span>
           <br />
           <span className="italic font-light text-primary-foreground/55">
-            Uma forma de viver.
+            segundo Bert Hellinger.
           </span>
         </h1>
 
         {/* Subtitle */}
         <p className="max-w-2xl text-base md:text-lg text-primary-foreground/65 leading-relaxed font-light font-body mb-12" style={{ textAlign: "center" }}>
-          Uma formação para quem quer parar de repetir padrões, organizar suas inteligências
-          emocional, mental e espiritual — e tomar a vida com leveza e propósito, segundo
-          Bert Hellinger.
+          Viva sem repetir padrões negativos, se torne a sua melhor versão e
+          contribua com o mundo através do seu propósito.
         </p>
 
         {/* Actions */}
