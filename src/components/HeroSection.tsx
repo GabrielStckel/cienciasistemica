@@ -46,13 +46,15 @@ const HeroSection = () => {
         </div>
 
         {/* Headline */}
-        <h1 className="font-display font-semibold leading-[0.92] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+        <p className="font-display text-2xl sm:text-3xl md:text-4xl text-primary-foreground/75 font-light mb-3 tracking-tight">
+          Curso de formação em
+        </p>
+        <h1 className="font-display font-semibold leading-[0.92] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-6 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
           Ciência Sistêmica<span className="text-accent">.</span>
-          <br />
-          <span className="italic font-light text-primary-foreground/55">
-            segundo Bert Hellinger.
-          </span>
         </h1>
+        <p className="font-display italic font-light text-primary-foreground/60 text-lg md:text-2xl mb-8">
+          segundo Bert Hellinger.
+        </p>
 
         {/* Subtitle */}
         <p className="max-w-2xl text-base md:text-lg text-primary-foreground/65 leading-relaxed font-light font-body mb-12" style={{ textAlign: "center" }}>

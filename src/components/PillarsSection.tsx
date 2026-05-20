@@ -24,9 +24,17 @@ const PillarsSection = () => (
       <SectionTitle
         light
         eyebrow="As bases"
-        label="Para facilitar constelações é preciso esvaziar-se"
-        subtitle="A condução do inconsciente requer três bases fundamentais para que aquilo que precisa ser revelado venha à tona."
+        label="Para se tornar um agente sistêmico e facilitar constelações é preciso esvaziar-se"
       />
+      <div className="max-w-3xl mx-auto text-center text-primary-foreground/70 text-[15px] leading-[1.85] font-body font-light space-y-4 -mt-4 mb-4">
+        <p>
+          Abordaremos os pressupostos da teoria sistêmica — não apenas a teoria
+          Hellingeriana das constelações, mas é preciso saber que não é a teoria
+          que nos forma constelador. É necessário esvaziar-se, tornar-se neutro,
+          ser permeado pelo todo. Desta forma, conduzir o inconsciente a trazer
+          à tona aquilo que precisa ser revelado requer as seguintes bases:
+        </p>
+      </div>
       <div className="grid md:grid-cols-3 gap-5 md:gap-6 mt-12">
         {pillars.map((p) => (
           <div key={p.n} className="border-l-2 border-accent/60 pl-5 py-2">

@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutCourseSection from "@/components/AboutCourseSection";
 import InstructorSection from "@/components/InstructorSection";
 import PillarsSection from "@/components/PillarsSection";
+import ConsciousnessSection from "@/components/ConsciousnessSection";
 import PreparationSection from "@/components/PreparationSection";
 import DifferentialsSection from "@/components/DifferentialsSection";
 import JourneySection from "@/components/JourneySection";
@@ -16,6 +17,7 @@ const Index = () => (
     <AboutCourseSection />
     <InstructorSection />
     <PillarsSection />
+    <ConsciousnessSection />
     <PreparationSection />
     <DifferentialsSection />
     <JourneySection />
