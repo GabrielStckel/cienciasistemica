@@ -26,10 +26,21 @@ const InstructorSection = () => (
         <p className="text-muted-foreground text-sm uppercase tracking-wider mb-6 font-body" style={{ textAlign: "left" }}>
           Constelações Familiares & Desenvolvimento Humano
         </p>
-        <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light mb-8">
-          Mais de 10 anos como constelador e terapeuta, no coração de uma vida destinada ao servir consciente à vida —
-          com o suporte de uma espiritualidade laica e filosófica que traz clareza, sabedoria e verdade ao processo.
-        </p>
+        <div className="space-y-5 text-foreground/80 text-[15px] leading-[1.85] font-body font-light mb-8">
+          <p>
+            Os mais de 10 anos como constelador e terapeuta são o coração de
+            uma vida inteira destinada ao servir consciente à vida — com o
+            suporte de uma espiritualidade laica e filosófica, que traz clareza,
+            sabedoria e verdade ao meu processo e ao de quem posso auxiliar.
+          </p>
+          <p>
+            Mais de 3.000 horas conduzindo constelações e vivências
+            terapêuticas, presenciais e online. Mais de 5.000 clientes e alunos
+            que viveram o poder transformador do autoconhecimento, resolvendo
+            questões urgentes e aprendendo a conduzir melhor suas vidas,
+            seguindo o meu método.
+          </p>
+        </div>
         <div className="grid grid-cols-3 gap-4 border-t border-border pt-6">
           {stats.map((s) => (
             <div key={s.l}>

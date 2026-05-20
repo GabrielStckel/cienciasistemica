@@ -3,6 +3,8 @@ import AboutCourseSection from "@/components/AboutCourseSection";
 import InstructorSection from "@/components/InstructorSection";
 import PillarsSection from "@/components/PillarsSection";
 import PreparationSection from "@/components/PreparationSection";
+import DifferentialsSection from "@/components/DifferentialsSection";
+import JourneySection from "@/components/JourneySection";
 import ModulesSection from "@/components/ModulesSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import CtaSection from "@/components/CtaSection";
@@ -15,6 +17,8 @@ const Index = () => (
     <InstructorSection />
     <PillarsSection />
     <PreparationSection />
+    <DifferentialsSection />
+    <JourneySection />
     <ModulesSection />
     <ComparisonSection />
     <CtaSection />
