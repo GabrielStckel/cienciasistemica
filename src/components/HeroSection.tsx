@@ -2,112 +2,130 @@ import jonas from "@/assets/jonas-peres.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative gradient-hero overflow-hidden">
-      {/* Ambient glows */}
-      <div className="pointer-events-none absolute inset-0">
-        <div
-          className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full opacity-40"
-          style={{ background: "radial-gradient(circle, hsl(220 86% 56% / 0.45) 0%, transparent 65%)" }}
-        />
-        <div
-          className="absolute -bottom-40 -right-32 w-[600px] h-[600px] rounded-full opacity-30"
-          style={{ background: "radial-gradient(circle, hsl(220 90% 70% / 0.35) 0%, transparent 65%)" }}
-        />
-        <div
-          className="absolute inset-0 opacity-[0.07]"
-          style={{
-            backgroundImage:
-              "linear-gradient(hsl(0 0% 100% / 0.5) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 100% / 0.5) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-            maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
-          }}
-        />
-      </div>
+    <section className="relative gradient-hero overflow-hidden min-h-screen flex items-center justify-center text-primary-foreground">
+      {/* Background grid */}
+      <div
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(hsl(213 52% 24%) 1px, transparent 1px), linear-gradient(90deg, hsl(213 52% 24%) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+      {/* Ambient blobs */}
+      <div
+        className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] rounded-full pointer-events-none"
+        style={{ background: "hsl(220 86% 56% / 0.10)", filter: "blur(120px)" }}
+      />
+      <div
+        className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] rounded-full pointer-events-none"
+        style={{ background: "hsl(220 86% 56% / 0.07)", filter: "blur(100px)" }}
+      />
 
-      {/* Top bar */}
-      <div className="relative z-10 container max-w-6xl flex items-center justify-between pt-7">
-        <div className="font-display text-primary-foreground text-lg font-semibold tracking-tight">
+      {/* Top overlay nav */}
+      <div className="absolute top-8 left-8 right-8 md:left-12 md:right-12 z-20 flex items-center justify-between">
+        <span className="font-display text-lg md:text-xl font-semibold tracking-tight">
           Jonas Peres
-        </div>
-        <span className="hidden md:inline-flex items-center gap-2 text-[11px] font-body font-medium tracking-[0.25em] uppercase text-primary-foreground/60">
-          <span className="w-6 h-px bg-primary-foreground/40" />
+        </span>
+        <span className="hidden md:inline text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">
           Turma 2026
         </span>
       </div>
 
-      <div className="relative z-10 container max-w-6xl grid md:grid-cols-12 gap-10 md:gap-12 items-center pt-16 md:pt-24 pb-24 md:pb-32">
-        {/* Left: copy */}
-        <div className="md:col-span-7 animate-[fade-up_0.8s_cubic-bezier(0.16,1,0.3,1)_forwards]">
-          <div className="inline-flex items-center gap-3 mb-7">
+      <div className="relative z-10 w-full max-w-6xl px-6 py-24 md:py-28 flex flex-col items-center text-center">
+        {/* Top metadata */}
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-10 text-[10px] tracking-[0.25em] font-semibold uppercase text-primary-foreground/55">
+          <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            <span className="font-body text-[11px] font-semibold tracking-[0.3em] uppercase text-primary-foreground/70">
-              Formação 2026 · 10 módulos
-            </span>
-          </div>
-
-          <h1 className="font-display text-primary-foreground leading-[1.05] tracking-tight font-semibold text-[2.75rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] mb-7">
-            Ciência Sistêmica<span className="text-accent">.</span>
-            <br />
-            <span className="italic font-medium text-primary-foreground/85">Uma forma de viver.</span>
-          </h1>
-
-          <p
-            className="font-body text-base md:text-lg text-primary-foreground/75 max-w-xl leading-relaxed mb-10"
-            style={{ textAlign: "left" }}
-          >
-            Uma formação para quem quer parar de repetir padrões, organizar suas inteligências
-            emocional, mental e espiritual — e tomar a vida com leveza e propósito, segundo
-            Bert Hellinger.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-4">
-            <a href="#inscricao" className="btn-primary">
-              Garantir minha vaga
-              <span aria-hidden>→</span>
-            </a>
-            <a href="#sobre" className="btn-ghost-light">
-              Conhecer o curso
-            </a>
-          </div>
-
-          <div className="mt-12 grid grid-cols-3 gap-6 max-w-md border-t border-primary-foreground/15 pt-6">
-            <div>
-              <div className="font-display text-2xl font-semibold text-primary-foreground">10</div>
-              <div className="text-[11px] font-body uppercase tracking-wider text-primary-foreground/55 mt-1">Módulos</div>
-            </div>
-            <div>
-              <div className="font-display text-2xl font-semibold text-primary-foreground">10 meses</div>
-              <div className="text-[11px] font-body uppercase tracking-wider text-primary-foreground/55 mt-1">Imersão</div>
-            </div>
-            <div>
-              <div className="font-display text-2xl font-semibold text-primary-foreground">2026</div>
-              <div className="text-[11px] font-body uppercase tracking-wider text-primary-foreground/55 mt-1">Início</div>
-            </div>
-          </div>
+            Formação 2026
+          </span>
+          <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
+          <span>10 Módulos</span>
+          <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
+          <span>10 Meses</span>
         </div>
 
-        {/* Right: portrait */}
-        <div className="md:col-span-5 relative animate-[fade-up_1s_cubic-bezier(0.16,1,0.3,1)_forwards]">
-          <div className="relative mx-auto max-w-sm">
-            <div
-              className="absolute -inset-6 rounded-[2rem] opacity-60"
-              style={{ background: "radial-gradient(circle at 50% 30%, hsl(220 86% 56% / 0.5), transparent 70%)" }}
-            />
-            <div className="relative overflow-hidden rounded-[1.25rem] border border-primary-foreground/10 shadow-2xl">
-              <img
-                src={jonas}
-                alt="Jonas Peres, constelador e terapeuta"
-                className="w-full aspect-[4/5] object-cover"
-              />
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{ background: "linear-gradient(180deg, transparent 55%, hsl(214 67% 8% / 0.75) 100%)" }}
-              />
-              <div className="absolute bottom-5 left-5 right-5">
-                <div className="font-display text-primary-foreground text-xl font-semibold">Jonas Peres</div>
-                <div className="text-[11px] uppercase tracking-[0.25em] text-primary-foreground/70 font-body">
-                  Constelador · há 10+ anos
+        {/* Headline */}
+        <h1 className="font-display font-semibold leading-[0.92] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+          Ciência Sistêmica<span className="text-accent">.</span>
+          <br />
+          <span className="italic font-light text-primary-foreground/55">
+            Uma forma de viver.
+          </span>
+        </h1>
+
+        {/* Subtitle */}
+        <p className="max-w-2xl text-base md:text-lg text-primary-foreground/65 leading-relaxed font-light font-body mb-12" style={{ textAlign: "center" }}>
+          Uma formação para quem quer parar de repetir padrões, organizar suas inteligências
+          emocional, mental e espiritual — e tomar a vida com leveza e propósito, segundo
+          Bert Hellinger.
+        </p>
+
+        {/* Actions */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 mb-20 md:mb-24">
+          <a href="#inscricao" className="btn-primary">
+            Garantir minha vaga
+            <span aria-hidden>→</span>
+          </a>
+          <a href="#sobre" className="btn-ghost-light">
+            Conhecer o curso
+          </a>
+        </div>
+
+        {/* Profile platform card */}
+        <div className="relative w-full max-w-4xl">
+          <div
+            className="absolute inset-x-0 -bottom-10 h-32 blur-3xl opacity-50 pointer-events-none"
+            style={{ background: "linear-gradient(to top, hsl(220 86% 56% / 0.18), transparent)" }}
+          />
+          <div
+            className="relative rounded-2xl border p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-8 backdrop-blur-md"
+            style={{
+              background: "hsl(0 0% 100% / 0.03)",
+              borderColor: "hsl(0 0% 100% / 0.10)",
+            }}
+          >
+            <div className="flex items-center gap-5 md:gap-6">
+              <div className="relative">
+                <div
+                  className="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden border"
+                  style={{ borderColor: "hsl(0 0% 100% / 0.10)" }}
+                >
+                  <img
+                    src={jonas}
+                    alt="Jonas Peres, constelador"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+                <div
+                  className="absolute -bottom-2 -right-2 w-7 h-7 rounded-full bg-accent flex items-center justify-center"
+                  style={{ border: "4px solid hsl(214 67% 14%)" }}
+                >
+                  <span className="w-2 h-2 rounded-full bg-primary-foreground" />
+                </div>
+              </div>
+              <div className="text-left">
+                <h3 className="font-display text-xl md:text-2xl font-semibold">Jonas Peres</h3>
+                <p className="text-[10px] tracking-[0.2em] text-primary-foreground/55 uppercase mt-1 font-body">
+                  Constelador · Há 10+ anos
+                </p>
+              </div>
+            </div>
+
+            <div className="h-px md:h-14 w-full md:w-px bg-primary-foreground/10" />
+
+            <div className="grid grid-cols-3 gap-6 md:gap-10 w-full md:w-auto">
+              <div className="text-center md:text-left">
+                <p className="text-[10px] uppercase tracking-wider text-primary-foreground/45 mb-1 font-body">Início</p>
+                <p className="font-body font-medium text-sm">Mar/26</p>
+              </div>
+              <div className="text-center md:text-left">
+                <p className="text-[10px] uppercase tracking-wider text-primary-foreground/45 mb-1 font-body">Vagas</p>
+                <p className="font-body font-medium text-sm">Limitadas</p>
+              </div>
+              <div className="text-center md:text-left">
+                <p className="text-[10px] uppercase tracking-wider text-primary-foreground/45 mb-1 font-body">Status</p>
+                <p className="font-body font-medium text-sm text-accent">• Aberto</p>
               </div>
             </div>
           </div>
