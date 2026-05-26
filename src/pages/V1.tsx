@@ -1,12 +1,11 @@
 import { Instagram } from "lucide-react";
-import jonas from "@/assets/jonas-peres.jpg";
 
 const modules = [
   { n: "01", t: "Ciência Sistêmica e pensamento sistêmico", d: "A base perceptiva que substitui a lógica linear" },
   { n: "02", t: "Ciclos da vida e postura fenomenológica", d: "A capacidade de ver sem interpretar" },
   { n: "03", t: "Lei do Pertencimento", d: "Percepção das dinâmicas de exclusão e vínculo" },
   { n: "04", t: "Lei da Ordem e Equilíbrio", d: "Leitura das hierarquias invisíveis" },
-  { n: "05", t: "Amor pai / filhos", d: "A percepção dos sistemas familiares" },
+  { n: "05", t: "Amor pai/filhos", d: "A percepção dos sistemas familiares" },
   { n: "06", t: "Saúde e sexualidade", d: "A fisiologia da dinâmica sistêmica" },
   { n: "07", t: "Amor de casal", d: "Percepção dos campos relacionais" },
   { n: "08", t: "Função sistêmica, propósito e sentido", d: "A leitura do lugar de cada um no sistema" },
@@ -15,12 +14,12 @@ const modules = [
 ];
 
 const proofs = [
-  { t: "Base fenomenológica", d: "O método de Husserl e Heidegger aplicado à percepção relacional." },
-  { t: "Ciência Sistêmica", d: "As 3 leis de Hellinger como dinâmicas observáveis, não como crenças." },
-  { t: "Neurociência", d: "95% dos comportamentos são inconscientes — a percepção sistêmica é a chave de acesso." },
-  { t: "Prática supervisionada", d: "Você constela sob orientação ao vivo, com correção em tempo real." },
-  { t: "Material exclusivo", d: "Apostila completa + plataforma digital + conteúdo complementar." },
-  { t: "Comunidade entre módulos", d: "A prática não para na sala de aula." },
+  { t: "Base fenomenológica", d: "O método de Husserl e Heidegger aplicado à percepção relacional" },
+  { t: "Ciência Sistêmica", d: "As 3 leis de Hellinger como dinâmicas observáveis, não como crenças" },
+  { t: "Neurociência", d: "95% dos comportamentos são inconscientes — a percepção sistêmica é a chave de acesso" },
+  { t: "Prática supervisionada", d: "Você constela sob orientação ao vivo, com correção em tempo real" },
+  { t: "Material exclusivo", d: "Apostila completa + plataforma digital + conteúdo complementar" },
+  { t: "Comunidade entre módulos", d: "A prática não para na sala de aula" },
 ];
 
 const audience = [
@@ -32,10 +31,10 @@ const audience = [
 ];
 
 const objections = [
-  { o: "“Já fiz cursos de constelação online”", r: "E você sentiu o limite. Constelação não se aprende explicando — se aprende percebendo. Presencial." },
-  { o: "“BC é longe”", r: "1 fim de semana por mês. O investimento em deslocamento é ínfimo perto do retorno de uma percepção que não se perde." },
-  { o: "“É caro”", r: "Você já investiu em cursos que viraram PDF na gaveta. Isso não é um curso. É uma transformação no seu modo de atender." },
-  { o: "“Não tenho tempo”", r: "2 dias por mês durante 10 meses. O que você ganha em profundidade nos atendimentos compensa cada hora investida." },
+  { o: "\u201CJá fiz cursos de constelação online\u201D", r: "E você sentiu o limite. Constelação não se aprende explicando — se aprende percebendo. Presencial." },
+  { o: "\u201CBC é longe\u201D", r: "1 fim de semana por mês. O investimento em deslocamento é ínfimo perto do retorno de uma percepção que não se perde." },
+  { o: "\u201CÉ caro\u201D", r: "Você já investiu em cursos que viraram PDF na gaveta. Isso não é um curso. É uma transformação no seu modo de atender." },
+  { o: "\u201CNão tenho tempo\u201D", r: "2 dias por mês durante 10 meses. O que você ganha em profundidade nos atendimentos compensa cada hora investida." },
 ];
 
 const transitions = [
