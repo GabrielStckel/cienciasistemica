@@ -105,8 +105,8 @@ const V1 = () => (
     </section>
 
     {/* O PROBLEMA */}
-    <section id="problema" className="section-white py-20 md:py-28">
-      <div className="container max-w-3xl">
+    <section id="problema" className="section-white py-24 md:py-32">
+      <div className="container max-w-4xl">
         <div className="label-section mb-4">O problema</div>
         <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-8">
           O limite não está no cliente — está no modo de leitura da realidade.
@@ -136,7 +136,7 @@ const V1 = () => (
     </section>
 
     {/* A PROMESSA */}
-    <section className="section-muted py-20 md:py-28">
+    <section className="section-muted py-24 md:py-32">
       <div className="container max-w-4xl">
         <div className="label-section mb-4">A promessa</div>
         <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-6">
@@ -167,8 +167,8 @@ const V1 = () => (
     </section>
 
     {/* ESTRUTURA / MÓDULOS */}
-    <section className="section-white py-20 md:py-28">
-      <div className="container max-w-3xl">
+    <section className="section-white py-24 md:py-32">
+      <div className="container max-w-4xl">
         <div className="label-section mb-4">A estrutura</div>
         <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-4">
           10 módulos presenciais. Um fim de semana por mês.
@@ -197,8 +197,8 @@ const V1 = () => (
     </section>
 
     {/* O MÉTODO */}
-    <section className="gradient-hero py-20 md:py-28">
-      <div className="container max-w-3xl text-primary-foreground">
+    <section className="gradient-hero py-24 md:py-32">
+      <div className="container max-w-4xl text-primary-foreground">
         <div className="label-section text-accent mb-4">O método</div>
         <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight leading-tight mb-8">
           Não é teórico — é vivencial.
@@ -221,7 +221,7 @@ const V1 = () => (
     </section>
 
     {/* PROVA CREDÍVEL */}
-    <section className="section-muted py-20 md:py-28">
+    <section className="section-muted py-24 md:py-32">
       <div className="container max-w-4xl">
         <div className="label-section mb-4">A prova credível</div>
         <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-12">
@@ -246,8 +246,8 @@ const V1 = () => (
     </section>
 
     {/* PARA QUEM */}
-    <section className="section-white py-20 md:py-28">
-      <div className="container max-w-3xl">
+    <section className="section-white py-24 md:py-32">
+      <div className="container max-w-4xl">
         <div className="label-section mb-4">Para quem é esta formação</div>
         <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-10">
           Para profissionais que já chegaram ao limite do modo mental.
@@ -266,7 +266,7 @@ const V1 = () => (
     </section>
 
     {/* INSTRUTOR (resumo) */}
-    <section className="section-muted py-20 md:py-28">
+    <section className="section-muted py-24 md:py-32">
       <div className="container max-w-4xl grid md:grid-cols-[1fr_1.2fr] gap-10 md:gap-14 items-center">
         <img
           src={jonas}
@@ -292,8 +292,8 @@ const V1 = () => (
     </section>
 
     {/* INVESTIMENTO */}
-    <section className="section-white py-20 md:py-28">
-      <div className="container max-w-3xl">
+    <section className="section-white py-24 md:py-32">
+      <div className="container max-w-4xl">
         <div className="label-section mb-4">O investimento</div>
         <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-8">
           Formação completa: 10 módulos presenciais.
@@ -321,8 +321,8 @@ const V1 = () => (
     </section>
 
     {/* OBJEÇÕES */}
-    <section className="section-muted py-20 md:py-28">
-      <div className="container max-w-3xl">
+    <section className="section-muted py-24 md:py-32">
+      <div className="container max-w-4xl">
         <div className="label-section mb-4">Quebra de objeções</div>
         <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-10">
           As perguntas que provavelmente estão na tua cabeça agora.
@@ -344,7 +344,7 @@ const V1 = () => (
 
     {/* CTA */}
     <section id="inscricao" className="gradient-hero py-24 md:py-32">
-      <div className="container max-w-2xl text-center">
+      <div className="container max-w-4xl text-center">
         <div className="label-section text-accent mb-4">Próximo passo</div>
         <h2 className="font-display text-3xl md:text-5xl text-primary-foreground font-semibold mb-6 leading-tight tracking-tight">
           Quero receber mais informações sobre a Formação em Ciência Sistêmica.
