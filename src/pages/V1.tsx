@@ -47,7 +47,7 @@ const transitions = [
 const V1 = () => (
   <main className="min-h-screen bg-background">
     {/* HERO */}
-    <section className="relative gradient-hero overflow-hidden min-h-screen flex items-center text-primary-foreground">
+    <section className="relative gradient-hero overflow-hidden flex items-center text-primary-foreground py-20 md:py-24 min-h-[85vh]">
       <div
         className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
@@ -61,15 +61,15 @@ const V1 = () => (
         style={{ background: "hsl(220 86% 56% / 0.10)", filter: "blur(120px)" }}
       />
 
-      <div className="absolute top-8 left-8 right-8 md:left-12 md:right-12 z-20 flex items-center justify-between">
-        <span className="font-display text-lg md:text-xl font-semibold tracking-tight">Jonas Peres</span>
+      <div className="absolute top-6 left-6 right-6 md:left-10 md:right-10 z-20 flex items-center justify-between">
+        <span className="font-display text-base md:text-lg font-semibold tracking-tight">Jonas Peres</span>
         <span className="hidden md:inline text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">
           Para profissionais · Turma 2026
         </span>
       </div>
 
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 py-28 md:py-32">
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-10 text-[10px] tracking-[0.25em] font-semibold uppercase text-primary-foreground/55">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 pt-12">
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-8 text-[10px] tracking-[0.25em] font-semibold uppercase text-primary-foreground/55">
           <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Formação Profissional
@@ -80,22 +80,21 @@ const V1 = () => (
           <span>Balneário Camboriú</span>
         </div>
 
-        <p className="text-[11px] tracking-[0.3em] uppercase text-accent mb-6 font-body font-semibold">
+        <p className="text-[11px] tracking-[0.3em] uppercase text-accent mb-5 font-body font-semibold">
           Para terapeutas, psicólogos, coaches e consteladores
         </p>
 
-        <h1 className="font-display font-semibold leading-[0.98] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
-          Você já sente que suas ferramentas alcançam a superfície, mas não tocam a{" "}
-          <span className="italic font-light text-accent">raiz</span>?
+        <h1 className="font-display font-semibold leading-[1.1] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 max-w-3xl animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+          Suas ferramentas tocam a superfície.<br />
+          E a <span className="italic font-light text-accent">raiz</span>?
         </h1>
 
-        <p className="max-w-2xl text-base md:text-lg text-primary-foreground/65 leading-relaxed font-light font-body mb-12">
-          Existe uma diferença entre <em>explicar</em> o padrão de um cliente e <em>perceber</em> a
-          dinâmica invisível que o sustenta. Esta formação presencial existe para te levar da
-          técnica à percepção.
+        <p className="max-w-xl text-base md:text-lg text-primary-foreground/65 leading-relaxed font-light font-body mb-10">
+          A diferença entre <em>explicar</em> o padrão de um cliente e <em>perceber</em> a dinâmica
+          invisível que o sustenta. Esta formação te leva da técnica à percepção.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
           <a href="#inscricao" className="btn-primary">
             Quero saber mais
             <span aria-hidden>→</span>
