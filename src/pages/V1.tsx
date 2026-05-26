@@ -46,7 +46,7 @@ const objections = [
 const V1 = () => (
   <main className="min-h-screen bg-background">
     {/* HERO */}
-    <section className="relative gradient-hero overflow-hidden flex items-center text-primary-foreground py-24 md:py-32 min-h-[85vh]">
+    <header className="relative gradient-hero overflow-hidden text-primary-foreground min-h-screen flex flex-col">
       <div
         className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
@@ -60,32 +60,43 @@ const V1 = () => (
         style={{ background: "hsl(220 86% 56% / 0.10)", filter: "blur(120px)" }}
       />
 
-      <div className="absolute top-6 left-6 right-6 md:left-10 md:right-10 z-20 flex items-center justify-between">
-        <span className="font-display text-base md:text-lg font-semibold tracking-tight">Jonas Peres</span>
-      </div>
-
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 pt-12">
-        <p className="text-[11px] tracking-[0.3em] uppercase text-accent mb-6 font-body font-semibold">
-          Para terapeutas, psicólogos, coaches, consteladores e profissionais que querem levar a Ciência Sistêmica para seus atendimentos
-        </p>
-
-        <h1 className="font-display font-semibold leading-[1.1] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
-          Você já sente que suas ferramentas alcançam a superfície, mas não tocam a <span className="italic font-light text-accent">raiz</span>?
-        </h1>
-
-        <p className="max-w-2xl text-base md:text-lg text-primary-foreground/70 leading-relaxed font-light font-body mb-10">
-          Existe uma diferença entre <em>explicar</em> o padrão de um cliente e <em>perceber</em> a dinâmica invisível que o sustenta. Essa formação presencial existe para te levar da técnica à percepção.
-        </p>
-
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-          <a href="#inscricao" className="btn-primary">
+      {/* NAV */}
+      <nav className="relative z-20 w-full border-b border-primary-foreground/10">
+        <div className="max-w-6xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+          <span className="font-display text-base md:text-lg font-semibold tracking-tight">
+            Jonas Peres
+          </span>
+          <a href="#inscricao" className="btn-ghost-light text-sm">
             Quero saber mais
-            <span aria-hidden>→</span>
           </a>
-          <a href="#problema" className="btn-ghost-light">Entender a proposta</a>
+        </div>
+      </nav>
+
+      {/* HERO CONTENT */}
+      <div className="relative z-10 flex-1 flex items-center">
+        <div className="w-full max-w-4xl mx-auto px-6 md:px-10 py-20">
+          <p className="text-[11px] tracking-[0.3em] uppercase text-accent mb-8 font-body font-semibold max-w-2xl">
+            Para terapeutas, psicólogos, coaches, consteladores e profissionais que querem levar a Ciência Sistêmica para seus atendimentos
+          </p>
+
+          <h1 className="font-display font-semibold leading-[1.1] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+            Você já sente que suas ferramentas alcançam a superfície, mas não tocam a <span className="italic font-light text-accent">raiz</span>?
+          </h1>
+
+          <p className="max-w-2xl text-base md:text-lg text-primary-foreground/70 leading-relaxed font-light font-body mb-10">
+            Existe uma diferença entre <em>explicar</em> o padrão de um cliente e <em>perceber</em> a dinâmica invisível que o sustenta. Essa formação presencial existe para te levar da técnica à percepção.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+            <a href="#inscricao" className="btn-primary">
+              Quero saber mais
+              <span aria-hidden>→</span>
+            </a>
+            <a href="#problema" className="btn-ghost-light">Entender a proposta</a>
+          </div>
         </div>
       </div>
-    </section>
+    </header>
 
     {/* O PROBLEMA */}
     <section id="problema" className="section-white py-24 md:py-32">
@@ -210,13 +221,19 @@ const V1 = () => (
         <ul className="space-y-3">
           {audience.map((a) => (
             <li key={a} className="flex gap-4 items-start card-refined p-5">
-              <span className="text-accent font-display font-semibold mt-0.5 shrink-0">✅</span>
+              <span className="text-accent font-display font-semibold mt-0.5 shrink-0">→</span>
               <span className="text-foreground/85 text-[15px] leading-relaxed font-body font-light">
                 {a}
               </span>
             </li>
           ))}
         </ul>
+        <div className="mt-12 flex justify-center">
+          <a href="#inscricao" className="btn-primary">
+            Quero saber mais
+            <span aria-hidden>→</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -242,8 +259,14 @@ const V1 = () => (
           </ul>
         </div>
         <p className="text-accent text-[13px] tracking-wide font-body font-semibold">
-          ⚠️ Vagas presenciais limitadas — a imersão funciona porque o grupo é pequeno.
+          Vagas presenciais limitadas — a imersão funciona porque o grupo é pequeno.
         </p>
+        <div className="mt-10 flex justify-center">
+          <a href="#inscricao" className="btn-primary">
+            Quero saber mais
+            <span aria-hidden>→</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -272,7 +295,7 @@ const V1 = () => (
     <section id="inscricao" className="gradient-hero py-24 md:py-32">
       <div className="container max-w-4xl text-center">
         <h2 className="font-display text-3xl md:text-5xl text-primary-foreground font-semibold mb-10 leading-tight tracking-tight">
-          👉 Quero receber mais informações sobre a Formação em Ciência Sistêmica
+          Quero receber mais informações sobre a Formação em Ciência Sistêmica
         </h2>
         <a
           href="https://wa.me/5500000000000"
