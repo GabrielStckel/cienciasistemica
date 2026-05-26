@@ -75,11 +75,14 @@ const V1 = () => (
       {/* HERO CONTENT */}
       <div className="relative z-10 flex-1 flex items-center">
         <div className="w-full max-w-4xl mx-auto px-6 md:px-10 py-20">
-          <p className="text-[11px] tracking-[0.3em] uppercase text-accent mb-8 font-body font-semibold max-w-2xl">
-            Para terapeutas, psicólogos, coaches, consteladores e profissionais que querem levar a Ciência Sistêmica para seus atendimentos
-          </p>
+          <div className="flex items-start gap-4 mb-8 max-w-2xl">
+            <span className="w-1 h-full min-h-[3rem] bg-accent rounded-full shrink-0 mt-1" />
+            <p className="text-sm md:text-[15px] text-accent font-body font-medium leading-relaxed">
+              Para terapeutas, psicólogos, coaches, consteladores e profissionais que querem levar a Ciência Sistêmica para seus atendimentos
+            </p>
+          </div>
 
-          <h1 className="font-display font-semibold leading-[1.1] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+          <h1 className="font-display font-semibold leading-[1.1] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 max-w-3xl animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
             Você já sente que suas ferramentas alcançam a superfície, mas não tocam a <span className="italic font-light text-accent">raiz</span>?
           </h1>
 
