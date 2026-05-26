@@ -82,7 +82,7 @@ const V1 = () => (
             </p>
           </div>
 
-          <h1 className="font-display font-semibold leading-[1.15] tracking-tight text-[1.875rem] sm:text-[2.25rem] md:text-[2.625rem] lg:text-[3rem] mb-8 max-w-[36rem] animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+          <h1 className="font-display font-semibold leading-[1.15] tracking-tight text-[1.75rem] sm:text-[2rem] md:text-[2.125rem] lg:text-[2.25rem] mb-8 max-w-[44rem] animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
             Você já sente que suas ferramentas alcançam a superfície, mas não tocam a <span className="italic font-light text-accent">raiz</span>?
           </h1>
 
