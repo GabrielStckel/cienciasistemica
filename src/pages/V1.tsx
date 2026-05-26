@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import SectionTitle from "@/components/SectionTitle";
 
 const modules = [
   { n: "01", t: "Ciência Sistêmica e pensamento sistêmico", d: "A base perceptiva que substitui a lógica linear" },
@@ -102,11 +103,9 @@ const V1 = () => (
     </header>
 
     {/* O PROBLEMA */}
-    <section id="problema" className="section-white py-24 md:py-32">
-      <div className="container max-w-4xl">
-        <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-10">
-          O problema
-        </h2>
+    <section id="problema" className="section-white py-16 md:py-24">
+      <div className="container max-w-3xl">
+        <SectionTitle eyebrow="O ponto de partida" label="O problema" />
         <div className="space-y-5 text-foreground/80 text-[15px] leading-[1.85] font-body font-light">
           <p>Você já construiu um repertório técnico. Sabe conduzir um atendimento, aplica ferramentas, entrega resultados. Mas algo te incomoda.</p>
           <p>Há casos que a metodologia não alcança. Clientes que repetem padrões mesmo depois de “entenderem” tudo. Dinâmicas familiares que desafiam qualquer protocolo linear. Um limite que não está no cliente — está no seu modo de leitura da realidade.</p>
@@ -120,16 +119,14 @@ const V1 = () => (
     </section>
 
     {/* A PROMESSA */}
-    <section className="section-muted py-24 md:py-32">
+    <section className="section-muted py-16 md:py-24">
       <div className="container max-w-4xl">
-        <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-8">
-          A promessa
-        </h2>
-        <div className="space-y-5 text-foreground/80 text-[15px] leading-[1.85] font-body font-light mb-10">
+        <SectionTitle eyebrow="O que muda" label="A promessa" />
+        <div className="space-y-5 text-foreground/80 text-[15px] leading-[1.85] font-body font-light mb-10 max-w-3xl mx-auto">
           <p>Após 10 módulos presenciais em Balneário Camboriú, você não sai com mais uma técnica no currículo.</p>
           <p>Você sai operando em um novo modo de funcionamento profissional:</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-5 mb-10">
+        <div className="grid md:grid-cols-3 gap-5 md:gap-6 mb-10">
           {transitions.map(([from, to], i) => (
             <div key={i} className="card-refined border-accent-left p-6">
               <p className="text-foreground/60 text-[15px] font-body font-light line-through decoration-1 mb-2">
@@ -141,23 +138,22 @@ const V1 = () => (
             </div>
           ))}
         </div>
-        <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light">
+        <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light max-w-3xl mx-auto">
           Você aprende a aplicar a sabedoria da percepção nos seus atendimentos — seja como constelador, terapeuta, psicólogo, coach ou líder. E seus clientes passam a acessar camadas que antes estavam fora do alcance.
         </p>
       </div>
     </section>
 
     {/* ESTRUTURA */}
-    <section className="section-white py-24 md:py-32">
-      <div className="container max-w-4xl">
-        <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-6">
-          O que você vai viver (a estrutura)
-        </h2>
-        <p className="text-muted-foreground text-[15px] font-body font-light mb-4">
-          10 módulos presenciais • 1 fim de semana por mês • Balneário Camboriú
-        </p>
-        <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light mb-12">
-          Os módulos não são aulas expositivas. São imersões vivenciais em cada um dos grandes temas da vida — e o desenvolvimento da percepção acontece ao atravessar cada um deles:
+    <section className="section-white py-16 md:py-24">
+      <div className="container max-w-3xl">
+        <SectionTitle
+          eyebrow="A estrutura"
+          label="O que você vai viver"
+          subtitle="10 módulos presenciais · 1 fim de semana por mês · Balneário Camboriú"
+        />
+        <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light mb-12 text-center max-w-2xl mx-auto">
+          Os módulos não são aulas expositivas. São imersões vivenciais em cada um dos grandes temas da vida — e o desenvolvimento da percepção acontece ao atravessar cada um deles.
         </p>
         <ol className="relative border-l border-border ml-2 md:ml-4">
           {modules.map((m) => (
@@ -177,11 +173,9 @@ const V1 = () => (
     </section>
 
     {/* O MÉTODO */}
-    <section className="gradient-hero py-24 md:py-32">
-      <div className="container max-w-4xl text-primary-foreground">
-        <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight leading-tight mb-10">
-          O método não é teórico — é vivencial
-        </h2>
+    <section className="gradient-hero py-16 md:py-24">
+      <div className="container max-w-3xl text-primary-foreground">
+        <SectionTitle light eyebrow="O método" label="Não é teórico — é vivencial" />
         <div className="space-y-5 text-primary-foreground/75 text-[15px] leading-[1.85] font-body font-light">
           <p>Cada módulo é um mergulho terapêutico nos grandes temas da vida. O desenvolvimento da percepção passa pela superação dos medos que cada tema evoca. Você não estuda a separação — você percebe as dinâmicas de pertencimento dentro de você. Você não decora a lei da ordem — você sente o que acontece no seu corpo quando uma hierarquia é violada.</p>
           <p className="font-display text-xl md:text-2xl text-primary-foreground italic font-light pt-2">
@@ -192,12 +186,10 @@ const V1 = () => (
     </section>
 
     {/* PROVA CREDÍVEL */}
-    <section className="section-muted py-24 md:py-32">
+    <section className="section-muted py-16 md:py-24">
       <div className="container max-w-4xl">
-        <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-12">
-          A prova credível
-        </h2>
-        <div className="grid md:grid-cols-2 gap-5">
+        <SectionTitle eyebrow="Por que confiar" label="A prova credível" />
+        <div className="grid md:grid-cols-2 gap-5 md:gap-6">
           {proofs.map((p, i) => (
             <div key={i} className="card-refined border-accent-left p-6">
               <div className="font-display text-accent text-sm font-semibold mb-2">
@@ -216,11 +208,9 @@ const V1 = () => (
     </section>
 
     {/* PARA QUEM */}
-    <section className="section-white py-24 md:py-32">
-      <div className="container max-w-4xl">
-        <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-10">
-          Para quem é esta formação
-        </h2>
+    <section className="section-white py-16 md:py-24">
+      <div className="container max-w-3xl">
+        <SectionTitle eyebrow="Público" label="Para quem é esta formação" />
         <ul className="space-y-3">
           {audience.map((a) => (
             <li key={a} className="flex gap-4 items-start card-refined p-5">
@@ -241,11 +231,9 @@ const V1 = () => (
     </section>
 
     {/* INVESTIMENTO */}
-    <section className="section-muted py-24 md:py-32">
-      <div className="container max-w-4xl">
-        <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-10">
-          O investimento
-        </h2>
+    <section className="section-muted py-16 md:py-24">
+      <div className="container max-w-3xl">
+        <SectionTitle eyebrow="Valores" label="O investimento" />
         <div className="card-refined border-accent-left p-7 md:p-9 mb-6">
           <p className="text-muted-foreground text-sm font-body mb-2">
             Formação completa (10 módulos presenciais)
@@ -274,11 +262,9 @@ const V1 = () => (
     </section>
 
     {/* OBJEÇÕES */}
-    <section className="section-white py-24 md:py-32">
-      <div className="container max-w-4xl">
-        <h2 className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight leading-tight mb-10">
-          Quebra de objeções
-        </h2>
+    <section className="section-white py-16 md:py-24">
+      <div className="container max-w-3xl">
+        <SectionTitle eyebrow="Dúvidas frequentes" label="Quebra de objeções" />
         <div className="space-y-4">
           {objections.map((q) => (
             <div key={q.o} className="card-refined p-6">
@@ -295,7 +281,7 @@ const V1 = () => (
     </section>
 
     {/* CTA */}
-    <section id="inscricao" className="gradient-hero py-24 md:py-32">
+    <section id="inscricao" className="gradient-hero py-16 md:py-24">
       <div className="container max-w-4xl text-center">
         <h2 className="font-display text-3xl md:text-5xl text-primary-foreground font-semibold mb-10 leading-tight tracking-tight">
           Quero receber mais informações sobre a Formação em Ciência Sistêmica
