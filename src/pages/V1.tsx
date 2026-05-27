@@ -184,38 +184,23 @@ const V1 = () => (
         <p className="text-primary-foreground/70 text-[15px] leading-[1.85] font-body font-light mb-12 text-center max-w-2xl mx-auto">
           Cada módulo é um mergulho terapêutico nos grandes temas da vida. O desenvolvimento da percepção passa pela superação dos medos que cada tema evoca.
         </p>
-        <div className="grid md:grid-cols-2 gap-5 md:gap-6 mb-12">
-          <div className="card-refined p-6 md:p-7">
-            <div className="font-display text-accent text-sm font-semibold mb-3">01</div>
-            <h3 className="font-display text-lg text-primary-foreground font-semibold tracking-tight mb-2">Você percebe</h3>
-            <p className="text-primary-foreground/65 text-[14px] leading-relaxed font-body font-light">
-              Você não estuda a separação — você percebe as dinâmicas de pertencimento dentro de você.
-            </p>
-          </div>
-          <div className="card-refined p-6 md:p-7">
-            <div className="font-display text-accent text-sm font-semibold mb-3">02</div>
-            <h3 className="font-display text-lg text-primary-foreground font-semibold tracking-tight mb-2">Você sente</h3>
-            <p className="text-primary-foreground/65 text-[14px] leading-relaxed font-body font-light">
-              Você não decora a lei da ordem — você sente o que acontece no seu corpo quando uma hierarquia é violada.
-            </p>
-          </div>
-          <div className="card-refined p-6 md:p-7">
-            <div className="font-display text-accent text-sm font-semibold mb-3">03</div>
-            <h3 className="font-display text-lg text-primary-foreground font-semibold tracking-tight mb-2">Você atravessa</h3>
-            <p className="text-primary-foreground/65 text-[14px] leading-relaxed font-body font-light">
-              A percepção se instala atravessando, não explicando. Cada tema vivido se torna uma nova capacidade de leitura.
-            </p>
-          </div>
-          <div className="card-refined p-6 md:p-7">
-            <div className="font-display text-accent text-sm font-semibold mb-3">04</div>
-            <h3 className="font-display text-lg text-primary-foreground font-semibold tracking-tight mb-2">Você aplica</h3>
-            <p className="text-primary-foreground/65 text-[14px] leading-relaxed font-body font-light">
-              O que viveu no campo do grupo você leva para o campo individual. O mesmo princípio, em qualquer atendimento.
-            </p>
-          </div>
+        <div className="grid md:grid-cols-3 gap-10 md:gap-12 mb-14">
+          {[
+            { n: "01", t: "Percebe", d: "Você não estuda a separação — percebe as dinâmicas de pertencimento dentro de você." },
+            { n: "02", t: "Atravessa", d: "Cada tema é vivido no corpo. A percepção se instala atravessando, não explicando." },
+            { n: "03", t: "Aplica", d: "O que viveu no campo do grupo, você leva para o atendimento individual." },
+          ].map((s) => (
+            <div key={s.n} className="relative pl-6 border-l border-primary-foreground/15">
+              <div className="font-display text-accent text-xs font-semibold tracking-[0.2em] mb-3">{s.n}</div>
+              <h3 className="font-display text-xl text-primary-foreground font-light tracking-tight mb-3">{s.t}</h3>
+              <p className="text-primary-foreground/65 text-[14px] leading-relaxed font-body font-light">
+                {s.d}
+              </p>
+            </div>
+          ))}
         </div>
         <p className="font-display text-xl md:text-2xl text-primary-foreground italic font-light text-center max-w-2xl mx-auto">
-          É assim que a percepção se instala: atravessando, não explicando.
+          A percepção se instala atravessando, não explicando.
         </p>
       </div>
     </section>
