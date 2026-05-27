@@ -122,25 +122,43 @@ const V1 = () => (
     <section className="section-muted py-16 md:py-24">
       <div className="container max-w-4xl">
         <SectionTitle eyebrow="O que muda" label="A promessa" />
-        <div className="space-y-5 text-foreground/80 text-[15px] leading-[1.85] font-body font-light mb-10 max-w-3xl mx-auto">
-          <p>Após 10 módulos presenciais em Balneário Camboriú, você não sai com mais uma técnica no currículo.</p>
-          <p>Você sai operando em um novo modo de funcionamento profissional:</p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-5 md:gap-6 mb-10">
-          {transitions.map(([from, to], i) => (
-            <div key={i} className="card-refined border-accent-left p-6">
-              <p className="text-foreground/60 text-[15px] font-body font-light line-through decoration-1 mb-2">
-                {from}
-              </p>
-              <p className="font-display text-lg text-foreground font-semibold tracking-tight">
-                → {to}
-              </p>
-            </div>
-          ))}
-        </div>
-        <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light max-w-3xl mx-auto">
-          Você aprende a aplicar a sabedoria da percepção nos seus atendimentos — seja como constelador, terapeuta, psicólogo, coach ou líder. E seus clientes passam a acessar camadas que antes estavam fora do alcance.
+        <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light mb-12 max-w-2xl mx-auto text-center">
+          Após 10 módulos presenciais em Balneário Camboriú, você não sai com mais uma técnica no currículo — você sai operando em um novo modo de funcionamento profissional.
         </p>
+
+        <div className="max-w-3xl mx-auto">
+          <div className="grid grid-cols-[1fr_auto_1fr] gap-x-4 md:gap-x-8 items-center text-[13px] uppercase tracking-[0.2em] text-muted-foreground font-body mb-6 px-1">
+            <span className="text-left">De</span>
+            <span aria-hidden />
+            <span className="text-right text-accent">Para</span>
+          </div>
+
+          <div className="divide-y divide-border border-y border-border">
+            {transitions.map(([from, to], i) => (
+              <div
+                key={i}
+                className="grid grid-cols-[1fr_auto_1fr] gap-x-4 md:gap-x-8 items-center py-6"
+              >
+                <p className="text-foreground/55 text-[15px] md:text-base font-body font-light leading-snug">
+                  {from}
+                </p>
+                <span
+                  aria-hidden
+                  className="font-display text-accent text-xl md:text-2xl leading-none"
+                >
+                  →
+                </span>
+                <p className="font-display text-base md:text-lg text-foreground font-semibold tracking-tight leading-snug text-right">
+                  {to}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light mt-12 text-center max-w-2xl mx-auto">
+            Você aprende a aplicar a sabedoria da percepção nos seus atendimentos — seja como constelador, terapeuta, psicólogo, coach ou líder. E seus clientes passam a acessar camadas que antes estavam fora do alcance.
+          </p>
+        </div>
       </div>
     </section>
 
