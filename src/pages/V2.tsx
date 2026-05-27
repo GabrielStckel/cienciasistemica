@@ -81,9 +81,34 @@ const V2 = () => (
       </nav>
 
       <div className="relative z-10 flex-1 flex items-center">
-        <div className="w-full max-w-6xl mx-auto px-6 md:px-10 py-16 md:py-20 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
-          {/* Left: vertical meta rail */}
-          <aside className="md:col-span-3 flex md:flex-col gap-6 md:gap-10 md:border-l md:border-primary-foreground/15 md:pl-6">
+        <div className="w-full max-w-5xl mx-auto px-6 md:px-10 py-16 md:py-20">
+          <div className="flex items-center gap-3 mb-10 text-[10px] tracking-[0.3em] uppercase text-primary-foreground/55">
+            <span className="w-8 h-px bg-accent" />
+            Formação · 2026
+            <span className="w-px h-3 bg-primary-foreground/20" />
+            <span className="text-accent">• Inscrições abertas</span>
+          </div>
+
+          <h1 className="font-display font-semibold leading-[1.02] tracking-tight text-balance text-[2.75rem] sm:text-[3.5rem] md:text-[4.25rem] lg:text-[5rem] mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+            Entender
+            <span className="text-primary-foreground/40"> não é </span>
+            <span className="italic font-light text-accent">transformar</span>
+            <span className="text-accent">.</span>
+          </h1>
+
+          <p className="max-w-2xl text-base md:text-[17px] text-primary-foreground/70 leading-[1.7] font-light font-body mb-10">
+            Você já leu, estudou, fez terapias. Acumulou conceitos — mas o modo de funcionamento continua o mesmo. Esta formação presencial existe para te levar do <em>entendimento</em> à <em>percepção</em>.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center mb-14">
+            <a href="#inscricao" className="btn-primary">
+              Quero saber mais
+              <span aria-hidden>→</span>
+            </a>
+            <a href="#problema" className="btn-ghost-light">Entender a proposta</a>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 pt-10 border-t border-primary-foreground/10 max-w-4xl">
             <div>
               <p className="text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-2">Para quem</p>
               <p className="text-[13px] text-primary-foreground/80 font-body font-light leading-relaxed">
@@ -96,37 +121,11 @@ const V2 = () => (
                 10 módulos presenciais · Balneário Camboriú
               </p>
             </div>
-            <div className="hidden md:block">
-              <p className="text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-2">Status</p>
-              <p className="text-[13px] text-accent font-body font-medium">• Inscrições abertas</p>
-            </div>
-          </aside>
-
-          {/* Right: headline block */}
-          <div className="md:col-span-9">
-            <div className="flex items-center gap-3 mb-8 text-[10px] tracking-[0.3em] uppercase text-primary-foreground/55">
-              <span className="w-8 h-px bg-accent" />
-              Formação · 2026
-            </div>
-
-            <h1 className="font-display font-semibold leading-[1.02] tracking-tight text-balance text-[2.5rem] sm:text-[3.25rem] md:text-[4rem] lg:text-[4.75rem] mb-10 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
-              Entender
-              <span className="text-primary-foreground/40"> não é </span>
-              <span className="italic font-light text-accent">transformar</span>
-              <span className="text-accent">.</span>
-            </h1>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-10 items-end">
-              <p className="md:col-span-3 text-base md:text-[17px] text-primary-foreground/70 leading-[1.7] font-light font-body">
-                Você já leu, estudou, fez terapias. Acumulou conceitos — mas o modo de funcionamento continua o mesmo. Esta formação presencial existe para te levar do <em>entendimento</em> à <em>percepção</em>.
+            <div>
+              <p className="text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-2">Início</p>
+              <p className="text-[13px] text-primary-foreground/80 font-body font-light leading-relaxed">
+                Março de 2026 · Turma limitada
               </p>
-              <div className="md:col-span-2 flex flex-col gap-3">
-                <a href="#inscricao" className="btn-primary">
-                  Quero saber mais
-                  <span aria-hidden>→</span>
-                </a>
-                <a href="#problema" className="btn-ghost-light">Entender a proposta</a>
-              </div>
             </div>
           </div>
         </div>
