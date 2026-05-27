@@ -106,7 +106,7 @@ const V2 = () => (
           <div className="md:col-span-9">
             <div className="flex items-center gap-3 mb-8 text-[10px] tracking-[0.3em] uppercase text-primary-foreground/55">
               <span className="w-8 h-px bg-accent" />
-              Manifesto · 01
+              Formação · 2026
             </div>
 
             <h1 className="font-display font-semibold leading-[1.02] tracking-tight text-balance text-[2.5rem] sm:text-[3.25rem] md:text-[4rem] lg:text-[4.75rem] mb-10 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
