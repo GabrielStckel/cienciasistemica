@@ -270,29 +270,54 @@ const V1 = () => (
     <section className="section-muted py-16 md:py-24">
       <div className="container max-w-3xl">
         <SectionTitle eyebrow="Valores" label="O investimento" />
-        <div className="card-refined border-accent-left p-7 md:p-9 mb-6">
-          <p className="text-muted-foreground text-sm font-body mb-2">
-            Formação completa (10 módulos presenciais)
+
+        <div className="relative card-refined border-accent-left p-8 md:p-10 mb-8">
+          <div className="absolute top-0 right-0 bg-accent text-accent-foreground text-[11px] font-semibold tracking-widest uppercase px-3 py-1.5 rounded-bl-lg">
+            Formação 2026
+          </div>
+
+          <p className="text-muted-foreground text-sm font-body mb-1">
+            Formação completa — 10 módulos presenciais
           </p>
-          <p className="font-display text-3xl md:text-4xl text-foreground font-semibold tracking-tight">
-            De R$ 5.000 a R$ 10.000
+          <p className="font-display text-4xl md:text-5xl text-foreground font-semibold tracking-tight leading-none mb-2">
+            De R$ 5.000
           </p>
-          <ul className="space-y-2 text-foreground/80 text-[14px] font-body font-light mt-6">
-            <li>• Menos de R$ 1.000/mês</li>
-            <li>• Parcelamento facilitado</li>
-            <li>• Apostila + plataforma inclusos</li>
-            <li>• Prática supervisionada inclusa</li>
-            <li>• Comunidade entre módulos inclusa</li>
-          </ul>
-        </div>
-        <p className="text-accent text-[13px] tracking-wide font-body font-semibold">
-          Vagas presenciais limitadas — a imersão funciona porque o grupo é pequeno.
-        </p>
-        <div className="mt-10 flex justify-center">
-          <a href="#inscricao" className="btn-primary">
-            Quero saber mais
-            <span aria-hidden>→</span>
-          </a>
+          <p className="font-display text-lg md:text-xl text-muted-foreground font-light tracking-tight mb-8">
+            a R$ 10.000
+          </p>
+
+          <div className="border-t border-border pt-6">
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-5">
+              O que está incluso
+            </p>
+            <div className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+              {[
+                "Menos de R$ 1.000/mês",
+                "Parcelamento facilitado",
+                "Apostila completa + plataforma digital",
+                "Prática supervisionada ao vivo",
+                "Comunidade entre módulos",
+                "Certificado de conclusão",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-3">
+                  <span className="text-accent text-lg leading-none">✓</span>
+                  <span className="text-foreground/85 text-[14px] font-body font-light leading-snug">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-accent text-[13px] tracking-wide font-body font-semibold text-center sm:text-left">
+              Vagas limitadas — turma presencial e restrita
+            </p>
+            <a href="#inscricao" className="btn-primary shrink-0">
+              Quero saber mais
+              <span aria-hidden>→</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
