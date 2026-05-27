@@ -44,14 +44,6 @@ const V2 = () => (
   <main className="min-h-screen bg-background">
     {/* HERO */}
     <header className="relative gradient-hero overflow-hidden text-primary-foreground min-h-screen flex flex-col">
-      {/* Background: large editorial numeral instead of grid */}
-      <div
-        className="absolute -right-[6%] top-[8%] pointer-events-none select-none font-display font-semibold leading-none text-primary-foreground/[0.04]"
-        style={{ fontSize: "clamp(20rem, 45vw, 44rem)" }}
-        aria-hidden
-      >
-        02
-      </div>
       <div
         className="absolute bottom-0 left-0 right-0 h-[55%] pointer-events-none"
         style={{
@@ -108,20 +100,20 @@ const V2 = () => (
             <a href="#problema" className="btn-ghost-light">Entender a proposta</a>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 pt-10 border-t border-primary-foreground/10 max-w-4xl">
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-8 pt-10 border-t border-primary-foreground/10 max-w-4xl">
+            <div className="min-w-0">
               <p className="text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-2">Para quem</p>
               <p className="text-[13px] text-primary-foreground/80 font-body font-light leading-relaxed">
                 Já caminha no autoconhecimento e quer ir à raiz.
               </p>
             </div>
-            <div>
+            <div className="min-w-0">
               <p className="text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-2">Formato</p>
               <p className="text-[13px] text-primary-foreground/80 font-body font-light leading-relaxed">
-                10 módulos presenciais · Balneário Camboriú
+                10 módulos presenciais · BC
               </p>
             </div>
-            <div>
+            <div className="min-w-0">
               <p className="text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-2">Início</p>
               <p className="text-[13px] text-primary-foreground/80 font-body font-light leading-relaxed">
                 Março de 2026 · Turma limitada
