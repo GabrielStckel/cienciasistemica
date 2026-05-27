@@ -2,16 +2,16 @@ import { Instagram } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
 
 const modules = [
-  { n: "01", t: "Ciência Sistêmica e pensamento sistêmico", d: "A base perceptiva que substitui a lógica linear" },
-  { n: "02", t: "Ciclos da vida e postura fenomenológica", d: "A capacidade de ver sem interpretar" },
-  { n: "03", t: "Lei do Pertencimento", d: "Percepção das dinâmicas de exclusão e vínculo" },
-  { n: "04", t: "Lei da Ordem e Equilíbrio", d: "Leitura das hierarquias invisíveis" },
-  { n: "05", t: "Amor pai/filhos", d: "A percepção dos sistemas familiares" },
-  { n: "06", t: "Saúde e sexualidade", d: "A fisiologia da dinâmica sistêmica" },
-  { n: "07", t: "Amor de casal", d: "Percepção dos campos relacionais" },
-  { n: "08", t: "Função sistêmica, propósito e sentido", d: "A leitura do lugar de cada um no sistema" },
-  { n: "09", t: "Espiritualidade sistêmica e a ajuda", d: "O curador aprende a não atrapalhar" },
-  { n: "10", t: "Prática das constelações", d: "Aplicação clínica sob supervisão" },
+  { n: "I", t: "Ciência Sistêmica e pensamento sistêmico", date: "21 e 22 / 03", d: "A base perceptiva que substitui a lógica linear" },
+  { n: "II", t: "Ciclos da vida e postura fenomenológica", date: "25 e 26 / 04", d: "A capacidade de ver sem interpretar" },
+  { n: "III", t: "Lei do Pertencimento", date: "30 e 31 / 05", d: "Percepção das dinâmicas de exclusão e vínculo" },
+  { n: "IV", t: "Lei da Ordem e Equilíbrio", date: "27 e 28 / 06", d: "Leitura das hierarquias invisíveis" },
+  { n: "V", t: "Amor pai/filhos", date: "25 e 26 / 07", d: "A percepção dos sistemas familiares" },
+  { n: "VI", t: "Saúde e sexualidade", date: "22 e 23 / 08", d: "A fisiologia da dinâmica sistêmica" },
+  { n: "VII", t: "Amor de casal", date: "26 e 27 / 09", d: "Percepção dos campos relacionais" },
+  { n: "VIII", t: "Função sistêmica, propósito e sentido", date: "24 e 25 / 10", d: "A leitura do lugar de cada um no sistema" },
+  { n: "IX", t: "Espiritualidade sistêmica e a ajuda", date: "28 e 29 / 11", d: "O curador aprende a não atrapalhar" },
+  { n: "X", t: "Prática das constelações", date: "12 e 13 / 12", d: "Aplicação clínica sob supervisão" },
 ];
 
 const proofs = [
@@ -155,25 +155,23 @@ const V1 = () => (
         <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light mb-12 text-center max-w-2xl mx-auto">
           Os módulos não são aulas expositivas. São imersões vivenciais em cada um dos grandes temas da vida — e o desenvolvimento da percepção acontece ao atravessar cada um deles.
         </p>
-        <div className="grid md:grid-cols-2 gap-4 md:gap-5">
+        <ol className="relative border-l border-border ml-2 md:ml-4 mt-10">
           {modules.map((m) => (
-            <div key={m.n} className="card-refined p-6 md:p-7">
-              <div className="flex items-start gap-4">
-                <span className="font-display text-2xl text-accent font-semibold tracking-tight shrink-0 leading-none mt-0.5">
-                  {m.n}
-                </span>
-                <div className="flex-1">
-                  <h3 className="font-display text-base text-foreground font-semibold tracking-tight mb-1">
-                    {m.t}
-                  </h3>
-                  <p className="text-sm text-muted-foreground font-body font-light leading-relaxed">
-                    {m.d}
-                  </p>
-                </div>
+            <li key={m.n} className="pl-6 md:pl-8 pb-8 relative">
+              <span className="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-accent ring-4 ring-background" />
+              <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                <h3 className="font-display text-lg text-foreground font-semibold tracking-tight">
+                  <span className="text-accent mr-3">{m.n}.</span>
+                  {m.t}
+                </h3>
+                <span className="text-xs uppercase tracking-widest text-muted-foreground font-body">{m.date}</span>
               </div>
-            </div>
+              <p className="text-sm text-muted-foreground font-body font-light leading-relaxed" style={{ textAlign: "left" }}>
+                {m.d}
+              </p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
 
