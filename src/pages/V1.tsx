@@ -382,7 +382,8 @@ const V1 = () => (
     <section id="inscricao" className="gradient-hero py-16 md:py-24">
       <div className="container max-w-4xl text-center">
         <h2 className="font-display text-2xl md:text-4xl text-primary-foreground font-semibold mb-10 leading-tight tracking-tight">
-          Quero receber mais informações sobre a Formação em Ciência Sistêmica
+          Quero receber mais informações sobre a<br />
+          Formação em Ciência Sistêmica
         </h2>
         <a
           href="https://wa.me/5500000000000"
