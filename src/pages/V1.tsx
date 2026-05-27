@@ -39,7 +39,7 @@ const transitions = [
 
 const objections = [
   { o: "\u201CJá fiz cursos de constelação online\u201D", r: "E você sentiu o limite. Constelação não se aprende explicando — se aprende percebendo. Presencial." },
-  { o: "\u201CBC é longe\u201D", r: "1 fim de semana por mês. O investimento em deslocamento é ínfimo perto do retorno de uma percepção que não se perde." },
+  { o: "\u201CBalneário Camboriú é longe\u201D", r: "1 fim de semana por mês. O investimento em deslocamento é ínfimo perto do retorno de uma percepção que não se perde." },
   { o: "\u201CÉ caro\u201D", r: "Você já investiu em cursos que viraram PDF na gaveta. Isso não é um curso. É uma transformação no seu modo de atender." },
   { o: "\u201CNão tenho tempo\u201D", r: "2 dias por mês durante 10 meses. O que você ganha em profundidade nos atendimentos compensa cada hora investida." },
 ];
@@ -155,20 +155,25 @@ const V1 = () => (
         <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light mb-12 text-center max-w-2xl mx-auto">
           Os módulos não são aulas expositivas. São imersões vivenciais em cada um dos grandes temas da vida — e o desenvolvimento da percepção acontece ao atravessar cada um deles.
         </p>
-        <ol className="relative border-l border-border ml-2 md:ml-4">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-5">
           {modules.map((m) => (
-            <li key={m.n} className="pl-6 md:pl-8 pb-8 relative">
-              <span className="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-accent ring-4 ring-background" />
-              <h3 className="font-display text-lg text-foreground font-semibold tracking-tight mb-1">
-                <span className="text-accent mr-3">{m.n}.</span>
-                {m.t}
-              </h3>
-              <p className="text-sm text-muted-foreground font-body font-light leading-relaxed">
-                {m.d}
-              </p>
-            </li>
+            <div key={m.n} className="card-refined p-6 md:p-7">
+              <div className="flex items-start gap-4">
+                <span className="font-display text-2xl text-accent font-semibold tracking-tight shrink-0 leading-none mt-0.5">
+                  {m.n}
+                </span>
+                <div className="flex-1">
+                  <h3 className="font-display text-base text-foreground font-semibold tracking-tight mb-1">
+                    {m.t}
+                  </h3>
+                  <p className="text-sm text-muted-foreground font-body font-light leading-relaxed">
+                    {m.d}
+                  </p>
+                </div>
+              </div>
+            </div>
           ))}
-        </ol>
+        </div>
       </div>
     </section>
 
@@ -283,7 +288,7 @@ const V1 = () => (
     {/* CTA */}
     <section id="inscricao" className="gradient-hero py-16 md:py-24">
       <div className="container max-w-4xl text-center">
-        <h2 className="font-display text-3xl md:text-5xl text-primary-foreground font-semibold mb-10 leading-tight tracking-tight">
+        <h2 className="font-display text-2xl md:text-4xl text-primary-foreground font-semibold mb-10 leading-tight tracking-tight">
           Quero receber mais informações sobre a Formação em Ciência Sistêmica
         </h2>
         <a
