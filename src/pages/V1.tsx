@@ -106,15 +106,47 @@ const V1 = () => (
     <section id="problema" className="section-white py-16 md:py-24">
       <div className="container max-w-3xl">
         <SectionTitle eyebrow="O ponto de partida" label="O problema" />
-        <div className="space-y-5 text-foreground/80 text-[15px] leading-[1.85] font-body font-light">
-          <p>Você já construiu um repertório técnico. Sabe conduzir um atendimento, aplica ferramentas, entrega resultados. Mas algo te incomoda.</p>
-          <p>Há casos que a metodologia não alcança. Clientes que repetem padrões mesmo depois de “entenderem” tudo. Dinâmicas familiares que desafiam qualquer protocolo linear. Um limite que não está no cliente — está no seu modo de leitura da realidade.</p>
-          <p className="font-display text-xl md:text-2xl text-foreground font-semibold tracking-tight pt-2">
-            O problema não é falta de técnica. É falta de acesso ao que a técnica não enxerga.
+        <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light max-w-2xl">
+          Você já construiu um repertório técnico. Sabe conduzir um atendimento, aplica ferramentas, entrega resultados. Mas algo te incomoda.
+        </p>
+
+        <div className="mt-12 mb-12">
+          <p className="text-[13px] uppercase tracking-[0.2em] text-muted-foreground font-body mb-6">
+            Os sinais
           </p>
-          <p>Enquanto você opera no modo mental — analisando, classificando, interpretando — você toca apenas a superfície. As dinâmicas inconscientes que regem o comportamento humano não se revelam para quem apenas pensa sobre elas.</p>
-          <p className="text-accent font-display text-lg md:text-xl italic">Elas se revelam para quem percebe.</p>
+          <div className="divide-y divide-border border-y border-border">
+            {[
+              "Casos que a metodologia não alcança.",
+              "Clientes que repetem padrões mesmo depois de “entenderem” tudo.",
+              "Dinâmicas familiares que desafiam qualquer protocolo linear.",
+              "Um limite que não está no cliente — está no seu modo de leitura.",
+            ].map((sinal, i) => (
+              <div key={i} className="grid grid-cols-[auto_1fr] gap-x-5 md:gap-x-8 items-baseline py-5">
+                <span className="font-display text-accent text-xs tracking-[0.2em]">
+                  0{i + 1}
+                </span>
+                <p className="text-foreground/85 text-[15px] md:text-base font-body font-light leading-snug">
+                  {sinal}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
+
+        <blockquote className="border-l-2 border-accent pl-6 md:pl-8 py-2 my-12">
+          <p className="font-display text-2xl md:text-3xl text-foreground font-semibold tracking-tight leading-[1.25]">
+            O problema não é falta de técnica.
+            <br />
+            <span className="text-foreground/55">É falta de acesso ao que a técnica não enxerga.</span>
+          </p>
+        </blockquote>
+
+        <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light max-w-2xl">
+          Enquanto você opera no modo mental — analisando, classificando, interpretando — você toca apenas a superfície. As dinâmicas inconscientes que regem o comportamento humano não se revelam para quem apenas pensa sobre elas.
+        </p>
+        <p className="text-accent font-display text-lg md:text-xl italic mt-4">
+          Elas se revelam para quem percebe.
+        </p>
       </div>
     </section>
 
