@@ -44,6 +44,14 @@ const V2 = () => (
   <main className="min-h-screen bg-background">
     {/* HERO */}
     <header className="relative gradient-hero overflow-hidden text-primary-foreground min-h-screen flex flex-col">
+      {/* Background: large editorial monogram */}
+      <div
+        className="absolute -right-[6%] top-[8%] pointer-events-none select-none font-display font-semibold leading-none text-primary-foreground/[0.04]"
+        style={{ fontSize: "clamp(20rem, 45vw, 44rem)" }}
+        aria-hidden
+      >
+        BC
+      </div>
       <div
         className="absolute bottom-0 left-0 right-0 h-[55%] pointer-events-none"
         style={{
@@ -83,7 +91,7 @@ const V2 = () => (
 
           <h1 className="font-display font-semibold leading-[1.02] tracking-tight text-balance text-[2.75rem] sm:text-[3.5rem] md:text-[4.25rem] lg:text-[5rem] mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
             Entender
-            <span className="text-primary-foreground/40"> não é </span>
+            <span> não é </span>
             <span className="italic font-light text-accent">transformar</span>
             <span className="text-accent">.</span>
           </h1>
