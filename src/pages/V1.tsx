@@ -326,15 +326,20 @@ const V1 = () => (
     <section className="section-white py-16 md:py-24">
       <div className="container max-w-3xl">
         <SectionTitle eyebrow="Dúvidas frequentes" label="Quebra de objeções" />
-        <div className="space-y-4">
-          {objections.map((q) => (
-            <div key={q.o} className="card-refined p-6">
-              <p className="font-display text-base md:text-lg text-foreground font-semibold tracking-tight mb-2">
-                {q.o}
-              </p>
-              <p className="text-foreground/75 text-[15px] leading-[1.8] font-body font-light">
-                {q.r}
-              </p>
+        <div className="mt-12 space-y-0 divide-y divide-border border-y border-border">
+          {objections.map((q, i) => (
+            <div key={q.o} className="py-7 md:py-8 grid grid-cols-[auto_1fr] gap-5 md:gap-6 items-start">
+              <span className="font-display text-accent text-xs font-semibold tracking-[0.2em] pt-1">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <p className="font-display text-base md:text-lg text-foreground font-semibold tracking-tight mb-2">
+                  {q.o}
+                </p>
+                <p className="text-foreground/70 text-[15px] leading-[1.8] font-body font-light">
+                  {q.r}
+                </p>
+              </div>
             </div>
           ))}
         </div>
