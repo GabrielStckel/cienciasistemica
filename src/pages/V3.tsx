@@ -383,7 +383,7 @@ const V3 = () => (
           rel="noopener noreferrer"
           className="btn-primary"
         >
-          FALE COMIGO
+          Quero saber mais
           <span aria-hidden>→</span>
         </a>
       </div>
