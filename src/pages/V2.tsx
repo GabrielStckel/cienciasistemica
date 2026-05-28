@@ -236,7 +236,7 @@ const V2 = () => (
       <div className="container max-w-3xl">
         <SectionTitle
           eyebrow="A estrutura"
-          label="Os grandes temas da vida"
+          label={<>Os grandes temas<br />da vida</>}
           subtitle="10 módulos presenciais · 1 fim de semana por mês · Balneário Camboriú"
         />
         <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light mb-12 text-center max-w-2xl mx-auto">
