@@ -151,7 +151,7 @@ const V3 = () => (
                     <p className="text-[9px] tracking-[0.25em] uppercase text-primary-foreground/40 mb-1.5 font-body" style={{ textAlign: "center" }}>
                       {it.k}
                     </p>
-                    <p className="font-display text-base md:text-lg font-semibold tracking-tight">
+                    <p className="font-display text-base md:text-lg font-semibold tracking-tight" style={{ textAlign: "center" }}>
                       {it.v}
                     </p>
                   </div>
