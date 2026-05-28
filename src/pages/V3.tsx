@@ -41,54 +41,135 @@ const V3 = () => (
   <main className="min-h-screen bg-background">
     {/* HERO */}
     <header className="relative gradient-hero overflow-hidden text-primary-foreground min-h-screen flex flex-col">
+      {/* Concentric rings backdrop */}
       <div
-        className="absolute inset-0 opacity-20 pointer-events-none"
+        aria-hidden
+        className="absolute -right-[20%] top-1/2 -translate-y-1/2 w-[90vw] h-[90vw] max-w-[1100px] max-h-[1100px] rounded-full pointer-events-none opacity-[0.18]"
         style={{
-          backgroundImage:
-            "linear-gradient(hsl(213 52% 24%) 1px, transparent 1px), linear-gradient(90deg, hsl(213 52% 24%) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
+          background:
+            "radial-gradient(circle, transparent 0%, transparent 38%, hsl(220 86% 56% / 0.55) 38.4%, transparent 39%, transparent 52%, hsl(220 86% 56% / 0.4) 52.4%, transparent 53%, transparent 66%, hsl(220 86% 56% / 0.3) 66.4%, transparent 67%, transparent 80%, hsl(220 86% 56% / 0.22) 80.4%, transparent 81%)",
         }}
       />
       <div
-        className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] rounded-full pointer-events-none"
-        style={{ background: "hsl(220 86% 56% / 0.10)", filter: "blur(120px)" }}
+        aria-hidden
+        className="absolute -right-[10%] top-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full pointer-events-none"
+        style={{ background: "hsl(220 86% 56% / 0.16)", filter: "blur(110px)" }}
       />
 
-      <nav className="relative z-20 w-full border-b border-primary-foreground/10">
-        <div className="max-w-6xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+      {/* Vertical side label */}
+      <span
+        aria-hidden
+        className="hidden md:block absolute left-6 top-1/2 -translate-y-1/2 -rotate-90 origin-center text-[10px] tracking-[0.5em] uppercase text-primary-foreground/35 font-body"
+      >
+        Formação · BC · 2026
+      </span>
+
+      <nav className="relative z-20 w-full">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 py-6 flex items-center justify-between">
           <span className="font-display text-base md:text-lg font-semibold tracking-tight">
             Jonas Peres
           </span>
-          <a href="#inscricao" className="btn-ghost-light text-sm">
-            Quero saber mais
-          </a>
+          <div className="flex items-center gap-6">
+            <span className="hidden md:inline text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45">
+              Edição III
+            </span>
+            <a href="#inscricao" className="btn-ghost-light text-sm">
+              Quero saber mais
+            </a>
+          </div>
         </div>
       </nav>
 
       <div className="relative z-10 flex-1 flex items-center">
-        <div className="w-full max-w-4xl mx-auto px-6 md:px-10 py-20">
-          <div className="flex items-start gap-4 mb-8 max-w-2xl">
-            <span className="w-1 h-full min-h-[3rem] bg-accent rounded-full shrink-0 mt-1" />
-            <p className="text-sm md:text-[15px] text-accent font-body font-medium leading-relaxed">
-              Para quem está começando e sente um chamado para verdadeiramente se conhecer
+        <div className="w-full max-w-6xl mx-auto px-6 md:px-12 py-16 md:py-20 grid md:grid-cols-12 gap-10 md:gap-12 items-center">
+          {/* LEFT — content */}
+          <div className="md:col-span-7">
+            <div className="flex items-center gap-3 mb-8">
+              <span className="w-8 h-px bg-accent" />
+              <span className="text-[10px] tracking-[0.3em] uppercase text-accent font-body font-semibold">
+                Para quem está começando
+              </span>
+            </div>
+
+            <h1 className="font-display font-semibold leading-[1.05] tracking-tight text-balance text-[2.5rem] sm:text-[3rem] md:text-[3.25rem] lg:text-[3.75rem] mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+              Existe algo<br />
+              <span className="text-primary-foreground/55 italic font-light">além do que</span><br />
+              seus olhos<br />
+              <span className="text-accent italic font-light">veem.</span>
+            </h1>
+
+            <p className="max-w-xl text-[15px] md:text-base text-primary-foreground/65 leading-[1.85] font-light font-body mb-10">
+              Talvez você nunca tenha feito terapia — ou já tentou e sentiu que algo fundamental ficou de fora. Essa formação presencial é para quem sente o chamado de se conhecer.
             </p>
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <a href="#inscricao" className="btn-primary">
+                Quero saber mais
+                <span aria-hidden>→</span>
+              </a>
+              <a href="#problema" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors font-body underline underline-offset-4 decoration-primary-foreground/20">
+                Entender a proposta
+              </a>
+            </div>
           </div>
 
-          <h1 className="font-display font-semibold leading-[1.15] tracking-tight text-balance text-[1.75rem] sm:text-[2rem] md:text-[2.125rem] lg:text-[2.25rem] mb-8 max-w-[40rem] animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
-            Você sente que existe algo além do que seus olhos veem — e <span className="italic font-light text-accent">não sabe por onde começar</span>?
-          </h1>
+          {/* RIGHT — info card */}
+          <aside className="md:col-span-5 md:pl-6">
+            <div
+              className="relative rounded-2xl border backdrop-blur-md p-7 md:p-8"
+              style={{
+                background: "hsl(0 0% 100% / 0.035)",
+                borderColor: "hsl(0 0% 100% / 0.10)",
+              }}
+            >
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50 font-body">
+                  Próxima turma
+                </span>
+                <span className="flex items-center gap-2 text-[10px] tracking-[0.2em] uppercase text-accent font-body font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                  Aberta
+                </span>
+              </div>
 
-          <p className="max-w-2xl text-base md:text-lg text-primary-foreground/70 leading-relaxed font-light font-body mb-10">
-            Talvez você nunca tenha feito terapia. Talvez já tenha tentado, mas sentiu que algo fundamental ficou de fora. Essa formação presencial é para quem sente o chamado de se conhecer — e está pronto para ir até o fim.
-          </p>
+              <p className="font-display text-2xl md:text-[1.75rem] leading-[1.2] tracking-tight font-semibold mb-8">
+                Formação em <span className="text-accent italic font-light">Ciência Sistêmica</span> segundo Bert Hellinger.
+              </p>
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <a href="#inscricao" className="btn-primary">
-              Quero saber mais
-              <span aria-hidden>→</span>
-            </a>
-            <a href="#problema" className="btn-ghost-light">Entender a proposta</a>
-          </div>
+              <div className="grid grid-cols-3 divide-x divide-primary-foreground/10 -mx-2">
+                {[
+                  { k: "Início", v: "Mar 26" },
+                  { k: "Módulos", v: "10" },
+                  { k: "Local", v: "BC" },
+                ].map((it) => (
+                  <div key={it.k} className="px-3 text-center">
+                    <p className="text-[9px] tracking-[0.25em] uppercase text-primary-foreground/40 mb-1.5 font-body">
+                      {it.k}
+                    </p>
+                    <p className="font-display text-lg font-semibold tracking-tight">
+                      {it.v}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-7 pt-6 border-t border-primary-foreground/10 flex items-center gap-3">
+                <span className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center text-accent text-sm">→</span>
+                <p className="text-[13px] text-primary-foreground/70 font-body font-light leading-snug">
+                  1 fim de semana por mês <br />
+                  <span className="text-primary-foreground/45">durante 10 meses</span>
+                </p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      {/* Bottom ticker */}
+      <div className="relative z-10 border-t border-primary-foreground/10">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 py-4 flex flex-wrap items-center justify-between gap-4 text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 font-body">
+          <span>Presencial · Vivencial · Supervisionado</span>
+          <span className="hidden md:inline">Vagas limitadas</span>
         </div>
       </div>
     </header>
