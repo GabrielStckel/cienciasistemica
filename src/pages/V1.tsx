@@ -99,31 +99,27 @@ const V1 = () => (
             <a href="#problema" className="btn-ghost-light">Entender a proposta</a>
           </div>
 
-          <div className="mt-14 pt-8 border-t border-primary-foreground/10 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-3xl">
+          <div className="mt-14 pt-8 border-t border-primary-foreground/10 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 max-w-3xl">
             {[
-              { k: "10", l: "Módulos presenciais" },
-              { k: "1×", l: "Fim de semana por mês" },
-              { k: "10", l: "Meses de imersão" },
-              { k: "BC", l: "Balneário Camboriú · SC" },
+              { k: "10", l: "Módulos" },
+              { k: "10", l: "Meses" },
+              { k: "1×", l: "Por mês" },
+              { k: "BC", l: "Camboriú · SC" },
             ].map((s) => (
-              <div key={s.l} className="flex flex-col gap-1">
-                <span className="font-display text-2xl md:text-3xl text-accent font-semibold tracking-tight tabular-nums leading-none">
+              <div key={s.l} className="flex flex-col gap-2">
+                <span className="font-display text-3xl md:text-4xl text-accent font-semibold tracking-tight tabular-nums leading-none">
                   {s.k}
                 </span>
-                <span className="text-[11px] md:text-xs uppercase tracking-[0.18em] text-primary-foreground/55 font-body leading-snug">
+                <span className="text-[11px] uppercase tracking-[0.18em] text-primary-foreground/55 font-body leading-none whitespace-nowrap">
                   {s.l}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] md:text-xs uppercase tracking-[0.2em] text-primary-foreground/50 font-body">
-            <span>Início ago 2026</span>
-            <span aria-hidden className="text-accent/60">·</span>
-            <span>Turmas reduzidas</span>
-            <span aria-hidden className="text-accent/60">·</span>
-            <span>Supervisão ao vivo</span>
-          </div>
+          <p className="mt-10 text-[11px] uppercase tracking-[0.2em] text-primary-foreground/50 font-body">
+            Início ago 2026 <span aria-hidden className="text-accent/60 mx-2">·</span> Turmas reduzidas <span aria-hidden className="text-accent/60 mx-2">·</span> Supervisão ao vivo
+          </p>
         </div>
       </div>
     </header>
