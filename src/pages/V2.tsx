@@ -112,7 +112,7 @@ const V2 = () => (
             <div className="min-w-0">
               <p className="text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-2">Para quem</p>
               <p className="text-[13px] text-primary-foreground/80 font-body font-light leading-relaxed">
-                Já caminha no autoconhecimento e quer ir à raiz.
+                Já caminha no autoconhecimento e<br />quer ir à raiz.
               </p>
             </div>
             <div className="min-w-0">
