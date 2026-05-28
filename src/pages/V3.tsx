@@ -349,7 +349,7 @@ const V3 = () => (
     {/* OBJEÇÕES */}
     <section className="section-muted py-16 md:py-24">
       <div className="container max-w-3xl">
-        <SectionTitle eyebrow="Dúvidas frequentes" label="Quebra de objeções" />
+        <SectionTitle eyebrow="Dúvidas frequentes" label="Respostas que você precisa" />
         <div className="mt-12 space-y-0 divide-y divide-border border-y border-border">
           {objections.map((q, i) => (
             <div key={q.o} className="py-7 md:py-8 grid grid-cols-[auto_1fr] gap-5 md:gap-6 items-start">
