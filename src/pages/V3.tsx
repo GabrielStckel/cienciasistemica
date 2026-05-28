@@ -143,7 +143,7 @@ const V3 = () => (
 
               <div className="grid grid-cols-3 divide-x divide-primary-foreground/10">
                 {[
-                  { k: "Início", v: "Mar 26" },
+                  { k: "Início", v: "Ago 26" },
                   { k: "Módulos", v: "10" },
                   { k: "Local", v: "BC" },
                 ].map((it) => (

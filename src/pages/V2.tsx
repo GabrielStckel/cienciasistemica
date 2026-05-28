@@ -124,7 +124,7 @@ const V2 = () => (
             <div className="min-w-0">
               <p className="text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 mb-2">Início</p>
               <p className="text-[13px] text-primary-foreground/80 font-body font-light leading-relaxed">
-                Março de 2026 · Turma limitada
+                Agosto de 2026 · Turma limitada
               </p>
             </div>
           </div>
@@ -134,7 +134,7 @@ const V2 = () => (
       {/* Bottom ticker */}
       <div className="relative z-10 border-t border-primary-foreground/10">
         <div className="max-w-6xl mx-auto px-6 md:px-10 py-4 flex flex-wrap items-center justify-between gap-y-2 text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">
-          <span>Início Mar/26</span>
+          <span>Início Ago/26</span>
           <span className="hidden md:inline">10 Módulos · 10 Meses</span>
           <span>Turma limitada</span>
         </div>
