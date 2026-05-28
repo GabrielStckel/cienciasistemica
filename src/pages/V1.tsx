@@ -2,16 +2,16 @@ import { Instagram } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
 
 const modules = [
-  { n: "I", t: "Ciência Sistêmica e pensamento sistêmico", date: "29 e 30 / 08 / 26", d: "A base perceptiva que substitui a lógica linear" },
-  { n: "II", t: "Ciclos da vida e postura fenomenológica", date: "12 e 13 / 09 / 26", d: "A capacidade de ver sem interpretar" },
-  { n: "III", t: "Lei do Pertencimento", date: "10 e 11 / 10 / 26", d: "Percepção das dinâmicas de exclusão e vínculo" },
-  { n: "IV", t: "Lei da Ordem e Equilíbrio", date: "14 e 15 / 11 / 26", d: "Leitura das hierarquias invisíveis" },
-  { n: "V", t: "Amor pai/filhos", date: "19 e 20 / 12 / 26", d: "A percepção dos sistemas familiares" },
-  { n: "VI", t: "Saúde e sexualidade", date: "30 e 31 / 01 / 27", d: "A fisiologia da dinâmica sistêmica" },
-  { n: "VII", t: "Amor de casal", date: "27 e 28 / 02 / 27", d: "Percepção dos campos relacionais" },
-  { n: "VIII", t: "Função sistêmica, propósito e sentido", date: "27 e 28 / 03 / 27", d: "A leitura do lugar de cada um no sistema" },
-  { n: "IX", t: "Espiritualidade sistêmica e a ajuda", date: "24 e 25 / 04 / 27", d: "O curador aprende a não atrapalhar" },
-  { n: "X", t: "Prática das constelações", date: "29 e 30 / 05 / 27", d: "Aplicação clínica sob supervisão" },
+  { n: "I", t: "Ciência Sistêmica e pensamento sistêmico", date: "29–30 ago 2026", d: "A base perceptiva que substitui a lógica linear" },
+  { n: "II", t: "Ciclos da vida e postura fenomenológica", date: "12–13 set 2026", d: "A capacidade de ver sem interpretar" },
+  { n: "III", t: "Lei do Pertencimento", date: "10–11 out 2026", d: "Percepção das dinâmicas de exclusão e vínculo" },
+  { n: "IV", t: "Lei da Ordem e Equilíbrio", date: "14–15 nov 2026", d: "Leitura das hierarquias invisíveis" },
+  { n: "V", t: "Amor pai/filhos", date: "19–20 dez 2026", d: "A percepção dos sistemas familiares" },
+  { n: "VI", t: "Saúde e sexualidade", date: "30–31 jan 2027", d: "A fisiologia da dinâmica sistêmica" },
+  { n: "VII", t: "Amor de casal", date: "27–28 fev 2027", d: "Percepção dos campos relacionais" },
+  { n: "VIII", t: "Função sistêmica, propósito e sentido", date: "27–28 mar 2027", d: "A leitura do lugar de cada um no sistema" },
+  { n: "IX", t: "Espiritualidade sistêmica e a ajuda", date: "24–25 abr 2027", d: "O curador aprende a não atrapalhar" },
+  { n: "X", t: "Prática das constelações", date: "29–30 mai 2027", d: "Aplicação clínica sob supervisão" },
 ];
 
 const proofs = [
@@ -214,10 +214,13 @@ const V1 = () => (
                   <span className="text-accent mr-3">{m.n}.</span>
                   {m.t}
                 </h3>
-                <span className="text-xs uppercase tracking-widest text-muted-foreground font-body">{m.date}</span>
+                <span className="hidden md:inline text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-body tabular-nums shrink-0">{m.date}</span>
               </div>
               <p className="text-sm text-muted-foreground font-body font-light leading-relaxed" style={{ textAlign: "left" }}>
                 {m.d}
+              </p>
+              <p className="md:hidden mt-2 text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-body tabular-nums">
+                {m.date}
               </p>
             </li>
           ))}
