@@ -98,10 +98,8 @@ All colors MUST be HSL.
   }
   h1, h2, h3, h4, h5, h6 { @apply font-display; }
   p {
-    text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    word-break: break-word;
+    hyphens: none;
+    -webkit-hyphens: none;
     overflow-wrap: break-word;
   }
 }
