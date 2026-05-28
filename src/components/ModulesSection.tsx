@@ -30,10 +30,13 @@ const ModulesSection = () => (
                 <span className="text-accent mr-3">{m.n}.</span>
                 {m.title}
               </h3>
-              <span className="text-xs uppercase tracking-widest text-muted-foreground font-body">{m.date}</span>
+              <span className="hidden md:inline text-xs uppercase tracking-widest text-muted-foreground font-body tabular-nums">{m.date}</span>
             </div>
             <p className="text-sm text-muted-foreground font-body font-light leading-relaxed" style={{ textAlign: "left" }}>
               {m.desc}
+            </p>
+            <p className="md:hidden mt-2 text-xs uppercase tracking-widest text-muted-foreground font-body tabular-nums">
+              {m.date}
             </p>
           </li>
         ))}
