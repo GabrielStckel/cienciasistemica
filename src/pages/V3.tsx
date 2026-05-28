@@ -56,14 +56,6 @@ const V3 = () => (
         style={{ background: "hsl(220 86% 56% / 0.16)", filter: "blur(110px)" }}
       />
 
-      {/* Vertical side label */}
-      <span
-        aria-hidden
-        className="hidden md:block absolute left-6 top-1/2 -translate-y-1/2 -rotate-90 origin-center text-[10px] tracking-[0.5em] uppercase text-primary-foreground/35 font-body"
-      >
-        Formação · BC · 2026
-      </span>
-
       <nav className="relative z-20 w-full">
         <div className="max-w-6xl mx-auto px-5 md:px-12 py-5 md:py-6 flex items-center justify-between">
           <span className="font-display text-sm md:text-lg font-semibold tracking-tight">
