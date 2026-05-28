@@ -290,61 +290,6 @@ const V3 = () => (
       </div>
     </section>
 
-    {/* INVESTIMENTO */}
-    <section className="section-white py-16 md:py-24">
-      <div className="container max-w-3xl">
-        <SectionTitle eyebrow="Valores" label="O que está incluso" />
-
-        <div className="relative card-refined border-accent-left p-8 md:p-10 mb-8">
-          <div className="absolute top-0 right-0 bg-accent text-accent-foreground text-[11px] font-semibold tracking-widest uppercase px-3 py-1.5 rounded-bl-lg">
-            Formação 2026
-          </div>
-
-          <p className="text-muted-foreground text-sm font-body mb-1">
-            10 módulos presenciais em Balneário Camboriú
-          </p>
-          <p className="font-display text-4xl md:text-5xl text-foreground font-semibold tracking-tight leading-none mb-2">
-            De R$ 5.000
-          </p>
-          <p className="font-display text-lg md:text-xl text-muted-foreground font-light tracking-tight mb-8">
-            a R$ 10.000 · menos de R$ 1.000/mês
-          </p>
-
-          <div className="border-t border-border pt-6">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-5">
-              Incluso na formação
-            </p>
-            <div className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
-              {[
-                "10 módulos presenciais em BC",
-                "Apostila exclusiva com o método completo",
-                "Plataforma digital com conteúdo complementar",
-                "Prática supervisionada ao vivo",
-                "Comunidade de alunos entre módulos",
-                "Certificação da formação",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <span className="text-accent text-lg leading-none">✓</span>
-                  <span className="text-foreground/85 text-[14px] font-body font-light leading-snug">
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-accent text-[13px] tracking-wide font-body font-semibold text-center sm:text-left">
-              É o investimento mais importante que você pode fazer em si mesmo.
-            </p>
-            <a href="#inscricao" className="btn-primary shrink-0">
-              Quero saber mais
-              <span aria-hidden>→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     {/* OBJEÇÕES */}
     <section className="section-muted py-16 md:py-24">
