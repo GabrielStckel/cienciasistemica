@@ -420,6 +420,9 @@ const V2 = () => (
         >
           <Instagram size={22} />
         </a>
+        <p className="text-primary-foreground/40 text-xs font-body text-center" style={{ hyphens: "none" }}>
+          © {new Date().getFullYear()} Jonas Peres · Formação em Ciência Sistêmica
+        </p>
       </div>
     </footer>
   </main>
