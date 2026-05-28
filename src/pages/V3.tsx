@@ -2,16 +2,16 @@ import { Instagram } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
 
 const modules = [
-  { n: "I", t: "O que é a ciência sistêmica", date: "29 e 30 / 08 / 26", d: "A chave para entender tudo que virá" },
-  { n: "II", t: "Os ciclos da vida", date: "12 e 13 / 09 / 26", d: "Perceber que tudo termina e começa" },
-  { n: "III", t: "Pertencimento", date: "10 e 11 / 10 / 26", d: "De onde você veio e por que isso importa" },
-  { n: "IV", t: "Ordem e equilíbrio", date: "14 e 15 / 11 / 26", d: "O que acontece quando você está fora do seu lugar" },
-  { n: "V", t: "Pais e filhos", date: "19 e 20 / 12 / 26", d: "As dinâmicas que moldaram sua história" },
-  { n: "VI", t: "Saúde e sexualidade", date: "30 e 31 / 01 / 27", d: "O corpo fala o que a mente silencia" },
-  { n: "VII", t: "Amor de casal", date: "27 e 28 / 02 / 27", d: "O que rege as relações íntimas" },
-  { n: "VIII", t: "Propósito", date: "27 e 28 / 03 / 27", d: "Sua função no sistema da vida" },
-  { n: "IX", t: "Espiritualidade sistêmica", date: "24 e 25 / 04 / 27", d: "Aprender a confiar na ajuda" },
-  { n: "X", t: "Prática", date: "29 e 30 / 05 / 27", d: "Você constela" },
+  { n: "I", t: "O que é a ciência sistêmica", date: "29–30 ago 2026", d: "A chave para entender tudo que virá" },
+  { n: "II", t: "Os ciclos da vida", date: "12–13 set 2026", d: "Perceber que tudo termina e começa" },
+  { n: "III", t: "Pertencimento", date: "10–11 out 2026", d: "De onde você veio e por que isso importa" },
+  { n: "IV", t: "Ordem e equilíbrio", date: "14–15 nov 2026", d: "O que acontece quando você está fora do seu lugar" },
+  { n: "V", t: "Pais e filhos", date: "19–20 dez 2026", d: "As dinâmicas que moldaram sua história" },
+  { n: "VI", t: "Saúde e sexualidade", date: "30–31 jan 2027", d: "O corpo fala o que a mente silencia" },
+  { n: "VII", t: "Amor de casal", date: "27–28 fev 2027", d: "O que rege as relações íntimas" },
+  { n: "VIII", t: "Propósito", date: "27–28 mar 2027", d: "Sua função no sistema da vida" },
+  { n: "IX", t: "Espiritualidade sistêmica", date: "24–25 abr 2027", d: "Aprender a confiar na ajuda" },
+  { n: "X", t: "Prática", date: "29–30 mai 2027", d: "Você constela" },
 ];
 
 const promessa = [
@@ -254,7 +254,7 @@ const V3 = () => (
                   <span className="text-accent mr-3">{m.n}.</span>
                   {m.t}
                 </h3>
-                <span className="text-xs uppercase tracking-widest text-muted-foreground font-body">{m.date}</span>
+                <span className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-body tabular-nums shrink-0">{m.date}</span>
               </div>
               <p className="text-sm text-muted-foreground font-body font-light leading-relaxed">
                 {m.d}
