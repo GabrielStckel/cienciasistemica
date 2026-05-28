@@ -1,16 +1,16 @@
 import SectionTitle from "./SectionTitle";
 
 const modules = [
-  { n: "I", title: "A ciência sistêmica", date: "21 e 22 / 03", desc: "Introdução ao pensamento sistêmico." },
-  { n: "II", title: "Ciclos da vida e postura fenomenológica", date: "25 e 26 / 04", desc: "As Leis Sistêmicas: pertencimento." },
-  { n: "III", title: "As Leis Sistêmicas", date: "30 e 31 / 05", desc: "Ordem e equilíbrio." },
-  { n: "IV", title: "O amor em movimento", date: "27 e 28 / 06", desc: "Pais e filhos." },
-  { n: "V", title: "O amor em movimento", date: "25 e 26 / 07", desc: "O amor de casal." },
-  { n: "VI", title: "Saúde e sexualidade", date: "22 e 23 / 08", desc: "O corpo como campo sistêmico." },
-  { n: "VII", title: "A vida no mundo", date: "26 e 27 / 09", desc: "Função sistêmica, propósito e sentido da vida." },
-  { n: "VIII", title: "Espiritualidade sistêmica", date: "24 e 25 / 10", desc: "As ordens da ajuda." },
-  { n: "IX", title: "A prática das constelações", date: "28 e 29 / 11", desc: "Vivência integrada." },
-  { n: "X", title: "A prática das constelações", date: "12 e 13 / 12", desc: "Encerramento e integração." },
+  { n: "I", title: "A ciência sistêmica", date: "29 e 30 / 08 / 26", desc: "Introdução ao pensamento sistêmico." },
+  { n: "II", title: "Ciclos da vida e postura fenomenológica", date: "12 e 13 / 09 / 26", desc: "As Leis Sistêmicas: pertencimento." },
+  { n: "III", title: "As Leis Sistêmicas", date: "10 e 11 / 10 / 26", desc: "Ordem e equilíbrio." },
+  { n: "IV", title: "O amor em movimento", date: "14 e 15 / 11 / 26", desc: "Pais e filhos." },
+  { n: "V", title: "O amor em movimento", date: "19 e 20 / 12 / 26", desc: "O amor de casal." },
+  { n: "VI", title: "Saúde e sexualidade", date: "30 e 31 / 01 / 27", desc: "O corpo como campo sistêmico." },
+  { n: "VII", title: "A vida no mundo", date: "27 e 28 / 02 / 27", desc: "Função sistêmica, propósito e sentido da vida." },
+  { n: "VIII", title: "Espiritualidade sistêmica", date: "27 e 28 / 03 / 27", desc: "As ordens da ajuda." },
+  { n: "IX", title: "A prática das constelações", date: "24 e 25 / 04 / 27", desc: "Vivência integrada." },
+  { n: "X", title: "A prática das constelações", date: "29 e 30 / 05 / 27", desc: "Encerramento e integração." },
 ];
 
 const ModulesSection = () => (

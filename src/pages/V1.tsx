@@ -2,16 +2,16 @@ import { Instagram } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
 
 const modules = [
-  { n: "I", t: "Ciência Sistêmica e pensamento sistêmico", date: "21 e 22 / 03", d: "A base perceptiva que substitui a lógica linear" },
-  { n: "II", t: "Ciclos da vida e postura fenomenológica", date: "25 e 26 / 04", d: "A capacidade de ver sem interpretar" },
-  { n: "III", t: "Lei do Pertencimento", date: "30 e 31 / 05", d: "Percepção das dinâmicas de exclusão e vínculo" },
-  { n: "IV", t: "Lei da Ordem e Equilíbrio", date: "27 e 28 / 06", d: "Leitura das hierarquias invisíveis" },
-  { n: "V", t: "Amor pai/filhos", date: "25 e 26 / 07", d: "A percepção dos sistemas familiares" },
-  { n: "VI", t: "Saúde e sexualidade", date: "22 e 23 / 08", d: "A fisiologia da dinâmica sistêmica" },
-  { n: "VII", t: "Amor de casal", date: "26 e 27 / 09", d: "Percepção dos campos relacionais" },
-  { n: "VIII", t: "Função sistêmica, propósito e sentido", date: "24 e 25 / 10", d: "A leitura do lugar de cada um no sistema" },
-  { n: "IX", t: "Espiritualidade sistêmica e a ajuda", date: "28 e 29 / 11", d: "O curador aprende a não atrapalhar" },
-  { n: "X", t: "Prática das constelações", date: "12 e 13 / 12", d: "Aplicação clínica sob supervisão" },
+  { n: "I", t: "Ciência Sistêmica e pensamento sistêmico", date: "29 e 30 / 08 / 26", d: "A base perceptiva que substitui a lógica linear" },
+  { n: "II", t: "Ciclos da vida e postura fenomenológica", date: "12 e 13 / 09 / 26", d: "A capacidade de ver sem interpretar" },
+  { n: "III", t: "Lei do Pertencimento", date: "10 e 11 / 10 / 26", d: "Percepção das dinâmicas de exclusão e vínculo" },
+  { n: "IV", t: "Lei da Ordem e Equilíbrio", date: "14 e 15 / 11 / 26", d: "Leitura das hierarquias invisíveis" },
+  { n: "V", t: "Amor pai/filhos", date: "19 e 20 / 12 / 26", d: "A percepção dos sistemas familiares" },
+  { n: "VI", t: "Saúde e sexualidade", date: "30 e 31 / 01 / 27", d: "A fisiologia da dinâmica sistêmica" },
+  { n: "VII", t: "Amor de casal", date: "27 e 28 / 02 / 27", d: "Percepção dos campos relacionais" },
+  { n: "VIII", t: "Função sistêmica, propósito e sentido", date: "27 e 28 / 03 / 27", d: "A leitura do lugar de cada um no sistema" },
+  { n: "IX", t: "Espiritualidade sistêmica e a ajuda", date: "24 e 25 / 04 / 27", d: "O curador aprende a não atrapalhar" },
+  { n: "X", t: "Prática das constelações", date: "29 e 30 / 05 / 27", d: "Aplicação clínica sob supervisão" },
 ];
 
 const proofs = [
