@@ -33,13 +33,6 @@ const leva = [
   { t: "Como ser humano", d: "Vivendo com mais presença e menos reatividade" },
 ];
 
-const objections = [
-  { o: "\u201CJá investi muito em autoconhecimento\u201D", r: "Exato. Você já investiu em conteúdos. Agora é hora de investir em percepção." },
-  { o: "\u201CPosso fazer online\u201D", r: "Você sabe que não é a mesma coisa. A percepção sistêmica acontece na presença." },
-  { o: "\u201CBC é longe da minha cidade\u201D", r: "1 fim de semana por mês. A imersão vale cada quilômetro." },
-  { o: "\u201CTenho medo do que vou encontrar\u201D", r: "Esse medo é exatamente o que a formação vai te ajudar a atravessar." },
-];
-
 const V2 = () => (
   <main className="min-h-screen bg-background">
     {/* HERO */}
@@ -359,30 +352,6 @@ const V2 = () => (
               <span aria-hidden>→</span>
             </a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    {/* OBJEÇÕES */}
-    <section className="section-muted py-16 md:py-24">
-      <div className="container max-w-3xl">
-        <SectionTitle eyebrow="Dúvidas frequentes" label="Quebra de objeções" />
-        <div className="mt-12 space-y-0 divide-y divide-border border-y border-border">
-          {objections.map((q, i) => (
-            <div key={q.o} className="py-7 md:py-8 grid grid-cols-[auto_1fr] gap-5 md:gap-6 items-start">
-              <span className="font-display text-accent text-xs font-semibold tracking-[0.2em] pt-1">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <p className="font-display text-base md:text-lg text-foreground font-semibold tracking-tight mb-2">
-                  {q.o}
-                </p>
-                <p className="text-foreground/70 text-[15px] leading-[1.8] font-body font-light">
-                  {q.r}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
