@@ -46,7 +46,7 @@ const V2 = () => (
     <header className="relative gradient-hero overflow-hidden text-primary-foreground min-h-screen flex flex-col">
       {/* Background: large editorial monogram */}
       <div
-        className="absolute -right-[6%] top-[8%] pointer-events-none select-none font-display font-semibold leading-none text-primary-foreground/[0.04]"
+        className="absolute -right-[2%] top-[8%] pointer-events-none select-none font-display font-semibold leading-none text-primary-foreground/[0.04]"
         style={{ fontSize: "clamp(20rem, 45vw, 44rem)" }}
         aria-hidden
       >
