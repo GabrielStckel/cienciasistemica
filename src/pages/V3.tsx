@@ -129,9 +129,17 @@ const V3 = () => (
                 </span>
               </div>
 
-              <p className="font-display text-xl md:text-[1.5rem] leading-[1.25] tracking-tight font-semibold mb-8 text-left" style={{ hyphens: "none", textAlign: "left" }}>
-                Formação em <span className="text-accent italic font-light">Ciência Sistêmica</span> segundo Bert Hellinger.
-              </p>
+              <div className="mb-8" style={{ textAlign: "left" }}>
+                <p className="font-display text-lg md:text-xl leading-[1.3] tracking-tight font-medium text-primary-foreground/70 mb-1" style={{ hyphens: "none", textAlign: "left" }}>
+                  Formação em
+                </p>
+                <p className="font-display text-2xl md:text-[1.75rem] leading-[1.15] tracking-tight font-semibold text-accent italic font-light whitespace-nowrap" style={{ hyphens: "none", textAlign: "left" }}>
+                  Ciência Sistêmica
+                </p>
+                <p className="font-body text-[11px] tracking-[0.2em] uppercase text-primary-foreground/45 mt-3" style={{ hyphens: "none", textAlign: "left" }}>
+                  segundo Bert Hellinger
+                </p>
+              </div>
 
               <div className="grid grid-cols-3 divide-x divide-primary-foreground/10">
                 {[
