@@ -2,16 +2,16 @@ import { Instagram } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
 
 const modules = [
-  { n: "I", t: "A ciência sistêmica", d: "Desmontar a ilusão da separação" },
-  { n: "II", t: "Ciclos da vida", d: "Aceitar o que termina para perceber o que começa" },
-  { n: "III", t: "Pertencimento", d: "Encarar o medo da exclusão" },
-  { n: "IV", t: "Ordem e equilíbrio", d: "Sentir o custo de estar fora do lugar" },
-  { n: "V", t: "Pais e filhos", d: "Atravessar as dinâmicas que moldaram você" },
-  { n: "VI", t: "Saúde e sexualidade", d: "O corpo como campo sistêmico" },
-  { n: "VII", t: "Amor de casal", d: "As leis invisíveis das relações" },
-  { n: "VIII", t: "Propósito e sentido da vida", d: "Sua função no sistema maior" },
-  { n: "IX", t: "Espiritualidade sistêmica", d: "Aprender a ajudar sem invadir" },
-  { n: "X", t: "Prática das constelações", d: "A percepção em ação" },
+  { n: "I", t: "A ciência sistêmica", date: "29–30 ago 2026", d: "Desmontar a ilusão da separação" },
+  { n: "II", t: "Ciclos da vida", date: "12–13 set 2026", d: "Aceitar o que termina para perceber o que começa" },
+  { n: "III", t: "Pertencimento", date: "10–11 out 2026", d: "Encarar o medo da exclusão" },
+  { n: "IV", t: "Ordem e equilíbrio", date: "14–15 nov 2026", d: "Sentir o custo de estar fora do lugar" },
+  { n: "V", t: "Pais e filhos", date: "19–20 dez 2026", d: "Atravessar as dinâmicas que moldaram você" },
+  { n: "VI", t: "Saúde e sexualidade", date: "30–31 jan 2027", d: "O corpo como campo sistêmico" },
+  { n: "VII", t: "Amor de casal", date: "27–28 fev 2027", d: "As leis invisíveis das relações" },
+  { n: "VIII", t: "Propósito e sentido da vida", date: "27–28 mar 2027", d: "Sua função no sistema maior" },
+  { n: "IX", t: "Espiritualidade sistêmica", date: "24–25 abr 2027", d: "Aprender a ajudar sem invadir" },
+  { n: "X", t: "Prática das constelações", date: "29–30 mai 2027", d: "A percepção em ação" },
 ];
 
 const transitions = [
@@ -246,10 +246,13 @@ const V2 = () => (
           {modules.map((m) => (
             <li key={m.n} className="pl-6 md:pl-8 pb-8 relative">
               <span className="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-accent ring-4 ring-background" />
-              <h3 className="font-display text-lg text-foreground font-semibold tracking-tight mb-1">
-                <span className="text-accent mr-3">{m.n}.</span>
-                {m.t}
-              </h3>
+              <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                <h3 className="font-display text-lg text-foreground font-semibold tracking-tight">
+                  <span className="text-accent mr-3">{m.n}.</span>
+                  {m.t}
+                </h3>
+                <span className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground font-body tabular-nums shrink-0">{m.date}</span>
+              </div>
               <p className="text-sm text-muted-foreground font-body font-light leading-relaxed">
                 {m.d}
               </p>
