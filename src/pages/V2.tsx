@@ -363,6 +363,30 @@ const V2 = () => (
       </div>
     </section>
 
+    {/* OBJEÇÕES */}
+    <section className="section-muted py-16 md:py-24">
+      <div className="container max-w-3xl">
+        <SectionTitle eyebrow="Dúvidas frequentes" label="Respostas que você precisa" />
+        <div className="mt-12 space-y-0 divide-y divide-border border-y border-border">
+          {objections.map((q, i) => (
+            <div key={q.o} className="py-7 md:py-8 grid grid-cols-[auto_1fr] gap-5 md:gap-6 items-start">
+              <span className="font-display text-accent text-xs font-semibold tracking-[0.2em] pt-1">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <p className="font-display text-base md:text-lg text-foreground font-semibold tracking-tight mb-2">
+                  {q.o}
+                </p>
+                <p className="text-foreground/70 text-[15px] leading-[1.8] font-body font-light">
+                  {q.r}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* CTA */}
     <section id="inscricao" className="gradient-hero py-16 md:py-24">
       <div className="container max-w-4xl text-center">
