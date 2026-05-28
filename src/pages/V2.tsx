@@ -41,7 +41,7 @@ const objections = [
 ];
 
 const V2 = () => (
-  <main className="min-h-screen bg-background">
+  <main className="v2-page min-h-screen bg-background">
     {/* HERO */}
     <header className="relative gradient-hero overflow-hidden text-primary-foreground min-h-screen flex flex-col">
       {/* Background: large editorial monogram */}
