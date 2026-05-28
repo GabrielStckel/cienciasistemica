@@ -17,9 +17,6 @@ const CtaSection = () => (
         Quero minha pré-inscrição
         <span aria-hidden>→</span>
       </a>
-      <p className="text-primary-foreground/40 text-xs font-body mt-6">
-        R$ 6.000 à vista · ou R$ 7.000 parcelado no cartão
-      </p>
     </div>
   </section>
 );
