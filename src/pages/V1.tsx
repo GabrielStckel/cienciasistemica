@@ -117,9 +117,13 @@ const V1 = () => (
             ))}
           </div>
 
-          <p className="mt-10 text-[11px] uppercase tracking-[0.2em] text-primary-foreground/50 font-body">
-            Início ago 2026 <span aria-hidden className="text-accent/60 mx-2">·</span> Turmas reduzidas <span aria-hidden className="text-accent/60 mx-2">·</span> Supervisão ao vivo
-          </p>
+          <div className="mt-10 text-[11px] uppercase tracking-[0.2em] text-primary-foreground/50 font-body flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
+            <span>Início ago 2026</span>
+            <span aria-hidden className="text-accent/60">·</span>
+            <span>Turmas reduzidas</span>
+            <span aria-hidden className="text-accent/60">·</span>
+            <span>Supervisão ao vivo</span>
+          </div>
         </div>
       </div>
     </header>
