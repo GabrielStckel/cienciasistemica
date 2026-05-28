@@ -10,7 +10,7 @@ const stats = [
 const InstructorSection = () => (
   <section className="section-white py-16 md:py-24">
     <div className="container max-w-4xl grid md:grid-cols-[1fr_1.2fr] gap-10 md:gap-14 items-center">
-      <div className="order-2 md:order-1">
+      <div className="order-1">
         <img
           src={jonas}
           alt="Jonas Peres, constelador e terapeuta"
@@ -18,7 +18,7 @@ const InstructorSection = () => (
           className="w-full aspect-[4/5] object-cover rounded-sm shadow-lg"
         />
       </div>
-      <div className="order-1 md:order-2">
+      <div className="order-2">
         <div className="label-section mb-3">Aprenda com quem já chegou lá</div>
         <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4 font-semibold leading-tight tracking-tight">
           Jonas Peres
