@@ -108,7 +108,9 @@ const HeroSection = () => {
               <div className="text-left">
                 <h3 className="font-display text-xl md:text-2xl font-semibold">Jonas Peres</h3>
                 <p className="text-[10px] tracking-[0.2em] text-primary-foreground/55 uppercase mt-1 font-body">
-                  Constelador · Há 10+ anos
+                  <span className="block md:inline">Constelador</span>
+                  <span className="hidden md:inline"> · </span>
+                  <span className="block md:inline">Há 10+ anos</span>
                 </p>
               </div>
             </div>
