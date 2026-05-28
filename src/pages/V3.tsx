@@ -91,14 +91,11 @@ const V3 = () => (
               </span>
             </div>
 
-            <h1 className="font-display font-semibold leading-[1.05] tracking-tight text-balance text-[2.5rem] sm:text-[3rem] md:text-[3.25rem] lg:text-[3.75rem] mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
-              Existe algo<br />
-              <span className="text-primary-foreground/55 italic font-light">além do que</span><br />
-              seus olhos<br />
-              <span className="text-accent italic font-light">veem.</span>
+            <h1 className="font-display font-semibold leading-[1.08] tracking-tight text-balance text-[2.25rem] sm:text-[2.75rem] md:text-[3rem] lg:text-[3.5rem] mb-8 max-w-[14ch] animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+              Existe algo <span className="text-primary-foreground/55 italic font-light">além do que</span> seus olhos <span className="text-accent italic font-light">veem.</span>
             </h1>
 
-            <p className="max-w-xl text-[15px] md:text-base text-primary-foreground/65 leading-[1.85] font-light font-body mb-10">
+            <p className="max-w-md text-[15px] md:text-base text-primary-foreground/65 leading-[1.75] font-light font-body mb-10 text-left" style={{ hyphens: "none", textAlign: "left" }}>
               Talvez você nunca tenha feito terapia — ou já tentou e sentiu que algo fundamental ficou de fora. Essa formação presencial é para quem sente o chamado de se conhecer.
             </p>
 
@@ -132,18 +129,18 @@ const V3 = () => (
                 </span>
               </div>
 
-              <p className="font-display text-2xl md:text-[1.75rem] leading-[1.2] tracking-tight font-semibold mb-8">
+              <p className="font-display text-xl md:text-[1.5rem] leading-[1.25] tracking-tight font-semibold mb-8 text-left" style={{ hyphens: "none", textAlign: "left" }}>
                 Formação em <span className="text-accent italic font-light">Ciência Sistêmica</span> segundo Bert Hellinger.
               </p>
 
-              <div className="grid grid-cols-3 divide-x divide-primary-foreground/10 -mx-2">
+              <div className="grid grid-cols-3 divide-x divide-primary-foreground/10">
                 {[
                   { k: "Início", v: "Mar 26" },
                   { k: "Módulos", v: "10" },
                   { k: "Local", v: "BC" },
                 ].map((it) => (
-                  <div key={it.k} className="px-3 text-center">
-                    <p className="text-[9px] tracking-[0.25em] uppercase text-primary-foreground/40 mb-1.5 font-body">
+                  <div key={it.k} className="px-2 text-center first:pl-0 last:pr-0">
+                    <p className="text-[9px] tracking-[0.25em] uppercase text-primary-foreground/40 mb-1.5 font-body" style={{ textAlign: "center" }}>
                       {it.k}
                     </p>
                     <p className="font-display text-lg font-semibold tracking-tight">
@@ -155,7 +152,7 @@ const V3 = () => (
 
               <div className="mt-7 pt-6 border-t border-primary-foreground/10 flex items-center gap-3">
                 <span className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center text-accent text-sm">→</span>
-                <p className="text-[13px] text-primary-foreground/70 font-body font-light leading-snug">
+                <p className="text-[13px] text-primary-foreground/70 font-body font-light leading-snug" style={{ textAlign: "left", hyphens: "none" }}>
                   1 fim de semana por mês <br />
                   <span className="text-primary-foreground/45">durante 10 meses</span>
                 </p>
