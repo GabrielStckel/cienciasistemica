@@ -65,15 +65,15 @@ const V3 = () => (
       </span>
 
       <nav className="relative z-20 w-full">
-        <div className="max-w-6xl mx-auto px-6 md:px-12 py-6 flex items-center justify-between">
-          <span className="font-display text-base md:text-lg font-semibold tracking-tight">
+        <div className="max-w-6xl mx-auto px-5 md:px-12 py-5 md:py-6 flex items-center justify-between">
+          <span className="font-display text-sm md:text-lg font-semibold tracking-tight">
             Jonas Peres
           </span>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 md:gap-6">
             <span className="hidden md:inline text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45">
               Edição III
             </span>
-            <a href="#inscricao" className="btn-ghost-light text-sm">
+            <a href="#inscricao" className="btn-ghost-light text-xs md:text-sm px-4 md:px-5">
               Quero saber mais
             </a>
           </div>
@@ -81,21 +81,21 @@ const V3 = () => (
       </nav>
 
       <div className="relative z-10 flex-1 flex items-center">
-        <div className="w-full max-w-6xl mx-auto px-6 md:px-12 py-16 md:py-20 grid md:grid-cols-12 gap-10 md:gap-12 items-center">
+        <div className="w-full max-w-6xl mx-auto px-5 md:px-12 py-10 md:py-20 grid md:grid-cols-12 gap-8 md:gap-12 items-center">
           {/* LEFT — content */}
           <div className="md:col-span-7">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-6 md:mb-8">
               <span className="w-8 h-px bg-accent" />
-              <span className="text-[10px] tracking-[0.3em] uppercase text-accent font-body font-semibold">
+              <span className="text-[9px] md:text-[10px] tracking-[0.25em] md:tracking-[0.3em] uppercase text-accent font-body font-semibold">
                 Para quem está começando
               </span>
             </div>
 
-            <h1 className="font-display font-semibold leading-[1.08] tracking-tight text-balance text-[2.25rem] sm:text-[2.75rem] md:text-[3rem] lg:text-[3.5rem] mb-8 max-w-[14ch] animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+            <h1 className="font-display font-semibold leading-[1.1] tracking-tight text-balance text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] mb-6 md:mb-8 md:max-w-[14ch] animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
               Existe algo <span className="text-primary-foreground/55 italic font-light">além do que</span> seus olhos <span className="text-accent italic font-light">veem.</span>
             </h1>
 
-            <p className="max-w-md text-[15px] md:text-base text-primary-foreground/65 leading-[1.75] font-light font-body mb-10 text-left" style={{ hyphens: "none", textAlign: "left" }}>
+            <p className="max-w-md text-[14px] md:text-base text-primary-foreground/65 leading-[1.7] md:leading-[1.75] font-light font-body mb-8 md:mb-10 text-left" style={{ hyphens: "none", textAlign: "left" }}>
               Talvez você nunca tenha feito terapia — ou já tentou e sentiu que algo fundamental ficou de fora. Essa formação presencial é para quem sente o chamado de se conhecer.
             </p>
 
@@ -111,15 +111,15 @@ const V3 = () => (
           </div>
 
           {/* RIGHT — info card */}
-          <aside className="md:col-span-5 md:pl-6">
+          <aside className="md:col-span-5 md:pl-6 w-full">
             <div
-              className="relative rounded-2xl border backdrop-blur-md p-7 md:p-8"
+              className="relative rounded-2xl border backdrop-blur-md p-6 md:p-8"
               style={{
                 background: "hsl(0 0% 100% / 0.035)",
                 borderColor: "hsl(0 0% 100% / 0.10)",
               }}
             >
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center justify-between gap-3 mb-5 md:mb-6">
                 <span className="text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50 font-body">
                   Próxima turma
                 </span>
@@ -129,14 +129,14 @@ const V3 = () => (
                 </span>
               </div>
 
-              <div className="mb-8" style={{ textAlign: "left" }}>
-                <p className="font-display text-lg md:text-xl leading-[1.3] tracking-tight font-medium text-primary-foreground/70 mb-1" style={{ hyphens: "none", textAlign: "left" }}>
+              <div className="mb-7 md:mb-8" style={{ textAlign: "left" }}>
+                <p className="font-display text-base md:text-xl leading-[1.3] tracking-tight font-medium text-primary-foreground/70 mb-1" style={{ hyphens: "none", textAlign: "left" }}>
                   Formação em
                 </p>
-                <p className="font-display text-2xl md:text-[1.75rem] leading-[1.15] tracking-tight font-semibold text-accent italic font-light whitespace-nowrap" style={{ hyphens: "none", textAlign: "left" }}>
+                <p className="font-display text-[1.5rem] md:text-[1.75rem] leading-[1.15] tracking-tight font-light text-accent italic" style={{ hyphens: "none", textAlign: "left" }}>
                   Ciência Sistêmica
                 </p>
-                <p className="font-body text-[11px] tracking-[0.2em] uppercase text-primary-foreground/45 mt-3" style={{ hyphens: "none", textAlign: "left" }}>
+                <p className="font-body text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-primary-foreground/45 mt-3" style={{ hyphens: "none", textAlign: "left" }}>
                   segundo Bert Hellinger
                 </p>
               </div>
@@ -151,7 +151,7 @@ const V3 = () => (
                     <p className="text-[9px] tracking-[0.25em] uppercase text-primary-foreground/40 mb-1.5 font-body" style={{ textAlign: "center" }}>
                       {it.k}
                     </p>
-                    <p className="font-display text-lg font-semibold tracking-tight">
+                    <p className="font-display text-base md:text-lg font-semibold tracking-tight">
                       {it.v}
                     </p>
                   </div>
@@ -172,8 +172,8 @@ const V3 = () => (
 
       {/* Bottom ticker */}
       <div className="relative z-10 border-t border-primary-foreground/10">
-        <div className="max-w-6xl mx-auto px-6 md:px-12 py-4 flex flex-wrap items-center justify-between gap-4 text-[10px] tracking-[0.3em] uppercase text-primary-foreground/45 font-body">
-          <span>Presencial · Vivencial · Supervisionado</span>
+        <div className="max-w-6xl mx-auto px-5 md:px-12 py-4 flex flex-wrap items-center justify-between gap-2 md:gap-4 text-[9px] md:text-[10px] tracking-[0.25em] md:tracking-[0.3em] uppercase text-primary-foreground/45 font-body">
+          <span className="text-center w-full md:w-auto md:text-left">Presencial · Vivencial · Supervisionado</span>
           <span className="hidden md:inline">Vagas limitadas</span>
         </div>
       </div>
