@@ -7,7 +7,6 @@ import PreparationSection from "@/components/PreparationSection";
 
 import JourneySection from "@/components/JourneySection";
 import ModulesSection from "@/components/ModulesSection";
-import ComparisonSection from "@/components/ComparisonSection";
 import CtaSection from "@/components/CtaSection";
 import { Instagram } from "lucide-react";
 
@@ -22,7 +21,6 @@ const Index = () => (
     
     <JourneySection />
     <ModulesSection />
-    <ComparisonSection />
     <CtaSection />
 
     <footer className="bg-primary py-10">
