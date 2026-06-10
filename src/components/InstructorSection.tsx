@@ -9,6 +9,8 @@ const stats = [
 
 const InstructorSection = () => (
   <section className="relative py-10 md:py-24 overflow-hidden bg-background text-foreground">
+    {/* subtle dark overlay to deepen the section */}
+    <div className="pointer-events-none absolute inset-0 bg-[hsl(220_60%_5%)]/[0.06]" aria-hidden="true" />
     {/* bottom fade for smooth transition into the dark section below */}
     <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 md:h-24 bg-gradient-to-b from-transparent to-[hsl(220_60%_5%)]/5 md:to-[hsl(220_60%_5%)]/15" aria-hidden="true" />
     <div
