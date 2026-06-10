@@ -2,25 +2,34 @@ import jonas from "@/assets/jonas-peres.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative gradient-hero overflow-hidden min-h-screen flex items-center justify-center text-primary-foreground">
-      {/* Ambient atmospheric layers */}
+    <section
+      className="relative overflow-hidden min-h-screen flex items-center justify-center text-primary-foreground"
+      style={{ background: "hsl(220 60% 5%)" }}
+    >
+      {/* Static atmospheric vignette — no animation for performance */}
       <div
-        className="absolute -top-[10%] -left-[10%] w-[55%] h-[55%] rounded-full pointer-events-none animate-[pulse_8s_ease-in-out_infinite]"
-        style={{ background: "hsl(220 86% 56% / 0.20)", filter: "blur(120px)" }}
-      />
-      <div
-        className="absolute -bottom-[12%] -right-[10%] w-[50%] h-[50%] rounded-full pointer-events-none animate-[pulse_10s_ease-in-out_infinite]"
-        style={{ background: "hsl(230 70% 40% / 0.22)", filter: "blur(140px)", animationDelay: "2s" }}
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 55% at 50% 45%, hsl(220 86% 56% / 0.32) 0%, hsl(220 80% 30% / 0.18) 35%, transparent 70%)",
+        }}
       />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle at 50% 45%, hsl(220 86% 56% / 0.18) 0%, transparent 60%)",
+            "radial-gradient(ellipse 90% 60% at 50% 100%, hsl(220 86% 56% / 0.18) 0%, transparent 60%)",
         }}
       />
       <div
-        className="absolute inset-0 pointer-events-none opacity-[0.04] mix-blend-overlay"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 100% 80% at 50% 50%, transparent 40%, hsl(220 60% 4%) 95%)",
+        }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-overlay"
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>\")",
@@ -47,7 +56,7 @@ const HeroSection = () => {
               borderColor: "hsl(0 0% 100% / 0.10)",
             }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Formação 2026
           </span>
           <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
