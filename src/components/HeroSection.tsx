@@ -3,15 +3,6 @@ import jonas from "@/assets/jonas-peres.jpg";
 const HeroSection = () => {
   return (
     <section className="relative gradient-hero overflow-hidden min-h-screen flex items-center justify-center text-primary-foreground">
-      {/* Background grid */}
-      <div
-        className="absolute inset-0 opacity-20 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(hsl(213 52% 24%) 1px, transparent 1px), linear-gradient(90deg, hsl(213 52% 24%) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
       {/* Ambient blobs */}
       <div
         className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] rounded-full pointer-events-none"
@@ -49,12 +40,9 @@ const HeroSection = () => {
         <p className="font-display text-2xl sm:text-3xl md:text-4xl text-primary-foreground/75 font-light mb-3 tracking-tight">
           Curso de formação em
         </p>
-        <h1 className="font-display font-semibold leading-[0.92] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-6 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
-          Ciência Sistêmica<span className="text-accent">.</span>
+        <h1 className="font-display font-semibold leading-[0.92] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+          Ciência Sistêmica
         </h1>
-        <p className="font-display italic font-light text-primary-foreground/60 text-lg md:text-2xl mb-8">
-          segundo Bert Hellinger.
-        </p>
 
         {/* Subtitle */}
         <p className="max-w-2xl text-base md:text-lg text-primary-foreground/65 leading-relaxed font-light font-body mb-12" style={{ textAlign: "center" }}>
