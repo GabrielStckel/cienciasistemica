@@ -4,7 +4,7 @@ import InstructorSection from "@/components/InstructorSection";
 import PillarsSection from "@/components/PillarsSection";
 import ConsciousnessSection from "@/components/ConsciousnessSection";
 import PreparationSection from "@/components/PreparationSection";
-import DifferentialsSection from "@/components/DifferentialsSection";
+
 import JourneySection from "@/components/JourneySection";
 import ModulesSection from "@/components/ModulesSection";
 import ComparisonSection from "@/components/ComparisonSection";
@@ -19,7 +19,7 @@ const Index = () => (
     <PillarsSection />
     <ConsciousnessSection />
     <PreparationSection />
-    <DifferentialsSection />
+    
     <JourneySection />
     <ModulesSection />
     <ComparisonSection />
