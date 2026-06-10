@@ -37,14 +37,7 @@ const HeroSection = () => {
       />
 
       {/* Top overlay nav */}
-      <div className="absolute top-8 left-8 right-8 md:left-12 md:right-12 z-20 flex items-center justify-between">
-        <span className="font-display text-lg md:text-xl font-semibold tracking-tight">
-          Jonas Peres
-        </span>
-        <span className="hidden md:inline text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">
-          Turma 2026
-        </span>
-      </div>
+      <div className="absolute top-8 left-8 right-8 md:left-12 md:right-12 z-20 flex items-center justify-between h-7" aria-hidden="true" />
 
       <div className="relative z-10 w-full max-w-6xl px-6 py-24 md:py-28 flex flex-col items-center text-center">
         {/* Top metadata */}
