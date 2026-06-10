@@ -26,12 +26,14 @@ const InstructorSection = () => (
     <div className="container max-w-4xl relative">
       {/* Mobile header */}
       <div className="md:hidden mb-4 text-center">
-        <div className="label-section text-accent mb-2">Aprenda com quem já chegou lá</div>
-        <h2 className="font-display text-2xl text-foreground mb-1 font-semibold leading-tight tracking-tight">
+        <h2 className="font-display text-2xl text-foreground mb-2 font-semibold leading-tight tracking-tight">
           Jonas Peres
         </h2>
+        <div className="label-section text-accent mb-2">Aprenda com quem já chegou lá</div>
         <p className="text-muted-foreground text-[11px] uppercase tracking-wider font-body">
-          Constelações Familiares & Desenvolvimento Humano
+          Constelações Familiares
+          <br />
+          & Desenvolvimento Humano
         </p>
       </div>
       <div className="grid md:grid-cols-[1fr_1.2fr] gap-6 md:gap-14 items-center">
