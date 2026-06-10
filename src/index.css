@@ -164,15 +164,10 @@ All colors MUST be HSL.
     -webkit-hyphens: none;
     word-break: normal;
   }
-  /* Improve legibility on light backgrounds (desktop only) */
-  @media (min-width: 768px) {
-    .section-white p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]),
-    .section-muted p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]) {
-      font-size: 1.0625rem;
-      line-height: 1.7;
-      font-weight: 400;
-      color: hsl(var(--foreground) / 0.92);
-    }
+  /* Light-background paragraph color refinement */
+  .section-white p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]),
+  .section-muted p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]) {
+    color: hsl(var(--foreground) / 0.92);
   }
 }
 
