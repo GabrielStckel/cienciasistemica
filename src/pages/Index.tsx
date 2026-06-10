@@ -25,18 +25,20 @@ const Index = () => (
 
     <footer className="bg-white py-5 md:py-8">
       <div className="container max-w-2xl flex flex-col items-center gap-2 md:gap-3">
-        <p className="font-display text-base font-medium text-foreground tracking-wide">
-          Jonas Peres
-        </p>
-        <a
-          href="https://www.instagram.com/jonas_peress/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-foreground/60 hover:text-foreground transition-colors"
-          aria-label="Instagram"
-        >
-          <Instagram size={20} />
-        </a>
+        <div className="flex items-center gap-2">
+          <p className="font-display text-sm font-medium text-foreground tracking-wide">
+            Jonas Peres
+          </p>
+          <a
+            href="https://www.instagram.com/jonas_peress/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/60 hover:text-foreground transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram size={16} />
+          </a>
+        </div>
         <p className="text-foreground/40 text-xs font-body text-center" style={{ hyphens: "none" }}>
           © {new Date().getFullYear()} Jonas Peres · Formação em Ciência Sistêmica
         </p>
