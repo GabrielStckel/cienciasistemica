@@ -11,8 +11,8 @@ const InstructorSection = () => (
   <section className="relative py-10 md:py-24 overflow-hidden bg-background text-foreground">
     {/* soft light backdrop with subtle blue tint */}
     <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[hsl(210_30%_98%)] via-[hsl(214_28%_95%)] to-[hsl(210_25%_92%)]" aria-hidden="true" />
-    <div className="pointer-events-none absolute -top-24 -left-24 w-[280px] md:w-[420px] h-[280px] md:h-[420px] rounded-full bg-accent/5 md:bg-accent/10 blur-3xl" aria-hidden="true" />
-    <div className="pointer-events-none absolute top-1/3 -right-32 w-[320px] md:w-[480px] h-[320px] md:h-[480px] rounded-full bg-primary/[0.03] md:bg-primary/5 blur-3xl" aria-hidden="true" />
+    <div className="pointer-events-none absolute -top-24 -left-24 hidden md:block w-[420px] h-[420px] rounded-full bg-accent/10 blur-3xl" aria-hidden="true" />
+    <div className="pointer-events-none absolute top-1/3 -right-32 hidden md:block w-[480px] h-[480px] rounded-full bg-primary/5 blur-3xl" aria-hidden="true" />
     {/* bottom fade for smooth transition into the dark section below */}
     <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 md:h-24 bg-gradient-to-b from-transparent to-[hsl(220_60%_5%)]/5 md:to-[hsl(220_60%_5%)]/15" aria-hidden="true" />
     <div
