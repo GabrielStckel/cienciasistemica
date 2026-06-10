@@ -81,9 +81,10 @@ const HeroSection = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-2xl text-base md:text-lg text-primary-foreground/65 leading-relaxed font-light font-body mb-12" style={{ textAlign: "center" }}>
-          Viva sem repetir padrões negativos, se torne a sua melhor versão e
-          contribua com o mundo através do seu propósito.
+        <p className="max-w-3xl text-base md:text-lg text-primary-foreground/65 leading-relaxed font-light font-body mb-12 text-center" style={{ textAlign: "center" }}>
+          Viva sem repetir padrões negativos, se torne a sua melhor
+          <br className="hidden md:inline" />{" "}
+          versão e contribua com o mundo através do seu propósito.
         </p>
 
         {/* Actions */}
