@@ -8,12 +8,10 @@ const stats = [
 ];
 
 const InstructorSection = () => (
-  <section className="relative py-10 md:py-24 [overflow-x:clip] bg-gradient-to-b from-[hsl(220_30%_95%)] via-background to-[hsl(220_30%_96%)]">
-    {/* blue glow bleeding up into the previous section — left only */}
-    <div className="pointer-events-none absolute -top-56 -left-10 w-[560px] h-[560px] rounded-full bg-accent/25 blur-3xl" aria-hidden="true" />
-    <div className="pointer-events-none absolute -bottom-32 -left-10 w-[420px] h-[420px] rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
-    {/* fade seam at the top */}
-    <div className="pointer-events-none absolute -top-12 inset-x-0 h-24 bg-gradient-to-b from-[hsl(210_25%_97%)] to-transparent" aria-hidden="true" />
+  <section className="relative py-10 md:py-24 overflow-hidden bg-gradient-to-b from-[hsl(220_30%_97%)] via-background to-[hsl(220_30%_97%)]">
+    {/* decorative blobs */}
+    <div className="pointer-events-none absolute -top-24 -left-24 w-[420px] h-[420px] rounded-full bg-accent/10 blur-3xl" aria-hidden="true" />
+    <div className="pointer-events-none absolute -bottom-32 -right-20 w-[480px] h-[480px] rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
     <div className="container max-w-4xl relative">
       {/* Mobile header */}
       <div className="md:hidden mb-4 text-center">
@@ -27,6 +25,8 @@ const InstructorSection = () => (
       </div>
       <div className="grid md:grid-cols-[1fr_1.2fr] gap-6 md:gap-14 items-center">
         <div className="max-w-[260px] md:max-w-none mx-auto w-full relative">
+          {/* offset accent frame */}
+          <div className="absolute -inset-3 md:-inset-4 rounded-2xl bg-gradient-to-br from-accent/30 via-primary/20 to-transparent blur-xl opacity-70" aria-hidden="true" />
           <div className="absolute inset-0 translate-x-2 translate-y-2 md:translate-x-3 md:translate-y-3 rounded-xl border border-accent/40" aria-hidden="true" />
           <img
             src={jonas}
