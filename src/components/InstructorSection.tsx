@@ -9,10 +9,11 @@ const stats = [
 
 const InstructorSection = () => (
   <section className="relative py-10 md:py-24 [overflow-x:clip] bg-gradient-to-b from-[hsl(220_30%_95%)] via-background to-[hsl(220_30%_96%)]">
-    {/* blue glow bleeding up into the previous section */}
-    <div className="pointer-events-none absolute -top-40 left-0 w-[460px] h-[460px] rounded-full bg-accent/20 blur-3xl" aria-hidden="true" />
-    <div className="pointer-events-none absolute -top-32 right-0 w-[420px] h-[420px] rounded-full bg-primary/20 blur-3xl" aria-hidden="true" />
-    <div className="pointer-events-none absolute -bottom-32 right-0 w-[480px] h-[480px] rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
+    {/* blue glow bleeding up into the previous section — left only */}
+    <div className="pointer-events-none absolute -top-56 -left-10 w-[560px] h-[560px] rounded-full bg-accent/25 blur-3xl" aria-hidden="true" />
+    <div className="pointer-events-none absolute -bottom-32 -left-10 w-[420px] h-[420px] rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
+    {/* fade seam at the top */}
+    <div className="pointer-events-none absolute -top-12 inset-x-0 h-24 bg-gradient-to-b from-[hsl(210_25%_97%)] to-transparent" aria-hidden="true" />
     <div className="container max-w-4xl relative">
       {/* Mobile header */}
       <div className="md:hidden mb-4 text-center">
