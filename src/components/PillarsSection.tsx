@@ -40,7 +40,7 @@ const PillarsSection = () => (
           <div key={p.n} className="border-l-2 border-accent/60 pl-5 py-2">
             <div className="font-display text-xl text-accent/80 mb-3 font-semibold">{p.n}</div>
             <h3 className="font-display text-lg text-primary-foreground mb-3 font-semibold tracking-tight">{p.title}</h3>
-            <p className="text-primary-foreground/70 text-sm leading-[1.85] font-body font-light text-justify">{p.body}</p>
+            <p className="text-primary-foreground/90 text-[15px] leading-[1.8] font-body font-normal text-justify">{p.body}</p>
           </div>
         ))}
       </div>
