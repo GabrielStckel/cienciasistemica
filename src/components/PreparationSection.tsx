@@ -9,18 +9,8 @@ const topics = [
   "Exercícios de percepção em todos os encontros",
 ];
 
-/* Posições orgânicas para distribuir os balões em desktop */
-const bubblePositions = [
-  "md:translate-x-[4%] md:translate-y-2",
-  "md:translate-x-[-6%] md:translate-y-6",
-  "md:translate-x-[8%] md:-translate-y-3",
-  "md:translate-x-[-3%] md:translate-y-4",
-  "md:translate-x-[6%] md:-translate-y-2",
-  "md:translate-x-[-7%] md:translate-y-3",
-];
-
 const PreparationSection = () => (
-  <section className="section-white py-16 md:py-24 relative overflow-hidden">
+  <section className="section-white py-12 md:py-24 relative overflow-hidden">
     {/* Sutil halo de fundo */}
     <div
       aria-hidden
@@ -37,14 +27,11 @@ const PreparationSection = () => (
         subtitle="O segredo do poder das constelações está na abertura de um vínculo de comunicação inconsciente, que se origina da vulnerabilidade. Antes de mais nada, este curso é um processo transformador de autoconhecimento — começamos a olhar para o outro a partir de nós mesmos."
       />
 
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-14">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12">
         {topics.map((t, i) => (
-          <li
-            key={t}
-            className={`group relative ${bubblePositions[i] ?? ""}`}
-          >
+          <li key={t} className="group h-full">
             <div
-              className="relative rounded-[2rem] p-7 md:p-8 flex flex-col gap-4 items-start transition-all duration-300 hover:-translate-y-1"
+              className="relative h-full rounded-2xl p-5 md:p-6 flex items-start gap-4 transition-all duration-300 hover:-translate-y-1"
               style={{
                 background:
                   "linear-gradient(160deg, hsl(0 0% 100%) 0%, hsl(210 25% 97%) 100%)",
@@ -54,7 +41,7 @@ const PreparationSection = () => (
               }}
             >
               <span
-                className="flex items-center justify-center w-11 h-11 rounded-full font-display text-sm font-semibold shrink-0"
+                className="flex items-center justify-center w-10 h-10 rounded-full font-display text-[13px] font-semibold shrink-0"
                 style={{
                   background:
                     "linear-gradient(135deg, hsl(220 86% 56%), hsl(220 86% 64%))",
@@ -65,19 +52,9 @@ const PreparationSection = () => (
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p className="text-foreground text-[15.5px] md:text-base leading-relaxed font-body">
+              <p className="text-foreground text-[14.5px] md:text-[15px] leading-relaxed font-body pt-1.5">
                 {t}
               </p>
-              {/* Cauda do balão */}
-              <span
-                aria-hidden
-                className="absolute -bottom-2 left-10 w-4 h-4 rotate-45"
-                style={{
-                  background: "hsl(210 25% 97%)",
-                  borderRight: "1px solid hsl(var(--border))",
-                  borderBottom: "1px solid hsl(var(--border))",
-                }}
-              />
             </div>
           </li>
         ))}
