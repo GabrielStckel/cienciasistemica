@@ -8,7 +8,11 @@ const stats = [
 ];
 
 const InstructorSection = () => (
-  <section className="relative py-10 md:py-24 bg-gradient-to-b from-[hsl(210_25%_97%)] to-background">
+  <section className="relative py-10 md:py-24 overflow-hidden bg-gradient-to-b from-[hsl(220_30%_95%)] via-background to-[hsl(220_30%_96%)]">
+    {/* blue glow bleeding up into the previous section */}
+    <div className="pointer-events-none absolute -top-40 -left-24 w-[460px] h-[460px] rounded-full bg-accent/15 blur-3xl" aria-hidden="true" />
+    <div className="pointer-events-none absolute -top-32 right-0 w-[420px] h-[420px] rounded-full bg-primary/15 blur-3xl" aria-hidden="true" />
+    <div className="pointer-events-none absolute -bottom-32 -right-20 w-[480px] h-[480px] rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
     <div className="container max-w-4xl relative">
       {/* Mobile header */}
       <div className="md:hidden mb-4 text-center">
