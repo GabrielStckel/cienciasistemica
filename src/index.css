@@ -151,12 +151,20 @@ All colors MUST be HSL.
     background: hsl(0 0% 100% / 0.08);
     border-color: hsl(0 0% 100% / 0.45);
   }
-  .v2-page :where(header, section) p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]) {
+  main :where(header, section) p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]) {
     text-align: justify;
     text-align-last: left;
     hyphens: none;
     -webkit-hyphens: none;
     word-break: normal;
+  }
+  /* Improve legibility on light backgrounds */
+  .section-white p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]),
+  .section-muted p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]) {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: hsl(var(--foreground) / 0.92);
   }
 }
 
