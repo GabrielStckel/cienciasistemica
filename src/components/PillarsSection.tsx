@@ -26,7 +26,7 @@ const PillarsSection = () => (
         eyebrow="As bases"
         label="Para se tornar um agente sistêmico e facilitar constelações é preciso esvaziar-se"
       />
-      <div className="max-w-2xl mx-auto text-center text-primary-foreground/90 text-[15px] md:text-[17px] leading-[1.8] font-body font-normal space-y-4 -mt-4 mb-4">
+      <div className="max-w-2xl mx-auto text-justify text-primary-foreground/90 text-[15px] md:text-[17px] leading-[1.8] font-body font-normal space-y-4 -mt-4 mb-4">
         <p>
           Abordaremos os pressupostos da teoria sistêmica — não apenas a teoria
           Hellingeriana das constelações, mas é preciso saber que não é a teoria
