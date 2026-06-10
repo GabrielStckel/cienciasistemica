@@ -26,10 +26,10 @@ const AboutCourseSection = () => (
       </div>
       <div className="grid gap-2 md:gap-2.5 mt-1 md:mt-1">
         {blocks.map((b) => (
-          <article key={b.label} className="card-refined border-accent-left p-3 md:p-4">
-            <div className="label-section mb-1 md:mb-1 text-[10px]">{b.label}</div>
-            <h3 className="font-display text-[15px] md:text-base text-foreground mb-1.5 md:mb-1.5 font-semibold tracking-tight">{b.title}</h3>
-            <p className="text-foreground/80 text-[15px] md:text-[14px] leading-snug md:leading-[1.55] font-body text-justify">{b.body}</p>
+          <article key={b.label} className="card-refined border-accent-left p-5 md:p-7">
+            <div className="label-section mb-3">{b.label}</div>
+            <h3 className="font-display text-xl md:text-2xl text-foreground mb-4 font-semibold tracking-tight">{b.title}</h3>
+            <p className="text-foreground/80 text-[15px] leading-[1.85] font-body font-light text-justify">{b.body}</p>
           </article>
         ))}
       </div>
