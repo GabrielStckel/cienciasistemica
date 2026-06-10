@@ -52,7 +52,10 @@ const PreparationSection = () => (
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p className="text-foreground text-[14.5px] md:text-[15px] leading-snug font-body pt-2 text-left">
+              <p
+                className="text-foreground text-[14.5px] md:text-[15px] leading-snug font-body pt-2"
+                style={{ textAlign: "left" }}
+              >
                 {t}
               </p>
             </div>
