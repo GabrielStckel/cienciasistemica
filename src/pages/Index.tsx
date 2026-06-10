@@ -19,7 +19,7 @@ const Index = () => (
     <PillarsSection />
     <ConsciousnessSection />
     <PreparationSection />
-    <DifferentialsSection />
+    
     <JourneySection />
     <ModulesSection />
     <ComparisonSection />
