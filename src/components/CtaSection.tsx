@@ -5,7 +5,7 @@ const CtaSection = () => (
       <h2 className="font-display text-3xl md:text-4xl text-primary-foreground font-semibold mb-5 leading-tight tracking-tight">
         Comece a viver a Ciência Sistêmica em 2026
       </h2>
-      <p className="text-primary-foreground/60 text-[15px] font-body font-light leading-relaxed mb-10 max-w-lg mx-auto">
+      <p className="text-primary-foreground/90 text-[15px] md:text-base font-body font-normal leading-relaxed mb-10 max-w-lg mx-auto">
         A terapia não é o suficiente — é preciso aprender a viver. Garanta sua vaga com valor especial de pré-inscrição.
       </p>
       <a
