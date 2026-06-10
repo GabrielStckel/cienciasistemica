@@ -94,11 +94,8 @@ const HeroSection = () => {
             className="btn-primary group"
             style={{ boxShadow: "0 0 40px hsl(220 86% 56% / 0.35)" }}
           >
-            Garantir minha vaga
-            <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-          </a>
-          <a href="#sobre" className="btn-ghost-light">
             Conhecer o curso
+            <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
           </a>
         </div>
 
