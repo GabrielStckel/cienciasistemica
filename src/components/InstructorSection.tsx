@@ -51,12 +51,14 @@ const InstructorSection = () => (
         <div>
           {/* Desktop header */}
           <div className="hidden md:block">
-            <div className="label-section text-accent mb-3">Aprenda com quem já chegou lá</div>
-            <h2 className="font-display text-4xl text-foreground mb-4 font-semibold leading-tight tracking-tight">
+            <h2 className="font-display text-4xl text-foreground mb-3 font-semibold leading-tight tracking-tight">
               Jonas Peres
             </h2>
+            <div className="label-section text-accent mb-4">Aprenda com quem já chegou lá</div>
             <p className="text-muted-foreground text-sm uppercase tracking-wider mb-6 font-body" style={{ textAlign: "left" }}>
-              Constelações Familiares & Desenvolvimento Humano
+              Constelações Familiares
+              <br />
+              & Desenvolvimento Humano
             </p>
           </div>
           <div className="space-y-4 md:space-y-5 text-foreground/85 text-[15px] leading-[1.65] md:leading-[1.85] font-body font-normal md:font-light mb-6 md:mb-8 text-left md:text-justify mt-5 md:mt-0">
