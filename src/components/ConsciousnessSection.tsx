@@ -24,7 +24,7 @@ const layers = [
 ];
 
 const ConsciousnessSection = () => (
-  <section className="section-muted py-16 md:py-24">
+  <section className="section-muted py-10 md:py-24">
     <div className="container max-w-4xl">
       <SectionTitle
         eyebrow="O mapa"
@@ -32,18 +32,18 @@ const ConsciousnessSection = () => (
         subtitle="O que opera em nós é 95% inconsciente — apenas 5% é consciente. Compreender essa arquitetura é o primeiro passo do trabalho sistêmico."
       />
 
-      <div className="mt-10 divide-y divide-foreground/10 border-y border-foreground/10">
+      <div className="mt-6 md:mt-10 divide-y divide-foreground/10 border-y border-foreground/10">
         {layers.map((l) => (
           <div
             key={l.n}
-            className="grid grid-cols-[48px_180px_1fr] items-baseline gap-6 py-5"
+            className="grid grid-cols-[32px_1fr] md:grid-cols-[48px_180px_1fr] items-baseline gap-x-3 gap-y-1 md:gap-6 py-4 md:py-5"
           >
-            <div className="font-display text-accent text-base font-semibold tabular-nums">{l.n}</div>
-            <h3 className="font-display text-base text-foreground font-semibold tracking-tight">
+            <div className="font-display text-accent text-sm md:text-base font-semibold tabular-nums">{l.n}</div>
+            <h3 className="font-display text-[15px] md:text-base text-foreground font-semibold tracking-tight">
               {l.title}
             </h3>
             <p
-              className="text-foreground/80 text-[15px] leading-relaxed font-body"
+              className="col-span-2 md:col-span-1 text-foreground/80 text-[14px] md:text-[15px] leading-relaxed font-body"
               style={{ textAlign: "left" }}
             >
               {l.body}
