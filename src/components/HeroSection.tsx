@@ -3,14 +3,28 @@ import jonas from "@/assets/jonas-peres.jpg";
 const HeroSection = () => {
   return (
     <section className="relative gradient-hero overflow-hidden min-h-screen flex items-center justify-center text-primary-foreground">
-      {/* Ambient blobs */}
+      {/* Ambient atmospheric layers */}
       <div
-        className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] rounded-full pointer-events-none"
-        style={{ background: "hsl(220 86% 56% / 0.10)", filter: "blur(120px)" }}
+        className="absolute -top-[10%] -left-[10%] w-[55%] h-[55%] rounded-full pointer-events-none animate-[pulse_8s_ease-in-out_infinite]"
+        style={{ background: "hsl(220 86% 56% / 0.20)", filter: "blur(120px)" }}
       />
       <div
-        className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] rounded-full pointer-events-none"
-        style={{ background: "hsl(220 86% 56% / 0.07)", filter: "blur(100px)" }}
+        className="absolute -bottom-[12%] -right-[10%] w-[50%] h-[50%] rounded-full pointer-events-none animate-[pulse_10s_ease-in-out_infinite]"
+        style={{ background: "hsl(230 70% 40% / 0.22)", filter: "blur(140px)", animationDelay: "2s" }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 45%, hsl(220 86% 56% / 0.18) 0%, transparent 60%)",
+        }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.04] mix-blend-overlay"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>\")",
+        }}
       />
 
       {/* Top overlay nav */}
@@ -25,22 +39,35 @@ const HeroSection = () => {
 
       <div className="relative z-10 w-full max-w-6xl px-6 py-24 md:py-28 flex flex-col items-center text-center">
         {/* Top metadata */}
-        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-10 text-[10px] tracking-[0.25em] font-semibold uppercase text-primary-foreground/55">
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+          <span
+            className="flex items-center gap-2 px-3 py-1 rounded-full border backdrop-blur-md text-[10px] tracking-[0.25em] font-bold uppercase text-primary-foreground/75"
+            style={{
+              background: "hsl(0 0% 100% / 0.05)",
+              borderColor: "hsl(0 0% 100% / 0.10)",
+            }}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             Formação 2026
           </span>
           <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
-          <span>10 Módulos</span>
+          <span className="text-[10px] tracking-[0.25em] font-semibold uppercase text-primary-foreground/55">
+            10 Módulos
+          </span>
           <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
-          <span>10 Meses</span>
+          <span className="text-[10px] tracking-[0.25em] font-semibold uppercase text-primary-foreground/55">
+            10 Meses
+          </span>
         </div>
 
         {/* Headline */}
         <p className="font-display text-2xl sm:text-3xl md:text-4xl text-primary-foreground/75 font-light mb-3 tracking-tight">
           Curso de formação em
         </p>
-        <h1 className="font-display font-semibold leading-[0.92] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]">
+        <h1
+          className="font-display font-semibold leading-[0.92] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]"
+          style={{ textShadow: "0 0 60px hsl(220 86% 56% / 0.35)" }}
+        >
           Ciência Sistêmica
         </h1>
 
@@ -52,9 +79,13 @@ const HeroSection = () => {
 
         {/* Actions */}
         <div className="flex flex-col sm:flex-row items-center gap-4 mb-20 md:mb-24">
-          <a href="#inscricao" className="btn-primary">
+          <a
+            href="#inscricao"
+            className="btn-primary group"
+            style={{ boxShadow: "0 0 40px hsl(220 86% 56% / 0.35)" }}
+          >
             Garantir minha vaga
-            <span aria-hidden>→</span>
+            <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
           </a>
           <a href="#sobre" className="btn-ghost-light">
             Conhecer o curso
