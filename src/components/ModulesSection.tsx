@@ -39,7 +39,7 @@ const ModulesSection = () => {
                   {m.date}
                 </span>
               </div>
-              <p className="text-sm text-muted-foreground font-body font-light leading-relaxed" style={{ textAlign: "left" }}>
+              <p className="text-sm text-muted-foreground font-body font-light leading-relaxed text-justify md:text-left">
                 {m.desc}
               </p>
               <p className="md:hidden mt-2 text-xs font-medium text-muted-foreground font-body tabular-nums">

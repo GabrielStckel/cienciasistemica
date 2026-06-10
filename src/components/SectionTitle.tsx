@@ -23,10 +23,9 @@ const SectionTitle = ({ label, subtitle, light = false, eyebrow }: Props) => (
     </h2>
     {subtitle && (
       <p
-        className={`font-body text-sm mt-3 font-normal max-w-xl mx-auto ${
+        className={`font-body text-sm mt-3 font-normal max-w-xl mx-auto text-justify md:text-center ${
           light ? "text-primary-foreground/60" : "text-muted-foreground"
         }`}
-        style={{ textAlign: "center" }}
       >
         {subtitle}
       </p>

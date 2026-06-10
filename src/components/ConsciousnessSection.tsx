@@ -42,10 +42,7 @@ const ConsciousnessSection = () => (
             <h3 className="font-display text-[15px] md:text-base text-foreground font-semibold tracking-tight">
               {l.title}
             </h3>
-            <p
-              className="col-span-2 md:col-span-1 text-foreground/80 text-[14px] md:text-[15px] leading-relaxed font-body"
-              style={{ textAlign: "left" }}
-            >
+            <p className="col-span-2 md:col-span-1 text-foreground/80 text-[14px] md:text-[15px] leading-relaxed font-body text-justify md:text-left">
               {l.body}
             </p>
           </div>
