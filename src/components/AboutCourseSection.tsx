@@ -19,15 +19,17 @@ const blocks = [
 ];
 
 const AboutCourseSection = () => (
-  <section className="section-muted py-12 md:py-16">
+  <section className="section-muted py-6 md:py-16">
     <div className="container max-w-3xl">
-      <SectionTitle eyebrow="A formação" label="Sobre o curso" />
-      <div className="grid gap-3 mt-2">
+      <div className="mb-5 md:mb-10">
+        <SectionTitle eyebrow="A formação" label="Sobre o curso" />
+      </div>
+      <div className="grid gap-2 md:gap-3 mt-1 md:mt-2">
         {blocks.map((b) => (
-          <article key={b.label} className="card-refined border-accent-left p-4 md:p-5">
-            <div className="label-section mb-1.5 text-[10px]">{b.label}</div>
-            <h3 className="font-display text-base md:text-lg text-foreground mb-2 font-semibold tracking-tight">{b.title}</h3>
-            <p className="text-foreground/80 text-[14px] leading-relaxed font-body" style={{ textAlign: "left" }}>{b.body}</p>
+          <article key={b.label} className="card-refined border-accent-left p-3 md:p-5">
+            <div className="label-section mb-1 md:mb-1.5 text-[10px]">{b.label}</div>
+            <h3 className="font-display text-sm md:text-lg text-foreground mb-1.5 md:mb-2 font-semibold tracking-tight">{b.title}</h3>
+            <p className="text-foreground/80 text-[13px] md:text-[14px] leading-relaxed font-body" style={{ textAlign: "left" }}>{b.body}</p>
           </article>
         ))}
       </div>
