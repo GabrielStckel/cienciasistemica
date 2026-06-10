@@ -52,9 +52,9 @@ const ModulesSection = () => {
           <div className="flex justify-center mt-2">
             <button
               onClick={() => setShowAll(true)}
-              className="text-xs uppercase tracking-[0.2em] font-semibold text-accent hover:text-accent/80 transition-colors py-2 px-4"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-accent border border-accent/40 rounded-full py-2.5 px-5 hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors"
             >
-              Ver todos os módulos →
+              Ver todos os módulos <span aria-hidden>→</span>
             </button>
           </div>
         )}
