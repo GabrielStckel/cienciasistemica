@@ -28,8 +28,8 @@ const AboutCourseSection = () => (
         {blocks.map((b) => (
           <article key={b.label} className="card-refined border-accent-left p-3 md:p-5">
             <div className="label-section mb-1 md:mb-1.5 text-[10px]">{b.label}</div>
-            <h3 className="font-display text-sm md:text-lg text-foreground mb-1.5 md:mb-2 font-semibold tracking-tight">{b.title}</h3>
-            <p className="text-foreground/80 text-[13px] md:text-[14px] leading-relaxed font-body" style={{ textAlign: "left" }}>{b.body}</p>
+            <h3 className="font-display text-[15px] md:text-lg text-foreground mb-1.5 md:mb-2 font-semibold tracking-tight">{b.title}</h3>
+            <p className="text-foreground/80 text-[15px] md:text-[14px] leading-relaxed font-body" style={{ textAlign: "left" }}>{b.body}</p>
           </article>
         ))}
       </div>
