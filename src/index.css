@@ -106,7 +106,13 @@ All colors MUST be HSL.
 
 @layer utilities {
   .gradient-hero {
-    background: linear-gradient(175deg, hsl(214 67% 14%) 0%, hsl(213 52% 24%) 50%, hsl(213 45% 30%) 100%);
+    position: relative;
+    background-color: hsl(220 60% 5%);
+    background-image:
+      radial-gradient(ellipse 70% 55% at 50% 45%, hsl(220 86% 56% / 0.32) 0%, hsl(220 80% 30% / 0.18) 35%, transparent 70%),
+      radial-gradient(ellipse 90% 60% at 50% 100%, hsl(220 86% 56% / 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 100% 80% at 50% 50%, transparent 40%, hsl(220 60% 4%) 95%);
+    background-repeat: no-repeat;
   }
   .section-white { background: hsl(var(--surface)); }
   .section-muted { background: hsl(210 25% 97%); }
