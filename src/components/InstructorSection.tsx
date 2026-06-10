@@ -11,7 +11,7 @@ const InstructorSection = () => (
   <section className="relative py-10 md:py-24 overflow-hidden bg-gradient-to-b from-[hsl(220_30%_97%)] via-background to-[hsl(220_30%_97%)]">
     {/* decorative blobs */}
     <div className="pointer-events-none absolute -top-24 -left-24 w-[420px] h-[420px] rounded-full bg-accent/10 blur-3xl" aria-hidden="true" />
-    <div className="pointer-events-none absolute -bottom-32 -right-20 w-[480px] h-[480px] rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
+    <div className="pointer-events-none absolute top-1/3 -left-32 w-[480px] h-[480px] rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
     <div className="container max-w-4xl relative">
       {/* Mobile header */}
       <div className="md:hidden mb-4 text-center">
