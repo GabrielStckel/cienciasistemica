@@ -23,7 +23,13 @@ const PreparationSection = () => (
     <div className="container max-w-5xl relative">
       <SectionTitle
         eyebrow="Método fenomenológico"
-        label="Tudo que tu estudaste até aqui não te servirá para nada"
+        label={
+          <>
+            Tudo que tu estudaste até aqui
+            <br className="hidden md:block" />{" "}
+            não te servirá para nada
+          </>
+        }
         subtitle="O segredo do poder das constelações está na abertura de um vínculo de comunicação inconsciente, que se origina da vulnerabilidade. Antes de mais nada, este curso é um processo transformador de autoconhecimento — começamos a olhar para o outro a partir de nós mesmos."
       />
 
