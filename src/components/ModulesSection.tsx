@@ -19,30 +19,30 @@ const ModulesSection = () => {
   const visible = showAll ? modules : modules.slice(0, 5);
 
   return (
-    <section className="section-muted py-16 md:py-24">
+    <section className="section-muted section-block">
       <div className="container max-w-3xl">
         <SectionTitle
           eyebrow="Cronograma 2026"
           label="Dez módulos, dez encontros"
           subtitle="Uma jornada coletiva de dez meses, presencial, com turmas reduzidas."
         />
-        <ol className="relative border-l border-border ml-2 md:ml-4 mt-10">
+        <ol className="relative border-l border-border ml-2 md:ml-4 mt-8 md:mt-10">
           {visible.map((m) => (
-            <li key={m.n} className="pl-6 md:pl-8 pb-8 relative">
+            <li key={m.n} className="pl-5 md:pl-8 pb-7 md:pb-8 relative">
               <span className="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-accent ring-4 ring-background" />
               <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-                <h3 className="font-display text-lg text-foreground font-semibold tracking-tight">
-                  <span className="text-accent mr-3">{m.n}.</span>
+                <h3 className="font-display text-[17px] md:text-lg text-foreground font-semibold tracking-tight">
+                  <span className="text-accent mr-2 md:mr-3">{m.n}.</span>
                   {m.title}
                 </h3>
                 <span className="hidden md:inline text-xs font-medium text-muted-foreground font-body tabular-nums whitespace-nowrap">
                   {m.date}
                 </span>
               </div>
-              <p className="text-sm text-muted-foreground font-body font-light leading-relaxed text-justify md:text-left">
+              <p className="text-[15px] md:text-sm text-muted-foreground font-body font-normal md:font-light leading-[1.6] md:leading-relaxed text-justify md:text-left">
                 {m.desc}
               </p>
-              <p className="md:hidden mt-2 text-xs font-medium text-muted-foreground font-body tabular-nums">
+              <p className="md:hidden mt-1.5 text-[11px] font-medium text-muted-foreground font-body tabular-nums">
                 {m.date}
               </p>
             </li>
@@ -52,7 +52,7 @@ const ModulesSection = () => {
           <div className="flex justify-center mt-2">
             <button
               onClick={() => setShowAll(true)}
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-accent border border-accent/40 rounded-full py-2.5 px-5 hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors"
+              className="inline-flex items-center gap-2 text-[11px] md:text-xs uppercase tracking-[0.2em] font-semibold text-accent border border-accent/40 rounded-full py-3 px-6 hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors"
             >
               Ver todos os módulos <span aria-hidden>→</span>
             </button>

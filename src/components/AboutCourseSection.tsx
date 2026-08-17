@@ -19,17 +19,17 @@ const blocks = [
 ];
 
 const AboutCourseSection = () => (
-  <section className="section-muted py-6 md:py-10">
+  <section id="sobre" className="section-muted py-8 md:py-12">
     <div className="container max-w-3xl">
       <div className="mb-5 md:mb-6">
         <SectionTitle eyebrow="A formação" label="Sobre o curso" />
       </div>
-      <div className="grid gap-2 md:gap-2.5">
+      <div className="grid gap-2.5 md:gap-3">
         {blocks.map((b) => (
-          <article key={b.label} className="card-refined border-accent-left p-3 md:p-4">
-            <div className="label-section mb-1 md:mb-1.5 text-[10px]">{b.label}</div>
-            <h3 className="font-display text-[15px] md:text-base text-foreground mb-1.5 md:mb-2 font-semibold tracking-tight">{b.title}</h3>
-            <p className="text-foreground/80 text-[15px] md:text-[14px] leading-relaxed font-body text-justify">{b.body}</p>
+          <article key={b.label} className="card-refined border-accent-left p-4 md:p-5">
+            <div className="label-section mb-1.5 text-[11px]">{b.label}</div>
+            <h3 className="font-display text-[17px] md:text-base text-foreground mb-2 font-semibold tracking-tight">{b.title}</h3>
+            <p className="text-foreground/80 text-[15px] md:text-[14px] leading-[1.65] md:leading-relaxed font-body text-justify">{b.body}</p>
           </article>
         ))}
       </div>

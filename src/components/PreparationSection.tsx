@@ -10,7 +10,7 @@ const topics = [
 ];
 
 const PreparationSection = () => (
-  <section className="section-white py-12 md:py-24 relative overflow-hidden">
+  <section className="section-white section-block relative overflow-hidden">
     {/* Sutil halo de fundo */}
     <div
       aria-hidden
@@ -33,11 +33,11 @@ const PreparationSection = () => (
         subtitle="O segredo do poder das constelações está na abertura de um vínculo de comunicação inconsciente, que se origina da vulnerabilidade. Antes de mais nada, este curso é um processo transformador de autoconhecimento — começamos a olhar para o outro a partir de nós mesmos."
       />
 
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 mt-8 md:mt-12">
         {topics.map((t, i) => (
           <li key={t} className="group h-full">
             <div
-              className="relative h-full rounded-2xl p-5 md:p-6 flex items-start gap-4 transition-all duration-300 hover:-translate-y-1"
+              className="relative h-full rounded-2xl p-4 md:p-6 flex items-start gap-3.5 md:gap-4 transition-all duration-300 hover:-translate-y-1"
               style={{
                 background:
                   "linear-gradient(160deg, hsl(0 0% 100%) 0%, hsl(210 25% 97%) 100%)",
@@ -47,7 +47,7 @@ const PreparationSection = () => (
               }}
             >
               <span
-                className="flex items-center justify-center w-10 h-10 rounded-full font-display text-[13px] font-semibold shrink-0"
+                className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-full font-display text-[13px] font-semibold shrink-0"
                 style={{
                   background:
                     "linear-gradient(135deg, hsl(220 86% 56%), hsl(220 86% 64%))",
@@ -59,7 +59,7 @@ const PreparationSection = () => (
                 {String(i + 1).padStart(2, "0")}
               </span>
               <p
-                className="text-foreground text-[14.5px] md:text-[15px] leading-snug font-body pt-2"
+                className="text-foreground text-[15px] leading-snug font-body pt-1.5 md:pt-2"
                 style={{ textAlign: "left" }}
               >
                 {t}

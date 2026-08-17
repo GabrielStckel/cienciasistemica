@@ -3,7 +3,7 @@ import jonas from "@/assets/jonas-peres.jpg";
 const HeroSection = () => {
   return (
     <section
-      className="relative overflow-hidden min-h-screen flex items-center justify-center text-primary-foreground"
+      className="relative overflow-hidden min-h-screen min-h-[100svh] flex items-center justify-center text-primary-foreground"
       style={{ background: "hsl(220 60% 5%)" }}
     >
       {/* Static atmospheric vignette — no animation for performance */}
@@ -36,14 +36,11 @@ const HeroSection = () => {
         }}
       />
 
-      {/* Top overlay nav */}
-      <div className="absolute top-8 left-8 right-8 md:left-12 md:right-12 z-20 flex items-center justify-between h-7" aria-hidden="true" />
-
-      <div className="relative z-10 w-full max-w-6xl px-6 py-24 md:py-28 flex flex-col items-center text-center">
+      <div className="relative z-10 w-full max-w-6xl px-5 sm:px-6 py-16 md:py-28 flex flex-col items-center text-center">
         {/* Top metadata */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-8 md:mb-10">
           <span
-            className="flex items-center gap-2 px-3 py-1 rounded-full border backdrop-blur-md text-[10px] tracking-[0.25em] font-bold uppercase text-primary-foreground/75"
+            className="flex items-center gap-2 px-3 py-1 rounded-full border backdrop-blur-md text-[11px] tracking-[0.2em] font-bold uppercase text-primary-foreground/85"
             style={{
               background: "hsl(0 0% 100% / 0.05)",
               borderColor: "hsl(0 0% 100% / 0.10)",
@@ -53,42 +50,45 @@ const HeroSection = () => {
             Formação 2026
           </span>
           <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
-          <span className="text-[10px] tracking-[0.25em] font-semibold uppercase text-primary-foreground/55">
+          <span className="text-[11px] tracking-[0.2em] font-semibold uppercase text-primary-foreground/70">
             10 Módulos
           </span>
           <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
-          <span className="text-[10px] tracking-[0.25em] font-semibold uppercase text-primary-foreground/55">
+          <span className="text-[11px] tracking-[0.2em] font-semibold uppercase text-primary-foreground/70">
             10 Meses
           </span>
         </div>
 
         {/* Headline */}
-        <p className="font-display text-2xl sm:text-3xl md:text-4xl text-primary-foreground/75 font-light mb-3 tracking-tight">
+        <p className="font-display text-xl sm:text-3xl md:text-4xl text-primary-foreground/75 font-light mb-2 md:mb-3 tracking-tight">
           Curso de formação em
         </p>
         <h1
-          className="font-display font-semibold leading-[0.92] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]"
+          className="font-display font-semibold leading-[0.95] sm:leading-[0.92] tracking-tight text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-6 md:mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]"
           style={{ textShadow: "0 0 60px hsl(220 86% 56% / 0.35)" }}
         >
           Ciência Sistêmica
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-3xl mx-auto text-base md:text-lg text-primary-foreground/65 leading-relaxed font-light font-body mb-12 text-center mx-auto">
+        <p className="max-w-3xl mx-auto text-[15px] md:text-lg text-primary-foreground/80 leading-[1.65] md:leading-relaxed font-light font-body mb-9 md:mb-12 text-center">
           Viva sem repetir padrões negativos, se torne a sua melhor
           <br className="hidden md:inline" />{" "}
           versão e contribua com o mundo através do seu propósito.
         </p>
 
         {/* Actions */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-20 md:mb-24">
+        <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-14 md:mb-24">
           <a
-            href="#inscricao"
-            className="btn-primary group"
+            href="#sobre"
+            className="btn-primary group w-full sm:w-auto"
             style={{ boxShadow: "0 0 40px hsl(220 86% 56% / 0.35)" }}
           >
             Conhecer o curso
             <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+          </a>
+          <a href="#inscricao" className="btn-ghost-light w-full sm:w-auto">
+            Ver modalidades
           </a>
         </div>
 
@@ -99,16 +99,16 @@ const HeroSection = () => {
             style={{ background: "linear-gradient(to top, hsl(220 86% 56% / 0.18), transparent)" }}
           />
           <div
-            className="relative rounded-2xl border p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-8 backdrop-blur-md"
+            className="relative rounded-2xl border p-5 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 backdrop-blur-md"
             style={{
               background: "hsl(0 0% 100% / 0.03)",
               borderColor: "hsl(0 0% 100% / 0.10)",
             }}
           >
-            <div className="flex items-center gap-5 md:gap-6">
+            <div className="flex items-center gap-4 md:gap-6">
               <div className="relative">
                 <div
-                  className="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden border"
+                  className="w-16 h-16 md:w-24 md:h-24 rounded-xl overflow-hidden border"
                   style={{ borderColor: "hsl(0 0% 100% / 0.10)" }}
                 >
                   <img
@@ -125,8 +125,8 @@ const HeroSection = () => {
                 </div>
               </div>
               <div className="text-left">
-                <h3 className="font-display text-xl md:text-2xl font-semibold">Jonas Peres</h3>
-                <p className="text-[10px] tracking-[0.2em] text-primary-foreground/55 uppercase mt-1 font-body">
+                <h3 className="font-display text-lg md:text-2xl font-semibold">Jonas Peres</h3>
+                <p className="text-[11px] tracking-[0.15em] text-primary-foreground/70 uppercase mt-1 font-body leading-snug">
                   <span className="block md:inline">Constelador</span>
                   <span className="hidden md:inline"> · </span>
                   <span className="block md:inline">Há 10+ anos</span>
@@ -136,17 +136,17 @@ const HeroSection = () => {
 
             <div className="h-px md:h-14 w-full md:w-px bg-primary-foreground/10" />
 
-            <div className="grid grid-cols-3 gap-6 md:gap-10 w-full md:w-auto">
+            <div className="grid grid-cols-3 gap-3 md:gap-10 w-full md:w-auto">
               <div className="text-center md:text-left">
-                <p className="text-[10px] uppercase tracking-wider text-primary-foreground/45 mb-1 font-body">Início</p>
-                <p className="font-body font-medium text-sm">Mar/26</p>
+                <p className="text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 font-body">Início</p>
+                <p className="font-body font-medium text-sm">Ago/26</p>
               </div>
               <div className="text-center md:text-left">
-                <p className="text-[10px] uppercase tracking-wider text-primary-foreground/45 mb-1 font-body">Vagas</p>
+                <p className="text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 font-body">Vagas</p>
                 <p className="font-body font-medium text-sm">Limitadas</p>
               </div>
               <div className="text-center md:text-left">
-                <p className="text-[10px] uppercase tracking-wider text-primary-foreground/45 mb-1 font-body">Status</p>
+                <p className="text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 font-body">Status</p>
                 <p className="font-body font-medium text-sm text-accent">• Aberto</p>
               </div>
             </div>
