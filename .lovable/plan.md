@@ -1,33 +1,37 @@
-## Ajustes solicitados
+# Ajustes de responsividade mobile
 
-### 1. Hero (`src/components/HeroSection.tsx`)
-- Remover o ponto final após "Ciência Sistêmica" (tirar o `.` em destaque accent).
-- Remover a linha "segundo Bert Hellinger." abaixo do título.
-- Remover o grid quadriculado do fundo (a `div` com `backgroundImage` de linhas).
-- Manter os blobs ambiente e o restante do layout intactos.
+Aplicação do documento enviado, com uma exceção: a **justificação de texto permanece como está hoje** (justificado no mobile e no desktop) — o item 2 do documento não será aplicado.
 
-### 2. Justificar textos do site
-- Aplicar `text-align: justify` aos parágrafos de conteúdo em todas as páginas (Index, V1, V2, V3), seguindo o mesmo padrão já existente em `.v2-page` no `src/index.css`.
-- Generalizar a regra para `main` (sem depender de classe específica) ou adicionar as classes `v1-page`, `v3-page` e aplicar ao Index também — escolherei generalizar via `main :where(header, section) p:not([class*=font-display]):not([class*=uppercase]):not([class*=tabular-nums])`.
-- Manter `text-align-last: left` e `hyphens: none` para evitar grandes espaçamentos e quebras com hífen.
+## O que muda
 
-### 3. Tipografia em fundos claros
-- Aumentar levemente o tamanho e peso dos parágrafos sobre fundo claro (seções com `bg-background`, `bg-white`, `bg-muted` claro) para melhorar legibilidade.
-- Ajustes previstos: parágrafos passam de `text-base`/`text-sm` para `text-[17px]`/`text-base` e `font-light` → `font-normal` (peso 400 → 450 via classe utilitária ou ajuste direto).
-- Aplicar nas seções: `AboutCourseSection`, `ComparisonSection`, `DifferentialsSection`, `InstructorSection`, `JourneySection`, `PillarsSection`, `PreparationSection`, `ModulesSection`, `ConsciousnessSection`, `CtaSection` — apenas onde o fundo é claro.
+### Espaçamento e ritmo
+- Padding do container passa a ser responsivo: 1.25rem no celular, 1.5rem em telas pequenas, 2rem a partir de telas grandes.
+- Nova utility `.section-block` (3.5rem no mobile / 6rem no desktop) aplicada em Sobre o curso, Jonas Peres, Pilares, Consciência, Preparação, Módulos e Ingresso — hoje cada uma usa um espaçamento diferente e o scroll fica desequilibrado.
 
-### 4. Seção "Método fenomenológico" → layout em balões
-- Localizar a seção atual (provavelmente em `PillarsSection` ou `ConsciousnessSection` — verificarei na implementação).
-- Substituir o layout atual por cards/balões arredondados (`rounded-full` ou `rounded-3xl` com formato orgânico), distribuídos em grid responsivo.
-- Cada balão contém: ícone/numeração + título curto + descrição.
-- Visual: fundo suave com gradiente sutil usando tokens do design system, borda fina, sombra leve, animação `hover` de elevação.
-- Manter conteúdo textual existente; mudar apenas o container visual.
+### Hero
+- Altura passa a `100svh` (corrige o corte causado pela barra de endereço no Safari iOS).
+- Paddings menores no mobile, título reduzido para 2.6rem com entrelinha 0.95, kicker menor, subtítulo em 15px com mais contraste.
+- Remoção da div de nav vazia (código morto).
+- Tags de metadata e labels do card de perfil maiores e com mais contraste; grid do card menos espremido no mobile.
 
-### Detalhes técnicos
-- Arquivos a editar:
-  - `src/components/HeroSection.tsx` — remover ponto, frase Hellinger, grid de fundo.
-  - `src/index.css` — generalizar regra de justificação; adicionar utilitário para tipografia em fundo claro se necessário.
-  - Componentes de seções com fundo claro listadas acima — ajuste de classes Tailwind nos parágrafos.
-  - Componente da seção "Método fenomenológico" — refatorar para layout de balões.
-- Sem mudanças de conteúdo (textos permanecem), sem mudanças de rotas, sem backend.
-- Usar exclusivamente tokens semânticos do `index.css`/`tailwind.config.ts` (sem cores hardcoded).
+### Tipografia
+- Corpo de texto padronizado em 15px no mobile com entrelinha confortável; títulos de card em 17px; labels de seção em 11px.
+- `SectionTitle` no mobile: 26px em vez de text-3xl.
+
+### Navegação e CTAs
+- "Conhecer o curso" passa a apontar para `#sobre` (novo id em Sobre o curso) em vez de pular para o rodapé.
+- Novo botão secundário no hero: "Ver modalidades" (estilo ghost) apontando para `#inscricao`. No mobile os dois botões ficam empilhados em largura total; a partir de telas pequenas ficam lado a lado.
+- CTA final ganha o botão "Escolher minha modalidade" e perde o `id="inscricao"`; título reduzido no mobile.
+- `scroll-margin-top` nas âncoras para o conteúdo não ficar colado no topo.
+
+### HTML
+- `<html lang="pt-BR">` no lugar de `en`.
+
+## Detalhes técnicos
+
+- `tailwind.config.ts`: `container.padding` vira objeto `{ DEFAULT: "1.25rem", sm: "1.5rem", lg: "2rem" }`.
+- `src/index.css`: adiciona `.section-block` e `section[id] { scroll-margin-top: 2rem; }`. A regra `main :where(header, section) p:not(...)` com `text-align: justify` fica intacta.
+- Componentes tocados: `HeroSection`, `AboutCourseSection`, `PillarsSection`, `ConsciousnessSection`, `JourneySection`, `ModulesSection`, `InstructorSection`, `PreparationSection`, `SectionTitle`, `CtaSection`.
+- As classes `text-justify` hardcoded nos componentes permanecem (decisão do usuário).
+- Somente cores por tokens semânticos; nenhum texto de conteúdo alterado.
+- Escopo: página `/` (Index). As páginas `/v1`, `/v2`, `/v3` não são alteradas.
