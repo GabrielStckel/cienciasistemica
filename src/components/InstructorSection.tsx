@@ -59,7 +59,7 @@ const InstructorSection = () => (
               & Desenvolvimento Humano
             </p>
           </div>
-          <div className="space-y-4 md:space-y-5 text-foreground/85 text-[15px] leading-[1.65] md:leading-[1.85] font-body font-normal md:font-light mb-6 md:mb-8 text-justify md:text-justify mt-5 md:mt-0">
+          <div className="space-y-4 md:space-y-5 text-foreground/85 text-[15px] leading-[1.65] md:leading-[1.85] font-body font-normal md:font-light mb-6 md:mb-8 text-left md:text-justify mt-5 md:mt-0">
             <p>
               Os mais de 10 anos como constelador e terapeuta são o coração de
               uma vida inteira destinada ao servir consciente à vida — com o
