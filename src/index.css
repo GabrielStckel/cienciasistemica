@@ -168,6 +168,19 @@ All colors MUST be HSL.
     background: hsl(0 0% 100% / 0.08);
     border-color: hsl(0 0% 100% / 0.45);
   }
+  .btn-ghost-dark {
+    @apply inline-flex items-center justify-center gap-2 font-body text-sm font-semibold tracking-wide;
+    color: hsl(var(--foreground));
+    padding: 0.95rem 2rem;
+    border-radius: 999px;
+    border: 1px solid hsl(var(--foreground) / 0.18);
+    transition: background .25s ease, border-color .25s ease, transform .25s ease;
+  }
+  .btn-ghost-dark:hover {
+    background: hsl(var(--foreground) / 0.04);
+    border-color: hsl(var(--foreground) / 0.35);
+    transform: translateY(-2px);
+  }
   main :where(header, section) p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]) {
     text-align: justify;
     text-align-last: left;
