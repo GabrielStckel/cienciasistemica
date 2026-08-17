@@ -3,9 +3,10 @@ import jonas from "@/assets/jonas-peres.jpg";
 const HeroSection = () => {
   return (
     <section
-      className="relative overflow-hidden min-h-screen flex items-center justify-center text-primary-foreground"
+      className="relative overflow-hidden flex items-center justify-center text-primary-foreground"
       style={{ background: "hsl(220 60% 5%)" }}
     >
+      <style>{`.hero-svh { min-height: 100vh; } @supports (height: 100svh) { .hero-svh { min-height: 100svh; } }`}</style>
       {/* Static atmospheric vignette — no animation for performance */}
       <div
         className="absolute inset-0 pointer-events-none"
