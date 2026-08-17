@@ -1,7 +1,7 @@
 import { Instagram } from "lucide-react";
 
 const CtaSection = () => (
-  <section id="inscricao" className="gradient-hero pt-14 md:pt-28 pb-10 md:pb-12">
+  <section className="gradient-hero pt-14 md:pt-28 pb-10 md:pb-12">
     <div className="container max-w-2xl text-center">
       <div className="label-section text-[11px] text-accent mb-3 md:mb-4">Vagas limitadas</div>
       <h2 className="font-display text-[26px] leading-[1.15] md:text-4xl md:leading-tight text-primary-foreground font-semibold mb-4 md:mb-5 tracking-tight">
@@ -12,12 +12,7 @@ const CtaSection = () => (
       </p>
 
       <div className="mt-7 md:mt-9 flex justify-center">
-        <a
-          href="https://www.instagram.com/jonas_peress/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary w-full sm:w-auto group"
-        >
+        <a href="#inscricao" className="btn-primary w-full sm:w-auto group">
           Escolher minha modalidade
           <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
         </a>

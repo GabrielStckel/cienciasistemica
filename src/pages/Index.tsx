@@ -7,6 +7,7 @@ import PreparationSection from "@/components/PreparationSection";
 
 import JourneySection from "@/components/JourneySection";
 import ModulesSection from "@/components/ModulesSection";
+import ModalitiesSection from "@/components/ModalitiesSection";
 import CtaSection from "@/components/CtaSection";
 
 const Index = () => (
@@ -20,6 +21,7 @@ const Index = () => (
     
     <JourneySection />
     <ModulesSection />
+    <ModalitiesSection />
     <CtaSection />
   </main>
 );
