@@ -1,18 +1,18 @@
-import HeroSection from "@/components/copiahome/HeroSection";
-import IdentificationSection from "@/components/copiahome/IdentificationSection";
-import AboutCourseSection from "@/components/copiahome/AboutCourseSection";
-import InstructorSection from "@/components/copiahome/InstructorSection";
-import TestimonialsSection from "@/components/copiahome/TestimonialsSection";
-import PreparationSection from "@/components/copiahome/PreparationSection";
-import PillarsSection from "@/components/copiahome/PillarsSection";
-import ConsciousnessSection from "@/components/copiahome/ConsciousnessSection";
-import ModulesSection from "@/components/copiahome/ModulesSection";
-import JourneySection from "@/components/copiahome/JourneySection";
-import ModalitiesSection from "@/components/copiahome/ModalitiesSection";
-import FaqSection from "@/components/copiahome/FaqSection";
-import CtaSection from "@/components/copiahome/CtaSection";
+import HeroSection from "@/components/turma2026/HeroSection";
+import IdentificationSection from "@/components/turma2026/IdentificationSection";
+import AboutCourseSection from "@/components/turma2026/AboutCourseSection";
+import InstructorSection from "@/components/turma2026/InstructorSection";
+import TestimonialsSection from "@/components/turma2026/TestimonialsSection";
+import PreparationSection from "@/components/turma2026/PreparationSection";
+import PillarsSection from "@/components/turma2026/PillarsSection";
+import ConsciousnessSection from "@/components/turma2026/ConsciousnessSection";
+import ModulesSection from "@/components/turma2026/ModulesSection";
+import JourneySection from "@/components/turma2026/JourneySection";
+import ModalitiesSection from "@/components/turma2026/ModalitiesSection";
+import FaqSection from "@/components/turma2026/FaqSection";
+import CtaSection from "@/components/turma2026/CtaSection";
 
-const CopiaHome = () => (
+const Turma2026 = () => (
   <main className="min-h-screen">
     <HeroSection />
     <IdentificationSection />
@@ -30,4 +30,4 @@ const CopiaHome = () => (
   </main>
 );
 
-export default CopiaHome;
+export default Turma2026;
