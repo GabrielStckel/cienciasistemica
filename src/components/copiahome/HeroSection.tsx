@@ -1,4 +1,5 @@
 import jonas from "@/assets/jonas-peres.jpg";
+import { CITY, formatShort, startsAt } from "@/content/course";
 
 const HeroSection = () => {
   return (
