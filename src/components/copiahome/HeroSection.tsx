@@ -2,6 +2,7 @@ import jonas from "@/assets/jonas-peres.jpg";
 import jonasSm from "@/assets/jonas-peres-160.webp";
 import jonasLg from "@/assets/jonas-peres-800.webp";
 import { CITY, formatShort, startsAt } from "@/content/course";
+import { track } from "@/lib/analytics";
 
 const HeroSection = () => {
   return (
