@@ -23,7 +23,7 @@ Ajustar o `src/components/copiahome/HeroSection.tsx` para que o hero da página 
 - Manter contraste e hierarquia visual.
 
 ## Detalhes técnicos
-- Arquivo: `src/components/HeroSection.tsx`.
+- Arquivo: `src/components/copiahome/HeroSection.tsx`.
 - Alterações apenas de layout mobile, mantendo o desktop como está.
 - Nenhum texto de conteúdo alterado.
 - Usar apenas tokens semânticos do design system (sem cores hardcoded).
