@@ -63,6 +63,37 @@ const Pill = ({ label, value }: { label: string; value: string }) => (
   </span>
 );
 
+const MobileStep = ({
+  index,
+  title,
+  lead = false,
+  last = false,
+  children,
+}: {
+  index: string;
+  title: string;
+  lead?: boolean;
+  last?: boolean;
+  children?: React.ReactNode;
+}) => (
+  <div className={`relative ${last ? "" : "mb-4"}`}>
+    {/* nó no trilho */}
+    <span className="absolute -left-[25px] top-6 h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_14px_3px_hsl(220_86%_56%/0.8)]" />
+    <div className="relative overflow-hidden rounded-2xl bg-[linear-gradient(150deg,hsl(220_86%_56%)_0%,hsl(220_86%_44%)_55%,hsl(222_70%_28%)_100%)] px-4 py-4 text-accent-foreground shadow-[0_20px_45px_-24px_hsl(220_86%_56%/0.9)]">
+      <div className="pointer-events-none absolute -top-12 -right-8 h-24 w-24 rounded-full bg-primary-foreground/20 blur-2xl" />
+      <span className="relative font-body text-[10px] tracking-[0.28em] text-accent-foreground/70">{index}</span>
+      <h3
+        className={`relative mt-1 font-display font-bold leading-[1.15] tracking-tight ${
+          lead ? "text-2xl" : "text-lg"
+        }`}
+      >
+        {title}
+      </h3>
+      {children}
+    </div>
+  </div>
+);
+
 const ConsciousnessSection = () => (
   <section className="gradient-hero section-block relative overflow-hidden">
     {/* atmosfera */}
