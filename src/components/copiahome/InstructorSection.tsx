@@ -1,4 +1,3 @@
-import SectionTitle from "./SectionTitle";
 import { instructor } from "@/content/course";
 import jonas from "@/assets/jonas-peres.jpg";
 import jonasSm from "@/assets/jonas-peres-160.webp";
