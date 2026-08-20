@@ -40,11 +40,11 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-6xl px-5 sm:px-6 py-14 md:py-28 flex flex-col items-center text-center">
+      <div className="relative z-10 w-full max-w-6xl px-5 sm:px-6 py-10 md:py-28 flex flex-col items-center text-center">
         {/* Top metadata */}
-        <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-6 md:mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-4 md:mb-10">
           <span
-            className="flex items-center gap-2 px-3 py-1 rounded-full border backdrop-blur-md text-[11px] tracking-[0.2em] font-bold uppercase text-primary-foreground/85"
+            className="flex items-center gap-2 px-2.5 py-1 rounded-full border backdrop-blur-md text-[10px] tracking-[0.2em] font-bold uppercase text-primary-foreground/85"
             style={{
               background: "hsl(0 0% 100% / 0.05)",
               borderColor: "hsl(0 0% 100% / 0.10)",
@@ -54,38 +54,38 @@ const HeroSection = () => {
             Formação 2026
           </span>
           <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
-          <span className="text-[11px] tracking-[0.2em] font-semibold uppercase text-primary-foreground/70">
+          <span className="text-[10px] tracking-[0.2em] font-semibold uppercase text-primary-foreground/70">
             10 Módulos
           </span>
           <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
-          <span className="text-[11px] tracking-[0.2em] font-semibold uppercase text-primary-foreground/70">
+          <span className="text-[10px] tracking-[0.2em] font-semibold uppercase text-primary-foreground/70">
             10 Meses
           </span>
         </div>
 
         {/* Headline */}
-        <p className="font-display text-xl sm:text-3xl md:text-4xl text-primary-foreground/75 font-light mb-2 md:mb-3 tracking-tight">
+        <p className="font-display text-lg sm:text-3xl md:text-4xl text-primary-foreground/75 font-light mb-1.5 md:mb-3 tracking-tight">
           Curso de formação em
         </p>
         <h1
-          className="font-display font-semibold leading-[0.95] sm:leading-[0.92] tracking-tight text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-5 md:mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]"
+          className="font-display font-semibold leading-[0.95] sm:leading-[0.92] tracking-tight text-[2.1rem] sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-4 md:mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]"
           style={{ textShadow: "0 0 60px hsl(220 86% 56% / 0.35)" }}
         >
           Ciência Sistêmica
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-3xl mx-auto text-[15px] md:text-lg text-primary-foreground/80 leading-[1.65] md:leading-relaxed font-light font-body mb-8 md:mb-12 text-center">
+        <p className="max-w-3xl mx-auto text-sm sm:text-[15px] md:text-lg text-primary-foreground/80 leading-[1.6] md:leading-relaxed font-light font-body mb-6 md:mb-12 text-center">
           Viva sem repetir padrões negativos, se torne a sua melhor
           <br className="hidden md:inline" />{" "}
           versão e contribua com o mundo através do seu propósito.
         </p>
 
         {/* Actions */}
-        <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-12 md:mb-24">
+        <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 mb-8 md:mb-24">
           <a
             href="#inscricao"
-            className="btn-primary group w-full sm:w-auto"
+            className="btn-primary group w-full sm:w-auto text-sm md:text-base py-3 md:py-3.5"
             style={{ boxShadow: "0 0 40px hsl(220 86% 56% / 0.35)" }}
             onClick={() => track("hero_modality_click", { modality: "presencial" })}
           >
@@ -94,7 +94,7 @@ const HeroSection = () => {
           </a>
           <a
             href="#inscricao"
-            className="btn-primary group w-full sm:w-auto"
+            className="btn-primary group w-full sm:w-auto text-sm md:text-base py-3 md:py-3.5"
             style={{ boxShadow: "0 0 40px hsl(220 86% 56% / 0.35)" }}
             onClick={() => track("hero_modality_click", { modality: "hibrida" })}
           >
@@ -106,26 +106,26 @@ const HeroSection = () => {
         {/* Profile platform card */}
         <div className="relative w-full max-w-4xl">
           <div
-            className="absolute inset-x-0 -bottom-10 h-32 blur-3xl opacity-50 pointer-events-none"
+            className="absolute inset-x-0 -bottom-8 md:-bottom-10 h-20 md:h-32 blur-3xl opacity-50 pointer-events-none"
             style={{ background: "linear-gradient(to top, hsl(220 86% 56% / 0.18), transparent)" }}
           />
           <div
-            className="relative rounded-2xl border p-4 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 backdrop-blur-md"
+            className="relative rounded-xl md:rounded-2xl border p-3.5 md:p-8 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-8 backdrop-blur-md"
             style={{
               background: "hsl(0 0% 100% / 0.03)",
               borderColor: "hsl(0 0% 100% / 0.10)",
             }}
           >
-            <div className="flex items-center gap-3 md:gap-6">
-              <div className="relative">
+            <div className="flex items-center gap-3 md:gap-6 w-full md:w-auto">
+              <div className="relative shrink-0">
                 <div
-                  className="w-14 h-14 md:w-24 md:h-24 rounded-xl overflow-hidden border"
+                  className="w-12 h-12 md:w-24 md:h-24 rounded-lg md:rounded-xl overflow-hidden border"
                   style={{ borderColor: "hsl(0 0% 100% / 0.10)" }}
                 >
                   <img
                     src={jonas}
                     srcSet={`${jonasSm} 160w, ${jonasLg} 800w`}
-                    sizes="96px"
+                    sizes="(max-width: 768px) 48px, 96px"
                     width={96}
                     height={96}
                     loading="eager"
@@ -135,15 +135,15 @@ const HeroSection = () => {
                   />
                 </div>
                 <div
-                  className="absolute -bottom-1.5 -right-1.5 w-6 h-6 md:w-7 md:h-7 rounded-full bg-accent flex items-center justify-center"
-                  style={{ border: "3px solid hsl(214 67% 14%)" }}
+                  className="absolute -bottom-1 -right-1 w-4 h-4 md:w-7 md:h-7 rounded-full bg-accent flex items-center justify-center"
+                  style={{ border: "2px solid hsl(214 67% 14%)" }}
                 >
-                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary-foreground" />
+                  <span className="w-1 h-1 md:w-2 md:h-2 rounded-full bg-primary-foreground" />
                 </div>
               </div>
-              <div className="text-left">
-                <h3 className="font-display text-base md:text-2xl font-semibold">Jonas Peres</h3>
-                <p className="text-[10px] md:text-[11px] tracking-[0.15em] text-primary-foreground/70 uppercase mt-1 font-body leading-snug">
+              <div className="text-left min-w-0">
+                <h3 className="font-display text-sm md:text-2xl font-semibold">Jonas Peres</h3>
+                <p className="text-[10px] md:text-[11px] tracking-[0.15em] text-primary-foreground/70 uppercase mt-0.5 md:mt-1 font-body leading-snug">
                   <span className="block md:inline">Constelador</span>
                   <span className="hidden md:inline"> · </span>
                   <span className="block md:inline">Há 10+ anos</span>
@@ -153,22 +153,22 @@ const HeroSection = () => {
 
             <div className="h-px md:h-14 w-full md:w-px bg-primary-foreground/10" />
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10 w-full md:w-auto">
+            <div className="grid grid-cols-4 gap-2 md:gap-10 w-full md:w-auto">
               <div className="text-center md:text-left">
-                <p className="text-[10px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 font-body">Início</p>
-                <p className="font-body font-medium text-xs md:text-sm">{formatShort(startsAt("presencial"))}</p>
+                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-0.5 md:mb-1 font-body">Início</p>
+                <p className="font-body font-medium text-[10px] md:text-sm">{formatShort(startsAt("presencial"))}</p>
               </div>
               <div className="text-center md:text-left">
-                <p className="text-[10px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 font-body">Local</p>
-                <p className="font-body font-medium text-xs md:text-sm">{CITY}</p>
+                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-0.5 md:mb-1 font-body">Local</p>
+                <p className="font-body font-medium text-[10px] md:text-sm">{CITY}</p>
               </div>
               <div className="text-center md:text-left">
-                <p className="text-[10px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 font-body">Vagas</p>
-                <p className="font-body font-medium text-xs md:text-sm">Limitadas</p>
+                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-0.5 md:mb-1 font-body">Vagas</p>
+                <p className="font-body font-medium text-[10px] md:text-sm">Limitadas</p>
               </div>
               <div className="text-center md:text-left">
-                <p className="text-[10px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 font-body">Status</p>
-                <p className="font-body font-medium text-xs md:text-sm text-accent">• Aberto</p>
+                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-0.5 md:mb-1 font-body">Status</p>
+                <p className="font-body font-medium text-[10px] md:text-sm text-accent">• Aberto</p>
               </div>
             </div>
           </div>
