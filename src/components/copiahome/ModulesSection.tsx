@@ -55,14 +55,14 @@ const ModulesSection = () => {
                   <span className="text-accent mr-2 md:mr-3">{m.n}.</span>
                   {m.title}
                 </h3>
-                <span className="hidden md:inline text-sm font-semibold text-foreground/80 font-body tabular-nums whitespace-nowrap">
+                <span className="hidden md:inline text-[15px] font-semibold text-foreground font-body tabular-nums whitespace-nowrap bg-accent/10 px-3 py-1 rounded-full">
                   {m.date}
                 </span>
               </div>
               <p className="text-[15px] md:text-sm text-muted-foreground font-body font-normal md:font-light leading-[1.6] md:leading-relaxed text-justify md:text-left">
                 {m.desc}
               </p>
-              <p className="md:hidden mt-2 text-[13px] font-semibold text-foreground/80 font-body tabular-nums">
+              <p className="md:hidden mt-2 text-[14px] font-semibold text-foreground font-body tabular-nums inline-flex bg-accent/10 px-2.5 py-1 rounded-full">
                 {m.date}
               </p>
             </li>
