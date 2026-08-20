@@ -1,4 +1,6 @@
 import jonas from "@/assets/jonas-peres.jpg";
+import jonasSm from "@/assets/jonas-peres-160.webp";
+import jonasLg from "@/assets/jonas-peres-800.webp";
 import { CITY, formatShort, startsAt } from "@/content/course";
 
 const HeroSection = () => {
@@ -114,6 +116,12 @@ const HeroSection = () => {
                 >
                   <img
                     src={jonas}
+                    srcSet={`${jonasSm} 160w, ${jonasLg} 800w`}
+                    sizes="96px"
+                    width={96}
+                    height={96}
+                    loading="eager"
+                    fetchPriority="high"
                     alt="Jonas Peres, constelador"
                     className="w-full h-full object-cover"
                   />

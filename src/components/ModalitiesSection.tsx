@@ -1,4 +1,5 @@
 import SectionTitle from "./SectionTitle";
+import { track } from "@/lib/analytics";
 
 const APPLY_URL_PRESENCIAL = "#inscricao";
 const APPLY_URL_HIBRIDA = "#inscricao";
@@ -91,17 +92,7 @@ const ModalitiesSection = () => (
         {modalities.map((m) => (
           <article
             key={m.id}
-            className="flex flex-col h-full rounded-2xl p-5 md:p-7 transition-transform duration-300 md:hover:-translate-y-1"
-            style={{
-              background: m.featured
-                ? "linear-gradient(160deg, hsl(0 0% 100%) 0%, hsl(210 30% 97%) 100%)"
-                : "hsl(var(--surface))",
-              border: "1px solid hsl(var(--border))",
-              borderLeft: m.featured ? "3px solid hsl(var(--accent))" : undefined,
-              boxShadow: m.featured
-                ? "0 18px 44px -22px hsl(214 67% 14% / 0.30)"
-                : "0 10px 30px -22px hsl(214 67% 14% / 0.20)",
-            }}
+            className={`${m.featured ? "card-elevated-accent" : "card-plain"} flex flex-col h-full rounded-2xl p-5 md:p-7 transition-transform duration-300 md:hover:-translate-y-1`}
           >
             <div className="flex items-center justify-between gap-3 mb-3">
               <span className="label-section text-[11px]">{m.tag}</span>
@@ -162,6 +153,8 @@ const ModalitiesSection = () => (
 
               <a
                 href={m.cta.href}
+                data-analytics="apply"
+                onClick={() => track("apply_click", { modality: m.id })}
                 className={`${m.cta.variant === "primary" ? "btn-primary" : "btn-ghost-dark"} w-full mt-5`}
               >
                 {m.cta.text}

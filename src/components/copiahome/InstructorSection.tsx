@@ -1,11 +1,7 @@
-import SectionTitle from "./SectionTitle";
+import { instructor } from "@/content/course";
 import jonas from "@/assets/jonas-peres.jpg";
-
-const stats = [
-  { n: "10+", l: "anos como constelador" },
-  { n: "3.000h", l: "de constelações conduzidas" },
-  { n: "5.000+", l: "clientes e alunos atendidos" },
-];
+import jonasSm from "@/assets/jonas-peres-160.webp";
+import jonasLg from "@/assets/jonas-peres-800.webp";
 
 const InstructorSection = () => (
   <section className="relative section-block overflow-hidden bg-background text-foreground">
@@ -22,43 +18,37 @@ const InstructorSection = () => (
       aria-hidden="true"
     />
     <div className="container max-w-4xl relative">
-      {/* Mobile header */}
-      <div className="md:hidden mb-5 text-center">
-        <h2 className="font-display text-[26px] text-foreground mb-2 font-semibold leading-[1.15] tracking-tight">
-          Jonas Peres
-        </h2>
-        <div className="label-section text-[11px] text-accent mb-2">Aprenda com quem já chegou lá</div>
-        <p className="text-muted-foreground text-[11px] uppercase tracking-wider font-body">
-          Constelações Familiares
-          <br />
-          & Desenvolvimento Humano
-        </p>
-      </div>
       <div className="grid md:grid-cols-[1fr_1.2fr] gap-6 md:gap-14 items-center">
-        <div className="max-w-[260px] md:max-w-none mx-auto w-full relative">
+        {/* Header — single instance, responsive */}
+        <div className="mb-5 md:mb-0 text-center md:text-left md:col-start-2 md:row-start-1 md:self-end">
+          <h2 className="font-display text-[26px] md:text-4xl text-foreground mb-2 md:mb-3 font-semibold leading-[1.15] md:leading-tight tracking-tight">
+            {instructor.name}
+          </h2>
+          <div className="label-section text-[11px] text-accent mb-2 md:mb-4">Aprenda com quem já chegou lá</div>
+          <p className="text-muted-foreground text-[11px] md:text-sm uppercase tracking-wider font-body">
+            Constelações Familiares
+            <br />
+            &amp; Desenvolvimento Humano
+          </p>
+        </div>
+
+        <div className="max-w-[260px] md:max-w-none mx-auto w-full relative md:col-start-1 md:row-start-1 md:row-span-2 md:self-center">
           {/* offset accent frame */}
           <div className="absolute -inset-3 md:-inset-4 rounded-2xl bg-gradient-to-br from-accent/30 via-primary/20 to-transparent blur-xl opacity-70" aria-hidden="true" />
           <div className="absolute inset-0 translate-x-2 translate-y-2 md:translate-x-3 md:translate-y-3 rounded-xl border border-accent/40" aria-hidden="true" />
           <img
             src={jonas}
+            srcSet={`${jonasSm} 160w, ${jonasLg} 800w`}
+            sizes="(min-width: 768px) 40vw, 260px"
+            width={800}
+            height={1029}
             alt="Jonas Peres, constelador e terapeuta"
             loading="lazy"
             className="relative w-full aspect-[4/5] object-cover rounded-xl shadow-2xl ring-1 ring-foreground/5"
           />
         </div>
-        <div>
-          {/* Desktop header */}
-          <div className="hidden md:block">
-            <h2 className="font-display text-4xl text-foreground mb-3 font-semibold leading-tight tracking-tight">
-              Jonas Peres
-            </h2>
-            <div className="label-section text-[11px] text-accent mb-4">Aprenda com quem já chegou lá</div>
-            <p className="text-muted-foreground text-sm uppercase tracking-wider mb-6 font-body" style={{ textAlign: "left" }}>
-              Constelações Familiares
-              <br />
-              & Desenvolvimento Humano
-            </p>
-          </div>
+
+        <div className="md:col-start-2 md:row-start-2">
           <div className="space-y-4 md:space-y-5 text-foreground/85 text-[15px] leading-[1.65] md:leading-[1.85] font-body font-normal md:font-light mb-6 md:mb-8 text-left md:text-justify mt-5 md:mt-0">
             <p>
               Os mais de 10 anos como constelador e terapeuta são o coração de
@@ -75,10 +65,10 @@ const InstructorSection = () => (
             </p>
           </div>
           <div className="grid grid-cols-3 gap-3 md:gap-4 border-t border-foreground/10 pt-5 md:pt-6">
-            {stats.map((s) => (
+            {instructor.stats.map((s) => (
               <div key={s.l}>
                 <div className="font-display text-[22px] md:text-3xl text-primary font-semibold">{s.n}</div>
-                <div className="text-[11px] md:text-xs text-muted-foreground mt-1 font-body leading-tight" style={{ textAlign: "left" }}>{s.l}</div>
+                <div className="text-left text-[11px] md:text-xs text-muted-foreground mt-1 font-body leading-tight">{s.l}</div>
               </div>
             ))}
           </div>

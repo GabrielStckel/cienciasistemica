@@ -1,18 +1,32 @@
+import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { track } from "@/lib/analytics";
 import Index from "./pages/Index.tsx";
-import V1 from "./pages/V1.tsx";
-import V2 from "./pages/V2.tsx";
-import V3 from "./pages/V3.tsx";
 import CopiaHome from "./pages/CopiaHome.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const useCtaTracking = () => {
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      const link = target?.closest?.('a[href="#inscricao"]') as HTMLAnchorElement | null;
+      if (!link || link.dataset.analytics === "apply") return;
+      track("cta_click", { cta_text: link.textContent?.trim().slice(0, 80) ?? "" });
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
+};
+
+const App = () => {
+  useCtaTracking();
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -20,9 +34,6 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/v1" element={<V1 />} />
-          <Route path="/v2" element={<V2 />} />
-          <Route path="/v3" element={<V3 />} />
           <Route path="/copiahome" element={<CopiaHome />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
@@ -30,6 +41,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;

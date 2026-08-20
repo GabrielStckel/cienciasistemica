@@ -37,14 +37,7 @@ const PreparationSection = () => (
         {topics.map((t, i) => (
           <li key={t} className="group h-full">
             <div
-              className="relative h-full rounded-2xl p-4 md:p-6 flex items-start gap-3.5 md:gap-4 transition-all duration-300 hover:-translate-y-1"
-              style={{
-                background:
-                  "linear-gradient(160deg, hsl(0 0% 100%) 0%, hsl(210 25% 97%) 100%)",
-                border: "1px solid hsl(var(--border))",
-                boxShadow:
-                  "0 1px 0 hsl(0 0% 100%) inset, 0 12px 30px -18px hsl(214 67% 14% / 0.18)",
-              }}
+              className="card-elevated relative h-full rounded-2xl p-4 md:p-6 flex items-start gap-3.5 md:gap-4 transition-all duration-300 hover:-translate-y-1"
             >
               <span
                 className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-full font-display text-[13px] font-semibold shrink-0"
@@ -58,10 +51,7 @@ const PreparationSection = () => (
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p
-                className="text-foreground text-[15px] leading-snug font-body pt-1.5 md:pt-2"
-                style={{ textAlign: "left" }}
-              >
+              <p className="text-left text-foreground text-[15px] leading-snug font-body pt-1.5 md:pt-2">
                 {t}
               </p>
             </div>
