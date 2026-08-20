@@ -1,5 +1,6 @@
 import SectionTitle from "./SectionTitle";
 import { modalities, specsFor, APPLY_URL } from "@/content/course";
+import { track } from "@/lib/analytics";
 
 const ModalitiesSection = () => (
   <section id="inscricao" className="section-white section-block relative overflow-hidden">
