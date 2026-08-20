@@ -2,6 +2,7 @@ import jonas from "@/assets/jonas-peres.jpg";
 import jonasSm from "@/assets/jonas-peres-160.webp";
 import jonasLg from "@/assets/jonas-peres-800.webp";
 import { CITY, formatShort, startsAt } from "@/content/course";
+import { track } from "@/lib/analytics";
 
 const HeroSection = () => {
   return (
@@ -83,15 +84,20 @@ const HeroSection = () => {
         {/* Actions */}
         <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-14 md:mb-24">
           <a
-            href="#sobre"
+            href="#inscricao"
             className="btn-primary group w-full sm:w-auto"
             style={{ boxShadow: "0 0 40px hsl(220 86% 56% / 0.35)" }}
+            onClick={() => track("hero_modality_click", { modality: "presencial" })}
           >
-            Conhecer o curso
+            Presencial
             <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
           </a>
-          <a href="#inscricao" className="btn-ghost-light w-full sm:w-auto">
-            Ver modalidades
+          <a
+            href="#inscricao"
+            className="btn-ghost-light w-full sm:w-auto"
+            onClick={() => track("hero_modality_click", { modality: "hibrida" })}
+          >
+            Híbrida
           </a>
         </div>
 
