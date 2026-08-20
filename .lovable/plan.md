@@ -1,6 +1,6 @@
-# Melhorar o design do hero no mobile
+# Melhorar o design do hero no mobile — `/copiahome`
 
-Ajustar o `HeroSection.tsx` da página `/` para que o hero fique mais organizado em telas pequenas, reduzindo a caixa de destaque do Jonas Peres e aumentando o respiro entre os elementos.
+Ajustar o `src/components/copiahome/HeroSection.tsx` para que o hero da página `/copiahome` fique mais organizado em telas pequenas, reduzindo a caixa de destaque do Jonas Peres e aumentando o respiro entre os elementos.
 
 ## O que muda
 
@@ -23,7 +23,7 @@ Ajustar o `HeroSection.tsx` da página `/` para que o hero fique mais organizado
 - Manter contraste e hierarquia visual.
 
 ## Detalhes técnicos
-- Arquivo: `src/components/HeroSection.tsx`.
+- Arquivo: `src/components/copiahome/HeroSection.tsx`.
 - Alterações apenas de layout mobile, mantendo o desktop como está.
 - Nenhum texto de conteúdo alterado.
 - Usar apenas tokens semânticos do design system (sem cores hardcoded).
