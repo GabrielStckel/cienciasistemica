@@ -155,3 +155,16 @@ export const specsFor = (mod: Modality): { k: string; v: string }[] =>
         { k: "Turma", v: "Reduzida" },
         { k: "Presenciais", v: VENUE },
       ];
+
+export const identificationItems: string[] = [];
+
+export const testimonials: { quote: string; name: string; context: string }[] = [];
+
+export const faq: { q: string; a: string }[] = [];
+
+/** Preencher junto com os arrays acima. */
+export const sectionCopy = {
+  identification: { eyebrow: "", title: "", subtitle: "" },
+  testimonials:   { eyebrow: "", title: "", subtitle: "" },
+  faq:            { eyebrow: "", title: "", subtitle: "" },
+};
