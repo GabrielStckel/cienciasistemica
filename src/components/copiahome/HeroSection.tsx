@@ -40,7 +40,7 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-6xl px-5 sm:px-6 py-10 md:py-28 flex flex-col items-center text-center">
+      <div className="relative z-10 w-full max-w-6xl px-5 sm:px-6 pt-6 pb-10 md:py-28 flex flex-col items-center text-center">
         {/* Top metadata */}
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-5 md:mb-10">
           <span
