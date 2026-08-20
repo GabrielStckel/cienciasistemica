@@ -56,24 +56,21 @@ const ConsciousnessSection = () => (
         </div>
 
         {/* Ramificação + rótulo 5% */}
-        <div className="grid grid-cols-[1.25fr_28px_1fr_28px_1fr_28px_1.15fr] mt-0">
-          {/* coluna Fonte: linha vertical descendo */}
-          <div className="relative">
-            <div className="absolute left-6 top-0 h-10 w-px bg-primary-foreground/50" />
-          </div>
-          <div />
-          <div className="col-span-3 pt-10 pl-4 border-l border-primary-foreground/50 -ml-[1px]">
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2 max-w-sm">
-              <SmallBlock />
-              <SmallBlock />
-              <SmallBlock />
-              <SmallBlock />
+        <div className="grid grid-cols-[1fr_1.15fr] gap-7">
+          <div className="relative pl-6 pt-0">
+            {/* linha vertical descendo da Fonte */}
+            <div className="absolute left-6 top-0 bottom-6 w-px bg-primary-foreground/45" />
+            <div className="pt-8 pl-8 flex items-start gap-4">
+              <div className="grid grid-cols-2 gap-x-4 gap-y-3 w-full max-w-[320px]">
+                <SmallBlock />
+                <SmallBlock />
+                <SmallBlock />
+                <SmallBlock />
+              </div>
+              <span className="font-body text-sm text-primary-foreground/80 leading-tight shrink-0 pt-0.5">
+                Outras<br />pessoas
+              </span>
             </div>
-          </div>
-          <div className="pt-10 pl-2 self-start">
-            <span className="font-body text-sm text-primary-foreground/80 leading-tight block">
-              Outras<br />pessoas
-            </span>
           </div>
           <div className="pt-8">
             <p className="font-display text-xl font-semibold text-primary-foreground">
