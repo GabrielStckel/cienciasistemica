@@ -1,58 +1,123 @@
-import SectionTitle from "./SectionTitle";
+const Block = ({
+  title,
+  className = "",
+  children,
+}: {
+  title: string;
+  className?: string;
+  children?: React.ReactNode;
+}) => (
+  <div
+    className={`relative rounded-lg bg-accent text-accent-foreground px-4 py-4 md:px-5 md:py-6 shadow-[0_18px_40px_-20px_hsl(220_86%_56%/0.6)] ${className}`}
+  >
+    <h3 className="font-display font-semibold leading-tight tracking-tight">{title}</h3>
+    {children}
+  </div>
+);
 
-const layers = [
-  {
-    n: "01",
-    title: "Fonte",
-    body: "A origem — o campo do qual tudo emerge e ao qual tudo retorna.",
-  },
-  {
-    n: "02",
-    title: "Inconsciente coletivo",
-    body: "A memória compartilhada da humanidade e dos sistemas a que pertencemos.",
-  },
-  {
-    n: "03",
-    title: "Consciência familiar",
-    body: "As lealdades, os pertencimentos e as dinâmicas herdadas do sistema familiar.",
-  },
-  {
-    n: "04",
-    title: "Consciência pessoal",
-    body: "Emocional, inconsciente individual, mental — o Eu/Ego no qual vivemos o dia a dia.",
-  },
-];
+const SmallBlock = () => (
+  <div className="h-5 md:h-6 rounded-md bg-accent/55 border border-accent/40" />
+);
 
 const ConsciousnessSection = () => (
-  <section className="section-muted section-block">
-    <div className="container max-w-4xl">
-      <SectionTitle
-        eyebrow="O mapa"
-        label="A arquitetura da consciência humana"
-        subtitle="O que opera em nós é 95% inconsciente — apenas 5% é consciente. Compreender essa arquitetura é o primeiro passo do trabalho sistêmico."
-      />
+  <section className="gradient-hero section-block overflow-hidden">
+    <div className="container max-w-5xl">
+      {/* Título */}
+      <header className="mb-8 md:mb-14">
+        <h2 className="font-display uppercase tracking-tight text-primary-foreground text-[26px] leading-[1.1] sm:text-4xl md:text-5xl font-bold">
+          A arquitetura da consciência humana
+        </h2>
+        <p className="mt-2 font-display uppercase tracking-wide text-primary-foreground/85 text-base md:text-2xl font-semibold">
+          Inconsciente <span className="text-accent">95%</span>
+        </p>
+      </header>
 
-      <div className="mt-8 md:mt-10 divide-y divide-foreground/10 border-y border-foreground/10">
-        {layers.map((l) => (
-          <div
-            key={l.n}
-            className="grid grid-cols-[32px_1fr] md:grid-cols-[48px_180px_1fr] items-baseline gap-x-3 gap-y-1.5 md:gap-6 py-4 md:py-5"
-          >
-            <div className="font-display text-accent text-[15px] md:text-base font-semibold tabular-nums">{l.n}</div>
-            <h3 className="font-display text-[17px] md:text-base text-foreground font-semibold tracking-tight">
-              {l.title}
-            </h3>
-            <p className="col-span-2 md:col-span-1 text-foreground/80 text-[15px] leading-[1.65] md:leading-relaxed font-body text-justify md:text-left">
-              {l.body}
+      {/* ---------- Diagrama: desktop ---------- */}
+      <div className="hidden md:block">
+        <div className="grid grid-cols-[1.25fr_28px_1fr_28px_1fr_28px_1.15fr] items-stretch">
+          <Block title="Fonte" className="flex items-center text-3xl [&>h3]:text-3xl" />
+          <div className="flex items-center">
+            <div className="h-px w-full bg-primary-foreground/60" />
+          </div>
+          <Block title="Inconsciente coletivo" className="flex items-center [&>h3]:text-xl" />
+          <div className="flex items-center">
+            <div className="h-px w-full bg-primary-foreground/60" />
+          </div>
+          <Block title="Consciência familiar" className="flex items-center [&>h3]:text-xl" />
+          <div className="flex items-center">
+            <div className="h-px w-full bg-primary-foreground/60" />
+          </div>
+          <Block title="Consciência pessoal" className="[&>h3]:text-xl">
+            <div className="mt-5 grid grid-cols-2 gap-3 text-[11px] leading-snug font-body text-accent-foreground/85">
+              <span>Emocional<br />inconsciente<br />individual</span>
+              <span>Mental<br />Eu/Ego</span>
+            </div>
+          </Block>
+        </div>
+
+        {/* Ramificação + rótulo 5% */}
+        <div className="grid grid-cols-[1.25fr_28px_1fr_28px_1fr_28px_1.15fr] mt-0">
+          {/* coluna Fonte: linha vertical descendo */}
+          <div className="relative">
+            <div className="absolute left-6 top-0 h-10 w-px bg-primary-foreground/50" />
+          </div>
+          <div />
+          <div className="col-span-3 pt-10 pl-4 border-l border-primary-foreground/50 -ml-[1px]">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2 max-w-sm">
+              <SmallBlock />
+              <SmallBlock />
+              <SmallBlock />
+              <SmallBlock />
+            </div>
+          </div>
+          <div className="pt-10 pl-2 self-start">
+            <span className="font-body text-sm text-primary-foreground/80 leading-tight block">
+              Outras<br />pessoas
+            </span>
+          </div>
+          <div className="pt-8">
+            <p className="font-display text-xl font-semibold text-primary-foreground">
+              Consciente <span className="text-accent">5%</span>
             </p>
           </div>
-        ))}
+        </div>
       </div>
 
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:gap-6 text-[11px] md:text-xs uppercase tracking-widest font-body text-muted-foreground">
-        <span><span className="text-accent font-semibold">95%</span> Inconsciente</span>
-        <span className="w-1 h-1 rounded-full bg-muted-foreground/40" />
-        <span><span className="text-accent font-semibold">5%</span> Consciente</span>
+      {/* ---------- Diagrama: mobile ---------- */}
+      <div className="md:hidden">
+        <div className="space-y-0">
+          <Block title="Fonte" className="[&>h3]:text-2xl" />
+          {/* ramo outras pessoas */}
+          <div className="pl-5 border-l border-primary-foreground/40 py-4 ml-6">
+            <div className="grid grid-cols-2 gap-2 max-w-[220px]">
+              <SmallBlock />
+              <SmallBlock />
+              <SmallBlock />
+              <SmallBlock />
+            </div>
+            <span className="mt-2 block font-body text-xs text-primary-foreground/75">Outras pessoas</span>
+          </div>
+          <div className="flex justify-center">
+            <div className="w-px h-6 bg-primary-foreground/50" />
+          </div>
+          <Block title="Inconsciente coletivo" className="[&>h3]:text-lg" />
+          <div className="flex justify-center">
+            <div className="w-px h-6 bg-primary-foreground/50" />
+          </div>
+          <Block title="Consciência familiar" className="[&>h3]:text-lg" />
+          <div className="flex justify-center">
+            <div className="w-px h-6 bg-primary-foreground/50" />
+          </div>
+          <Block title="Consciência pessoal" className="[&>h3]:text-lg">
+            <div className="mt-3 grid grid-cols-2 gap-3 text-[11px] leading-snug font-body text-accent-foreground/85">
+              <span>Emocional<br />inconsciente individual</span>
+              <span>Mental<br />Eu/Ego</span>
+            </div>
+          </Block>
+        </div>
+        <p className="mt-5 text-right font-display text-base font-semibold text-primary-foreground">
+          Consciente <span className="text-accent">5%</span>
+        </p>
       </div>
     </div>
   </section>
