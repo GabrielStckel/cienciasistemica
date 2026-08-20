@@ -82,7 +82,7 @@ const HeroSection = () => {
         </p>
 
         {/* Actions */}
-        <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 mb-8 md:mb-24">
+        <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 mb-10 md:mb-24">
           <a
             href="#inscricao"
             className="btn-primary group w-full sm:w-auto text-sm md:text-base py-3 md:py-3.5"
