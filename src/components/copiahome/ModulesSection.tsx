@@ -1,18 +1,8 @@
 import { useState } from "react";
 import SectionTitle from "./SectionTitle";
+import { modulesFor } from "@/content/course";
 
-const modules = [
-  { n: "I", title: "A ciência sistêmica", date: "29–30 Ago 2026", desc: "Introdução ao pensamento sistêmico." },
-  { n: "II", title: "Ciclos da vida e postura fenomenológica", date: "12–13 Set 2026", desc: "As Leis Sistêmicas: pertencimento." },
-  { n: "III", title: "As Leis Sistêmicas", date: "10–11 Out 2026", desc: "Ordem e equilíbrio." },
-  { n: "IV", title: "O amor em movimento", date: "14–15 Nov 2026", desc: "Pais e filhos." },
-  { n: "V", title: "O amor em movimento", date: "19–20 Dez 2026", desc: "O amor de casal." },
-  { n: "VI", title: "Saúde e sexualidade", date: "30–31 Jan 2027", desc: "O corpo como campo sistêmico." },
-  { n: "VII", title: "A vida no mundo", date: "27–28 Fev 2027", desc: "Função sistêmica, propósito e sentido da vida." },
-  { n: "VIII", title: "Espiritualidade sistêmica", date: "27–28 Mar 2027", desc: "As ordens da ajuda." },
-  { n: "IX", title: "A prática das constelações", date: "24–25 Abr 2027", desc: "Vivência integrada." },
-  { n: "X", title: "A prática das constelações", date: "29–30 Mai 2027", desc: "Encerramento e integração." },
-];
+const modules = modulesFor("presencial");
 
 const ModulesSection = () => {
   const [showAll, setShowAll] = useState(false);

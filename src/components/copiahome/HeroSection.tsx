@@ -1,4 +1,5 @@
 import jonas from "@/assets/jonas-peres.jpg";
+import { CITY, formatShort, startsAt } from "@/content/course";
 
 const HeroSection = () => {
   return (
@@ -136,10 +137,14 @@ const HeroSection = () => {
 
             <div className="h-px md:h-14 w-full md:w-px bg-primary-foreground/10" />
 
-            <div className="grid grid-cols-3 gap-3 md:gap-10 w-full md:w-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-10 w-full md:w-auto">
               <div className="text-center md:text-left">
                 <p className="text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 font-body">Início</p>
-                <p className="font-body font-medium text-sm">Ago/26</p>
+                <p className="font-body font-medium text-sm">{formatShort(startsAt("presencial"))}</p>
+              </div>
+              <div className="text-center md:text-left">
+                <p className="text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 font-body">Local</p>
+                <p className="font-body font-medium text-sm">{CITY}</p>
               </div>
               <div className="text-center md:text-left">
                 <p className="text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 font-body">Vagas</p>
