@@ -76,12 +76,12 @@ const InstructorSection = () => (
             </h2>
 
             {/* Subtitle */}
-            <p className="font-display text-lg md:text-xl text-[hsl(213_100%_95%)]/90 italic mb-8 md:mb-10 tracking-wide">
+            <p className="font-display text-lg md:text-xl text-[hsl(213_100%_95%_/_0.9)] italic mb-8 md:mb-10 tracking-wide">
               Constelações Familiares &amp; Desenvolvimento Humano
             </p>
 
             {/* Bio */}
-            <div className="space-y-5 md:space-y-6 text-[hsl(213_100%_95%)]/70 text-[15px] md:text-base leading-[1.7] md:leading-[1.8] font-body font-light mb-10 md:mb-14 max-w-lg">
+            <div className="space-y-5 md:space-y-6 text-[hsl(213_100%_95%_/_0.7)] text-[15px] md:text-base leading-[1.7] md:leading-[1.8] font-body font-light mb-10 md:mb-14 max-w-lg">
               <p>
                 Os mais de 10 anos como constelador e terapeuta são o coração de
                 uma vida inteira destinada ao servir consciente à vida — com o
@@ -104,7 +104,7 @@ const InstructorSection = () => (
                   <div className="font-display text-[22px] md:text-3xl lg:text-4xl text-[hsl(213_100%_95%)] font-semibold transition-colors group-hover:text-[hsl(220_86%_56%)]">
                     {s.n}
                   </div>
-                  <div className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[hsl(220_86%_56%)]/60 font-semibold mt-1 md:mt-2 leading-tight">
+                  <div className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[hsl(220_86%_56%_/_0.6)] font-semibold mt-1 md:mt-2 leading-tight">
                     {s.l}
                   </div>
                 </div>
