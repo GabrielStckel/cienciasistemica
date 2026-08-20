@@ -93,7 +93,7 @@ const ConsciousnessSection = () => (
         <h2 className="font-display uppercase tracking-tight text-primary-foreground text-[26px] leading-[1.05] sm:text-4xl md:text-5xl font-bold">
           A arquitetura da consciência humana
         </h2>
-        <div className="mt-5 flex flex-wrap gap-2 md:gap-3">
+        <div className="mt-5 grid grid-cols-2 gap-2 md:flex md:flex-wrap md:gap-3">
           <Pill label="Inconsciente" value="95%" />
           <Pill label="Consciente" value="5%" />
         </div>
@@ -138,33 +138,37 @@ const ConsciousnessSection = () => (
         </div>
       </div>
 
-      {/* ---------- Diagrama: mobile ---------- */}
-      <div className="md:hidden">
-        <Node index="01" title="Fonte" size="lg" />
-        <div className="ml-8 border-l border-dashed border-primary-foreground/30 pl-5 py-4">
-          <div className="grid grid-cols-4 gap-2 max-w-[240px]">
-            <SmallBlock />
-            <SmallBlock />
-            <SmallBlock />
-            <SmallBlock />
+      {/* ---------- Diagrama: mobile (trilha vertical) ---------- */}
+      <div className="md:hidden relative pl-7">
+        {/* trilho */}
+        <div className="absolute left-[9px] top-3 bottom-3 w-px bg-gradient-to-b from-accent via-accent/60 to-accent/10" />
+
+        <MobileStep index="01" title="Fonte" lead>
+          <div className="mt-3 rounded-xl border border-primary-foreground/15 bg-primary-foreground/[0.05] px-3 py-3">
+            <div className="grid grid-cols-4 gap-1.5">
+              <SmallBlock />
+              <SmallBlock />
+              <SmallBlock />
+              <SmallBlock />
+            </div>
+            <span className="mt-2 block font-body text-[11px] uppercase tracking-[0.18em] text-primary-foreground/70">
+              Outras pessoas
+            </span>
           </div>
-          <span className="mt-2 block font-body text-xs text-primary-foreground/75">Outras pessoas</span>
-        </div>
-        <Connector vertical />
-        <Node index="02" title="Inconsciente coletivo" />
-        <Connector vertical />
-        <Node index="03" title="Consciência familiar" />
-        <Connector vertical />
-        <Node index="04" title="Consciência pessoal">
-          <div className="relative mt-3 grid grid-cols-2 gap-2">
+        </MobileStep>
+
+        <MobileStep index="02" title="Inconsciente coletivo" />
+        <MobileStep index="03" title="Consciência familiar" />
+        <MobileStep index="04" title="Consciência pessoal" last>
+          <div className="mt-3 grid grid-cols-2 gap-2">
             <span className="rounded-lg bg-primary-foreground/10 px-2.5 py-2 font-body text-[11px] leading-snug text-accent-foreground/90">
-              Emocional<br />inconsciente individual
+              Emocional<br />inconsciente<br />individual
             </span>
             <span className="rounded-lg bg-primary-foreground/10 px-2.5 py-2 font-body text-[11px] leading-snug text-accent-foreground/90">
               Mental<br />Eu/Ego
             </span>
           </div>
-        </Node>
+        </MobileStep>
       </div>
     </div>
   </section>
