@@ -1,4 +1,5 @@
 import SectionTitle from "./SectionTitle";
+import { track } from "@/lib/analytics";
 
 const APPLY_URL_PRESENCIAL = "#inscricao";
 const APPLY_URL_HIBRIDA = "#inscricao";
@@ -152,6 +153,8 @@ const ModalitiesSection = () => (
 
               <a
                 href={m.cta.href}
+                data-analytics="apply"
+                onClick={() => track("apply_click", { modality: m.id })}
                 className={`${m.cta.variant === "primary" ? "btn-primary" : "btn-ghost-dark"} w-full mt-5`}
               >
                 {m.cta.text}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SectionTitle from "./SectionTitle";
 import { modulesFor, type Modality } from "@/content/course";
+import { track } from "@/lib/analytics";
 
 const ModulesSection = () => {
   const [showAll, setShowAll] = useState(false);
@@ -34,6 +35,7 @@ const ModulesSection = () => {
                 onClick={() => {
                   setModality(t.id);
                   setShowAll(false);
+                  track("schedule_toggle", { modality: t.id });
                 }}
                 className={`flex-1 sm:flex-none rounded-full px-5 py-2 text-[11px] md:text-xs uppercase tracking-[0.18em] font-semibold transition-colors ${
                   modality === t.id
