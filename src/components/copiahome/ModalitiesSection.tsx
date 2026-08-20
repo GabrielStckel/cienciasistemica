@@ -1,74 +1,5 @@
 import SectionTitle from "./SectionTitle";
-
-const APPLY_URL_PRESENCIAL = "#inscricao";
-const APPLY_URL_HIBRIDA = "#inscricao";
-
-type Modality = {
-  id: string;
-  tag: string;
-  badge?: string;
-  title: string;
-  pitch: string;
-  specs: { k: string; v: string }[];
-  benefits: string[];
-  price: { label: string; value: string; suffix?: string; note: string };
-  cta: { text: string; href: string; variant: "primary" | "ghost" };
-  featured: boolean;
-};
-
-const modalities: Modality[] = [
-  {
-    id: "presencial",
-    tag: "Turma presencial",
-    badge: "Vagas limitadas",
-    title: "Presencial",
-    pitch:
-      "A experiência completa: dez encontros presenciais, campo vivo, prática de constelação em grupo reduzido e contato direto com o docente.",
-    specs: [
-      { k: "Formato", v: "10 encontros presenciais" },
-      { k: "Duração", v: "10 meses · Ago/26 a Mai/27" },
-      { k: "Turma", v: "Reduzida" },
-    ],
-    benefits: [
-      "Todos os módulos ao vivo, no mesmo espaço",
-      "Prática de constelação com o campo presencial",
-      "Vivências e exercícios de percepção em grupo",
-      "Acompanhamento direto do docente",
-    ],
-    price: {
-      label: "Pré-inscrição",
-      value: "Sob consulta",
-      note: "Condições enviadas após a aplicação",
-    },
-    cta: { text: "Fazer minha aplicação", href: APPLY_URL_PRESENCIAL, variant: "primary" },
-    featured: true,
-  },
-  {
-    id: "hibrida",
-    tag: "Turma híbrida",
-    title: "Híbrida",
-    pitch:
-      "Para quem mora longe ou não consegue estar presente todos os meses: parte dos módulos online ao vivo, com encontros presenciais nos momentos-chave da formação.",
-    specs: [
-      { k: "Formato", v: "Online ao vivo + presencial" },
-      { k: "Duração", v: "10 meses · Ago/26 a Mai/27" },
-      { k: "Turma", v: "Reduzida" },
-    ],
-    benefits: [
-      "Módulos teóricos online, ao vivo e com interação",
-      "Encontros presenciais nos módulos de prática",
-      "Mesmo conteúdo e mesma certificação",
-      "Gravações para revisão dos módulos online",
-    ],
-    price: {
-      label: "Pré-inscrição",
-      value: "Sob consulta",
-      note: "Condições enviadas após a aplicação",
-    },
-    cta: { text: "Fazer minha aplicação", href: APPLY_URL_HIBRIDA, variant: "ghost" },
-    featured: false,
-  },
-];
+import { modalities, specsFor, APPLY_URL } from "@/content/course";
 
 const ModalitiesSection = () => (
   <section id="inscricao" className="section-white section-block relative overflow-hidden">
@@ -121,7 +52,7 @@ const ModalitiesSection = () => (
             </p>
 
             <dl className="border-y border-border py-4 space-y-2.5">
-              {m.specs.map((s) => (
+              {specsFor(m.id).map((s) => (
                 <div key={s.k} className="flex items-baseline justify-between gap-4">
                   <dt className="text-[11px] uppercase tracking-wider text-muted-foreground font-body">
                     {s.k}
@@ -161,7 +92,7 @@ const ModalitiesSection = () => (
               <p className="text-[13px] text-muted-foreground font-body mt-1">{m.price.note}</p>
 
               <a
-                href={m.cta.href}
+                href={APPLY_URL[m.id]}
                 className={`${m.cta.variant === "primary" ? "btn-primary" : "btn-ghost-dark"} w-full mt-5`}
               >
                 {m.cta.text}
