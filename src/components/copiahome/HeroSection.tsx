@@ -40,7 +40,7 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-6xl px-5 sm:px-6 py-10 md:py-28 flex flex-col items-center text-center">
+      <div className="relative z-10 w-full max-w-6xl px-5 sm:px-6 pt-6 pb-10 md:py-28 flex flex-col items-center text-center">
         {/* Top metadata */}
         <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-5 md:mb-10">
           <span
@@ -82,7 +82,7 @@ const HeroSection = () => {
         </p>
 
         {/* Actions */}
-        <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 mb-10 md:mb-24">
+        <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 mb-16 md:mb-24">
           <a
             href="#inscricao"
             className="btn-primary group w-full sm:w-auto text-sm md:text-base py-3 md:py-3.5"
