@@ -72,7 +72,7 @@ const ConsciousnessSection = () => (
               </span>
             </div>
           </div>
-          <div className="pt-8">
+          <div className="pt-8 text-right">
             <p className="font-display text-xl font-semibold text-primary-foreground">
               Consciente <span className="text-accent">5%</span>
             </p>
