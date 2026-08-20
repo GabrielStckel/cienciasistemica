@@ -17,8 +17,8 @@ const CopiaHome = () => (
     <PillarsSection />
     <ConsciousnessSection />
     <PreparationSection />
-    <JourneySection />
     <ModulesSection />
+    <JourneySection />
     <ModalitiesSection />
     <CtaSection />
   </main>
