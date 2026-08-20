@@ -23,7 +23,7 @@ const ModalitiesSection = () => (
         {modalities.map((m) => (
           <article
             key={m.id}
-            className={`${m.featured ? "card-elevated-accent" : "card-plain"} flex flex-col h-full rounded-2xl p-5 md:p-7 transition-transform duration-300 md:hover:-translate-y-1`}
+            className="card-elevated-accent flex flex-col h-full rounded-2xl p-5 md:p-7 transition-transform duration-300 md:hover:-translate-y-1"
           >
             <div className="flex items-center justify-between gap-3 mb-3">
               <span className="label-section text-[11px]">{m.tag}</span>
@@ -86,7 +86,7 @@ const ModalitiesSection = () => (
                 href={APPLY_URL[m.id]}
                 data-analytics="apply"
                 onClick={() => track("apply_click", { modality: m.id })}
-                className={`${m.cta.variant === "primary" ? "btn-primary" : "btn-ghost-dark"} w-full mt-5`}
+                className="btn-primary w-full mt-5"
               >
                 {m.cta.text}
               </a>

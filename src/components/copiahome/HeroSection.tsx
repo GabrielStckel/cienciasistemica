@@ -94,10 +94,12 @@ const HeroSection = () => {
           </a>
           <a
             href="#inscricao"
-            className="btn-ghost-light w-full sm:w-auto"
+            className="btn-primary group w-full sm:w-auto"
+            style={{ boxShadow: "0 0 40px hsl(220 86% 56% / 0.35)" }}
             onClick={() => track("hero_modality_click", { modality: "hibrida" })}
           >
             Híbrida
+            <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
           </a>
         </div>
 
