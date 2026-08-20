@@ -42,7 +42,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 w-full max-w-6xl px-5 sm:px-6 py-10 md:py-28 flex flex-col items-center text-center">
         {/* Top metadata */}
-        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-4 md:mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-5 md:mb-10">
           <span
             className="flex items-center gap-2 px-2.5 py-1 rounded-full border backdrop-blur-md text-[10px] tracking-[0.2em] font-bold uppercase text-primary-foreground/85"
             style={{
@@ -64,25 +64,25 @@ const HeroSection = () => {
         </div>
 
         {/* Headline */}
-        <p className="font-display text-lg sm:text-3xl md:text-4xl text-primary-foreground/75 font-light mb-1.5 md:mb-3 tracking-tight">
+        <p className="font-display text-lg sm:text-3xl md:text-4xl text-primary-foreground/75 font-light mb-2.5 md:mb-3 tracking-tight">
           Curso de formação em
         </p>
         <h1
-          className="font-display font-semibold leading-[0.95] sm:leading-[0.92] tracking-tight text-[2.1rem] sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-4 md:mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]"
+          className="font-display font-semibold leading-[0.95] sm:leading-[0.92] tracking-tight text-[2.1rem] sm:text-6xl md:text-7xl lg:text-[7.5rem] mb-5 md:mb-8 animate-[fade-up_0.9s_cubic-bezier(0.16,1,0.3,1)_forwards]"
           style={{ textShadow: "0 0 60px hsl(220 86% 56% / 0.35)" }}
         >
           Ciência Sistêmica
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-3xl mx-auto text-sm sm:text-[15px] md:text-lg text-primary-foreground/80 leading-[1.6] md:leading-relaxed font-light font-body mb-6 md:mb-12 text-center">
+        <p className="max-w-3xl mx-auto text-sm sm:text-[15px] md:text-lg text-primary-foreground/80 leading-[1.6] md:leading-relaxed font-light font-body mb-8 md:mb-12 text-center">
           Viva sem repetir padrões negativos, se torne a sua melhor
           <br className="hidden md:inline" />{" "}
           versão e contribua com o mundo através do seu propósito.
         </p>
 
         {/* Actions */}
-        <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 mb-8 md:mb-24">
+        <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 mb-10 md:mb-24">
           <a
             href="#inscricao"
             className="btn-primary group w-full sm:w-auto text-sm md:text-base py-3 md:py-3.5"
