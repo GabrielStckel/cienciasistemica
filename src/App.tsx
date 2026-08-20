@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { track } from "@/lib/analytics";
 import Index from "./pages/Index.tsx";
-import CopiaHome from "./pages/CopiaHome.tsx";
+import Turma2026 from "./pages/Turma2026.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -34,7 +34,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/copiahome" element={<CopiaHome />} />
+          <Route path="/turma2026" element={<Turma2026 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
