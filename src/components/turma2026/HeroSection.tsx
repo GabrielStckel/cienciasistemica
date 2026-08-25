@@ -82,7 +82,18 @@ const HeroSection = () => {
         </p>
 
         {/* Actions */}
-        <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 mb-16 md:mb-24">
+        <div className="sm:hidden w-full mb-16">
+          <a
+            href="#inscricao"
+            className="btn-primary group w-full justify-center text-sm py-3.5"
+            style={{ boxShadow: "0 0 24px hsl(220 86% 56% / 0.28)" }}
+            onClick={() => track("hero_modalities_click", { source: "hero_mobile" })}
+          >
+            Ver as modalidades
+            <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+          </a>
+        </div>
+        <div className="hidden sm:flex w-full sm:w-auto flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 sm:mb-16 md:mb-24">
           <a
             href="#inscricao"
             className="btn-primary group w-full sm:w-auto text-sm md:text-base py-3 md:py-3.5"
@@ -153,7 +164,7 @@ const HeroSection = () => {
 
             <div className="h-px md:h-14 w-full md:w-px bg-primary-foreground/10" />
 
-            <div className="grid grid-cols-4 gap-2 md:gap-10 w-full md:w-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-3 md:gap-10 w-full md:w-auto">
               <div className="text-center md:text-left">
                 <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-0.5 md:mb-1 font-body">Início</p>
                 <p className="font-body font-medium text-[10px] md:text-sm">{formatShort(startsAt("presencial"))}</p>
