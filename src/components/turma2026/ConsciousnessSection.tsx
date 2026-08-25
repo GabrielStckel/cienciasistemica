@@ -179,9 +179,6 @@ const ConsciousnessSection = () => (
               <SmallBlock />
               <SmallBlock />
             </div>
-            <span className="mt-2 block font-body text-[11px] uppercase tracking-[0.18em] text-primary-foreground/70">
-              Outras pessoas
-            </span>
           </div>
         </MobileStep>
 
