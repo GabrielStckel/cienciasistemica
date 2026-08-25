@@ -166,19 +166,19 @@ const HeroSection = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-5 md:gap-10 w-full md:w-auto">
               <div className="text-left md:text-left">
-                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-0.5 md:mb-1 font-body">Início</p>
+                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Início</p>
                 <p className="font-body font-medium text-[10px] md:text-sm">{formatShort(startsAt("presencial"))}</p>
               </div>
               <div className="text-left md:text-left">
-                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-0.5 md:mb-1 font-body">Local</p>
+                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Local</p>
                 <p className="font-body font-medium text-[10px] md:text-sm">{CITY}</p>
               </div>
               <div className="text-left md:text-left">
-                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-0.5 md:mb-1 font-body">Vagas</p>
+                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Vagas</p>
                 <p className="font-body font-medium text-[10px] md:text-sm">Limitadas</p>
               </div>
               <div className="text-left md:text-left">
-                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-0.5 md:mb-1 font-body">Status</p>
+                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Status</p>
                 <p className="font-body font-medium text-[10px] md:text-sm text-accent">• Aberto</p>
               </div>
             </div>
