@@ -40,9 +40,9 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-6xl px-5 sm:px-6 pt-6 pb-10 md:py-28 flex flex-col items-center text-center">
+      <div className="relative z-10 w-full max-w-6xl px-5 sm:px-6 pt-8 pb-12 md:py-28 flex flex-col items-center text-center">
         {/* Top metadata */}
-        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-5 md:mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-4 md:mb-10">
           <span
             className="flex items-center gap-2 px-2.5 py-1 rounded-full border backdrop-blur-md text-[10px] tracking-[0.2em] font-bold uppercase text-primary-foreground/85"
             style={{
@@ -75,7 +75,7 @@ const HeroSection = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-3xl mx-auto text-sm sm:text-[15px] md:text-lg text-primary-foreground/80 leading-[1.6] md:leading-relaxed font-light font-body mb-8 md:mb-12 text-center">
+        <p className="max-w-3xl mx-auto text-sm sm:text-[15px] md:text-lg text-primary-foreground/80 leading-[1.6] md:leading-relaxed font-light font-body mb-7 md:mb-12 text-center">
           Viva sem repetir padrões negativos, se torne a sua melhor
           <br className="hidden md:inline" />{" "}
           versão e contribua com o mundo através do seu propósito.
