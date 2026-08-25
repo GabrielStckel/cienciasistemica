@@ -162,9 +162,6 @@ const ConsciousnessSection = () => (
               <SmallBlock />
               <SmallBlock />
             </div>
-            <span className="font-body text-sm text-primary-foreground/80 leading-tight shrink-0">
-              Outras<br />pessoas
-            </span>
           </div>
         </div>
       </div>
