@@ -30,7 +30,7 @@ export const modules = [
 /** Datas ISO do primeiro dia de cada encontro, na ordem dos módulos. */
 export const schedule: Record<Modality, string[]> = {
   presencial: [
-    "2026-10-10", "2026-11-14", "2026-12-19", "2027-01-23", "2027-02-20",
+    "2026-10-10", "2026-11-14", "2026-12-19", "2027-01-23", "2027-02-13",
     "2027-03-20", "2027-04-17", "2027-05-22", "2027-06-19", "2027-07-17",
   ],
   hibrida: [
