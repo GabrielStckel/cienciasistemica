@@ -154,16 +154,7 @@ const ConsciousnessSection = () => (
         {/* trilho */}
         <div className="absolute left-[9px] top-3 bottom-3 w-px bg-gradient-to-b from-accent via-accent/60 to-accent/10" />
 
-        <MobileStep index="01" title="Fonte" lead>
-          <div className="mt-3 rounded-xl border border-primary-foreground/15 bg-primary-foreground/[0.05] px-3 py-3">
-            <div className="grid grid-cols-4 gap-1.5">
-              <SmallBlock />
-              <SmallBlock />
-              <SmallBlock />
-              <SmallBlock />
-            </div>
-          </div>
-        </MobileStep>
+        <MobileStep index="01" title="Fonte" lead />
 
         <MobileStep index="02" title="Inconsciente coletivo" />
         <MobileStep index="03" title="Consciência familiar" />
