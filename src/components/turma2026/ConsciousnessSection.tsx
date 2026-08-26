@@ -50,9 +50,6 @@ const Connector = ({ vertical = false }: { vertical?: boolean }) =>
     </div>
   );
 
-const SmallBlock = () => (
-  <div className="h-5 md:h-6 rounded-md bg-accent/45 border border-accent/50 shadow-[0_0_18px_-6px_hsl(220_86%_56%)]" />
-);
 
 const Pill = ({ label, value }: { label: string; value: string }) => (
   <span className="inline-flex items-baseline gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/[0.06] px-4 py-1.5 backdrop-blur-sm">
@@ -150,20 +147,6 @@ const ConsciousnessSection = () => (
             </div>
           </Node>
         </div>
-
-        {/* Ramificação */}
-        <div className="relative mt-10 pl-10">
-          <div className="absolute left-10 -top-10 h-16 w-px bg-gradient-to-b from-accent to-accent/10" />
-          <div className="absolute left-10 top-6 h-px w-10 bg-gradient-to-r from-accent to-accent/10" />
-          <div className="ml-16 inline-flex items-center gap-5 rounded-2xl border border-primary-foreground/15 bg-primary-foreground/[0.05] px-5 py-4 backdrop-blur-sm">
-            <div className="grid grid-cols-4 gap-2.5 w-[280px]">
-              <SmallBlock />
-              <SmallBlock />
-              <SmallBlock />
-              <SmallBlock />
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* ---------- Diagrama: mobile (trilha vertical) ---------- */}
@@ -171,16 +154,7 @@ const ConsciousnessSection = () => (
         {/* trilho */}
         <div className="absolute left-[9px] top-3 bottom-3 w-px bg-gradient-to-b from-accent via-accent/60 to-accent/10" />
 
-        <MobileStep index="01" title="Fonte" lead>
-          <div className="mt-3 rounded-xl border border-primary-foreground/15 bg-primary-foreground/[0.05] px-3 py-3">
-            <div className="grid grid-cols-4 gap-1.5">
-              <SmallBlock />
-              <SmallBlock />
-              <SmallBlock />
-              <SmallBlock />
-            </div>
-          </div>
-        </MobileStep>
+        <MobileStep index="01" title="Fonte" lead />
 
         <MobileStep index="02" title="Inconsciente coletivo" />
         <MobileStep index="03" title="Consciência familiar" />
