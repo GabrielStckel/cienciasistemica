@@ -50,9 +50,6 @@ const Connector = ({ vertical = false }: { vertical?: boolean }) =>
     </div>
   );
 
-const SmallBlock = () => (
-  <div className="h-5 md:h-6 rounded-md bg-accent/45 border border-accent/50 shadow-[0_0_18px_-6px_hsl(220_86%_56%)]" />
-);
 
 const Pill = ({ label, value }: { label: string; value: string }) => (
   <span className="inline-flex items-baseline gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/[0.06] px-4 py-1.5 backdrop-blur-sm">
