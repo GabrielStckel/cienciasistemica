@@ -52,7 +52,7 @@ const Connector = ({ vertical = false }: { vertical?: boolean }) =>
 
 
 const Pill = ({ label, value }: { label: string; value: string }) => (
-  <span className="inline-flex min-w-0 items-baseline justify-center gap-1.5 rounded-full border border-primary-foreground/20 bg-primary-foreground/[0.06] px-3 py-1.5 md:px-4 backdrop-blur-sm">
+  <span className="inline-flex min-w-0 w-full md:w-auto items-baseline justify-center gap-1.5 rounded-full border border-primary-foreground/20 bg-primary-foreground/[0.06] px-3 py-1.5 md:px-4 backdrop-blur-sm">
     <span className="font-body text-[10px] md:text-xs uppercase tracking-[0.15em] md:tracking-[0.2em] text-primary-foreground/75">
       {label}
     </span>
