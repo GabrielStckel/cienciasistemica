@@ -11,7 +11,7 @@ presencial: [
 ],
 ```
 
-Sai `2026-10-10`, entra `2027-08-21` no fim — continuam 10 datas, todas em sábado. Nada mais no arquivo muda (híbrida, modules, formatação, exports intactos). Efeito visível em `/` e `/turma2026`: módulo I passa a "14–15 Nov 2026", módulo X a "21–22 Ago 2027", e o card presencial mostra "10 meses · Nov/26 a Ago/27".
+Sai `2026-10-10`, entra `2027-08-21` no fim — continuam 10 datas, todas em sábado. Nada mais no arquivo muda (híbrida, modules, formatação, exports intactos). Efeito visível: `/turma2026` (módulo I passa a "14–15 Nov 2026", módulo X a "21–22 Ago 2027", card presencial mostra "10 meses · Nov/26 a Ago/27") e a nova `/presencial`. A rota `/` NÃO é afetada: a home (`src/components/ModulesSection.tsx`) tem as datas hardcoded no próprio arquivo e não importa `@/content/course`. Não alteramos a home para alinhar — a divergência da rota `/` é conhecida e será tratada separadamente.
 
 ## B) Nova rota /presencial
 
