@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { track } from "@/lib/analytics";
 import Index from "./pages/Index.tsx";
 import Turma2026 from "./pages/Turma2026.tsx";
+import Presencial from "./pages/Presencial.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
