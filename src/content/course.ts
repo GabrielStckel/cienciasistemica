@@ -10,7 +10,8 @@ export const STATE = "Santa Catarina";
 export const VENUE = `${CITY} · ${STATE}`;
 
 export const APPLY_URL: Record<Modality, string> = {
-  presencial: "#inscricao",
+  presencial:
+    "https://docs.google.com/forms/d/e/1FAIpQLSeyrUSmuYbCIRwdXyA9oTxz4YDOfy08Mig5nRYTC9d4cipgoQ/viewform",
   hibrida: "#inscricao",
 };
 
