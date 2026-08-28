@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { track } from "@/lib/analytics";
 import Index from "./pages/Index.tsx";
 import Turma2026 from "./pages/Turma2026.tsx";
+import Presencial from "./pages/Presencial.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -33,8 +34,9 @@ const App = () => {
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+<Route path="/" element={<Index />} />
           <Route path="/turma2026" element={<Turma2026 />} />
+          <Route path="/presencial" element={<Presencial />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
