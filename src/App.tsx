@@ -34,8 +34,9 @@ const App = () => {
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+<Route path="/" element={<Index />} />
           <Route path="/turma2026" element={<Turma2026 />} />
+          <Route path="/presencial" element={<Presencial />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
