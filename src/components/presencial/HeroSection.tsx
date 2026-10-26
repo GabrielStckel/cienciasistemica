@@ -40,9 +40,9 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-6xl px-5 sm:px-6 pt-10 pb-14 md:py-28 flex flex-col items-center text-center">
+      <div className="relative z-10 w-full max-w-6xl px-4 sm:px-6 pt-12 pb-14 md:py-28 flex flex-col items-center text-center">
         {/* Top metadata */}
-        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-7 md:mb-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 mb-9 md:mb-10">
           <span
             className="flex items-center gap-2 px-2.5 py-1 rounded-full border backdrop-blur-md text-[10px] tracking-[0.2em] font-bold uppercase text-primary-foreground/85"
             style={{
@@ -53,18 +53,14 @@ const HeroSection = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Turma presencial 2026
           </span>
-          <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
-          <span className="text-[10px] tracking-[0.2em] font-semibold uppercase text-primary-foreground/70">
-            10 Módulos
-          </span>
-          <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
-          <span className="text-[10px] tracking-[0.2em] font-semibold uppercase text-primary-foreground/70">
-            10 Meses
-          </span>
-          <span className="hidden sm:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
-          <span className="text-[10px] tracking-[0.2em] font-semibold uppercase text-primary-foreground/70">
-            {CITY}
-          </span>
+          <div className="flex items-center justify-center gap-2 md:gap-4 whitespace-nowrap text-[9.5px] tracking-[0.12em] md:text-[10px] md:tracking-[0.2em] font-semibold uppercase text-primary-foreground/70">
+            <span className="hidden md:inline w-1 h-1 rounded-full bg-primary-foreground/25" />
+            <span>10 Módulos</span>
+            <span className="w-1 h-1 rounded-full bg-primary-foreground/25" />
+            <span>10 Meses</span>
+            <span className="w-1 h-1 rounded-full bg-primary-foreground/25" />
+            <span>{CITY}</span>
+          </div>
         </div>
 
         {/* Headline */}
