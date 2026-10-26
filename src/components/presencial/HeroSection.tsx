@@ -75,14 +75,14 @@ const HeroSection = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-3xl mx-auto text-sm sm:text-[15px] md:text-lg text-primary-foreground/80 leading-[1.6] md:leading-relaxed font-light font-body mb-10 md:mb-12 text-center">
+        <p className="max-w-3xl mx-auto text-sm sm:text-[15px] md:text-lg text-primary-foreground/80 leading-[1.6] md:leading-relaxed font-light font-body mb-9 md:mb-12 text-center">
           Viva sem repetir padrões negativos, se torne a sua melhor
           <br className="hidden md:inline" />{" "}
           versão e contribua com o mundo através do seu propósito.
         </p>
 
         {/* Actions */}
-        <div className="flex w-full items-center justify-center mb-12 sm:mb-16 md:mb-24">
+        <div className="flex w-full items-center justify-center mb-14 sm:mb-16 md:mb-24">
           <a
             href="#inscricao"
             data-analytics="apply"
@@ -102,7 +102,7 @@ const HeroSection = () => {
             style={{ background: "linear-gradient(to top, hsl(220 86% 56% / 0.18), transparent)" }}
           />
           <div
-            className="relative rounded-xl md:rounded-2xl border p-5 md:p-8 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-8 backdrop-blur-md"
+            className="relative rounded-xl md:rounded-2xl border p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 backdrop-blur-md"
             style={{
               background: "hsl(0 0% 100% / 0.03)",
               borderColor: "hsl(0 0% 100% / 0.10)",
@@ -111,13 +111,13 @@ const HeroSection = () => {
             <div className="flex items-center gap-4 md:gap-6 w-full md:w-auto">
               <div className="relative shrink-0">
                 <div
-                  className="w-14 h-14 md:w-24 md:h-24 rounded-lg md:rounded-xl overflow-hidden border"
+                  className="w-16 h-16 md:w-24 md:h-24 rounded-lg md:rounded-xl overflow-hidden border"
                   style={{ borderColor: "hsl(0 0% 100% / 0.10)" }}
                 >
                   <img
                     src={jonas}
                     srcSet={`${jonasSm} 160w, ${jonasLg} 800w`}
-                    sizes="(max-width: 768px) 56px, 96px"
+                    sizes="(max-width: 768px) 64px, 96px"
                     width={96}
                     height={96}
                     loading="eager"
@@ -134,8 +134,8 @@ const HeroSection = () => {
                 </div>
               </div>
               <div className="text-left min-w-0">
-                <h3 className="font-display text-sm md:text-2xl font-semibold">Jonas Peres</h3>
-                <p className="text-[10px] md:text-[11px] tracking-[0.15em] text-primary-foreground/70 uppercase mt-1.5 md:mt-1 font-body leading-snug">
+                <h3 className="font-display text-[17px] md:text-2xl font-semibold">Jonas Peres</h3>
+                <p className="text-[11px] tracking-[0.15em] text-primary-foreground/70 uppercase mt-1.5 md:mt-1 font-body leading-snug">
                   <span className="block md:inline">Constelador</span>
                   <span className="hidden md:inline"> · </span>
                   <span className="block md:inline">Há 10+ anos</span>
@@ -145,22 +145,22 @@ const HeroSection = () => {
 
             <div className="h-px md:h-14 w-full md:w-px bg-primary-foreground/10" />
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-5 md:gap-10 w-full md:w-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-5 md:gap-10 w-full md:w-auto">
               <div className="text-left md:text-left">
-                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Início</p>
-                <p className="font-body font-medium text-[10px] md:text-sm">{formatShort(startsAt("presencial"))}</p>
+                <p className="text-[10.5px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Início</p>
+                <p className="font-body font-medium text-[13.5px] leading-snug md:text-sm md:leading-normal">{formatShort(startsAt("presencial"))}</p>
               </div>
               <div className="text-left md:text-left">
-                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Local</p>
-                <p className="font-body font-medium text-[10px] md:text-sm">{CITY}</p>
+                <p className="text-[10.5px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Local</p>
+                <p className="font-body font-medium text-[13.5px] leading-snug md:text-sm md:leading-normal">{CITY}</p>
               </div>
               <div className="text-left md:text-left">
-                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Vagas</p>
-                <p className="font-body font-medium text-[10px] md:text-sm">Limitadas</p>
+                <p className="text-[10.5px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Vagas</p>
+                <p className="font-body font-medium text-[13.5px] leading-snug md:text-sm md:leading-normal">Limitadas</p>
               </div>
               <div className="text-left md:text-left">
-                <p className="text-[9px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Status</p>
-                <p className="font-body font-medium text-[10px] md:text-sm text-accent">• Aberto</p>
+                <p className="text-[10.5px] md:text-[11px] uppercase tracking-wider text-primary-foreground/60 mb-1 md:mb-1 font-body">Status</p>
+                <p className="font-body font-medium text-[13.5px] leading-snug md:text-sm md:leading-normal text-accent">• Aberto</p>
               </div>
             </div>
           </div>
