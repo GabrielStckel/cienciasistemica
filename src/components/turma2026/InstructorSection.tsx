@@ -3,6 +3,9 @@ import jonas from "@/assets/jonas-peres.jpg";
 import jonasSm from "@/assets/jonas-peres-160.webp";
 import jonasLg from "@/assets/jonas-peres-800.webp";
 
+/** Azul-marinho da marca (mesmo tom de --primary), usado na faixa de credenciais sob o retrato. */
+const NAVY = "hsl(214 67% 14%)";
+
 const InstructorSection = () => (
   <section className="relative section-block overflow-hidden bg-background text-foreground">
     {/* subtle dark overlay to deepen the section */}
@@ -17,61 +20,79 @@ const InstructorSection = () => (
       }}
       aria-hidden="true"
     />
-    <div className="container max-w-4xl relative">
-      <div className="grid md:grid-cols-[1fr_1.2fr] gap-6 md:gap-14 items-center">
-        {/* Header — single instance, responsive */}
-        <div className="mb-5 md:mb-0 text-center md:text-left md:col-start-2 md:row-start-1 md:self-end">
-          <h2 className="font-display text-[26px] md:text-4xl text-foreground mb-2 md:mb-3 font-semibold leading-[1.15] md:leading-tight tracking-tight">
+
+    <div className="container max-w-5xl relative">
+      <div className="grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] gap-y-8 md:gap-x-16 md:gap-y-7 items-center">
+        {/* Apresentação: selo, nome e especialidade */}
+        <header className="text-center md:text-left md:col-start-2 md:row-start-1 md:self-end">
+          <div className="label-section text-[11px] text-accent mb-3 md:mb-4">Aprenda com quem já chegou lá</div>
+          <h2 className="font-display text-[34px] md:text-[3.25rem] text-foreground font-semibold leading-[1.05] tracking-tight">
             {instructor.name}
           </h2>
-          <div className="label-section text-[11px] text-accent mb-2 md:mb-4">Aprenda com quem já chegou lá</div>
-          <p className="text-muted-foreground text-[11px] md:text-sm uppercase tracking-wider font-body">
+          <p className="mt-3 md:mt-4 text-muted-foreground text-[11.5px] md:text-[13px] uppercase tracking-[0.14em] leading-[1.6] font-body">
             Constelações Familiares
             <br />
             &amp; Desenvolvimento Humano
           </p>
-        </div>
+        </header>
 
-        <div className="max-w-[260px] md:max-w-none mx-auto w-full relative md:col-start-1 md:row-start-1 md:row-span-2 md:self-center">
-          {/* offset accent frame */}
-          <div className="absolute -inset-3 md:-inset-4 rounded-2xl bg-gradient-to-br from-accent/30 via-primary/20 to-transparent blur-xl opacity-70" aria-hidden="true" />
-          <div className="absolute inset-0 translate-x-2 translate-y-2 md:translate-x-3 md:translate-y-3 rounded-xl border border-accent/40" aria-hidden="true" />
-          <img
-            src={jonas}
-            srcSet={`${jonasSm} 160w, ${jonasLg} 800w`}
-            sizes="(min-width: 768px) 40vw, 260px"
-            width={800}
-            height={1029}
-            alt="Jonas Peres, constelador e terapeuta"
-            loading="lazy"
-            className="relative w-full aspect-[4/5] object-cover rounded-xl shadow-2xl ring-1 ring-foreground/5"
-          />
-        </div>
+        {/* Retrato com faixa de credenciais: a foto se funde no azul-marinho onde ficam os números */}
+        <figure className="relative mx-auto w-full max-w-[360px] md:max-w-none md:col-start-1 md:row-start-1 md:row-span-2 md:self-center">
+          <div
+            className="relative overflow-hidden rounded-2xl ring-1 ring-foreground/10 shadow-[0_32px_64px_-28px_hsl(214_67%_14%/0.55)]"
+            style={{ background: NAVY }}
+          >
+            <div className="relative">
+              <img
+                src={jonas}
+                srcSet={`${jonasSm} 160w, ${jonasLg} 800w`}
+                sizes="(min-width: 768px) 42vw, 360px"
+                width={800}
+                height={1029}
+                alt="Jonas Peres, constelador e terapeuta"
+                loading="lazy"
+                className="block w-full aspect-[4/5] object-cover object-[50%_20%]"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-0 bottom-0 h-1/3"
+                style={{ background: `linear-gradient(to bottom, transparent, ${NAVY})` }}
+              />
+            </div>
 
-        <div className="md:col-start-2 md:row-start-2">
-          <div className="space-y-4 md:space-y-5 text-foreground/85 text-[15px] leading-[1.65] md:leading-[1.85] font-body font-normal md:font-light mb-6 md:mb-8 text-left md:text-justify mt-5 md:mt-0">
-            <p>
-              Os mais de 10 anos como constelador e terapeuta são o coração de
-              uma vida inteira destinada ao servir consciente à vida, com o
-              suporte de uma espiritualidade laica e filosófica, que traz clareza,
-              sabedoria e verdade ao meu processo e ao de quem posso auxiliar.
-            </p>
-            <p>
-              Mais de 3.000 horas conduzindo constelações e vivências
-              terapêuticas, presenciais e online. Mais de 5.000 clientes e alunos
-              que viveram o poder transformador do autoconhecimento, resolvendo
-              questões urgentes e aprendendo a conduzir melhor suas vidas,
-              seguindo o meu método.
-            </p>
+            <div className="relative grid grid-cols-3 -mt-5 md:-mt-6 pb-5 md:pb-7 px-2 md:px-5">
+              {instructor.stats.map((s, i) => (
+                <div
+                  key={s.l}
+                  className={`px-1.5 md:px-3 text-center ${i > 0 ? "border-l border-white/15" : ""}`}
+                >
+                  <div className="font-display text-[22px] md:text-[28px] leading-none font-semibold text-white">
+                    {s.n}
+                  </div>
+                  <div className="mt-2 text-[11px] md:text-[12.5px] leading-snug text-white/70 font-body">
+                    {s.l}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-3 gap-3 md:gap-4 border-t border-foreground/10 pt-5 md:pt-6">
-            {instructor.stats.map((s) => (
-              <div key={s.l}>
-                <div className="font-display text-[22px] md:text-3xl text-primary font-semibold">{s.n}</div>
-                <div className="text-left text-[12.5px] md:text-xs text-muted-foreground mt-1 font-body leading-tight">{s.l}</div>
-              </div>
-            ))}
-          </div>
+        </figure>
+
+        {/* Texto */}
+        <div className="md:col-start-2 md:row-start-2 md:self-start space-y-4 md:space-y-5 text-foreground/85 text-[15px] md:text-base leading-[1.7] md:leading-[1.8] font-body font-normal md:font-light [&_p]:!hyphens-auto">
+          <p>
+            Os mais de 10 anos como constelador e terapeuta são o coração de
+            uma vida inteira destinada ao servir consciente à vida, com o
+            suporte de uma espiritualidade laica e filosófica, que traz clareza,
+            sabedoria e verdade ao meu processo e ao de quem posso auxiliar.
+          </p>
+          <p>
+            Mais de 3.000 horas conduzindo constelações e vivências
+            terapêuticas, presenciais e online. Mais de 5.000 clientes e alunos
+            que viveram o poder transformador do autoconhecimento, resolvendo
+            questões urgentes e aprendendo a conduzir melhor suas vidas,
+            seguindo o meu método.
+          </p>
         </div>
       </div>
     </div>
