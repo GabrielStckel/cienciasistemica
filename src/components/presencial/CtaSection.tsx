@@ -5,11 +5,11 @@ const CtaSection = () => (
   <section className="gradient-hero pt-14 md:pt-28 pb-10 md:pb-12">
     <div className="container max-w-2xl text-center">
       <div className="label-section text-[11px] text-accent mb-3 md:mb-4">Vagas limitadas</div>
-      <h2 className="font-display text-[26px] leading-[1.15] md:text-4xl md:leading-tight text-primary-foreground font-semibold mb-4 md:mb-5 tracking-tight">
+      <h2 className="font-display text-[26px] leading-[1.15] max-md:text-balance md:text-4xl md:leading-tight text-primary-foreground font-semibold mb-4 md:mb-5 tracking-tight">
         Comece a viver a Ciência Sistêmica em 2026
       </h2>
       <p className="text-primary-foreground/90 text-[15px] md:text-base font-body font-normal leading-[1.65] md:leading-relaxed max-w-lg mx-auto">
-        A terapia não é o suficiente — é preciso aprender a viver. Garanta sua vaga com valor especial de pré-inscrição.
+        A terapia não é o suficiente: é preciso aprender a viver. Garanta sua vaga com valor especial de pré-inscrição.
       </p>
 
       <div className="mt-7 md:mt-9 flex justify-center">

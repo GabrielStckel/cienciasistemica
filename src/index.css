@@ -204,17 +204,14 @@ All colors MUST be HSL.
     -webkit-hyphens: none;
     word-break: normal;
   }
-  /* /presencial no mobile: em coluna estreita o justificado abre buracos entre as palavras.
-     Parágrafos vão à esquerda; os que já são centralizados (hero, subtítulos de seção) ficam centralizados.
-     Desktop (md+) continua justificado como antes. */
+  /* /presencial no mobile: o texto continua justificado, mas em coluna estreita o justificado
+     abre buracos entre as palavras. A hifenização em português (lang="pt-BR") quebra palavras
+     longas no fim da linha e fecha esses buracos. Desktop (md+) fica exatamente como antes. */
   @media (max-width: 767px) {
     .page-presencial :where(header, section) p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]) {
-      text-align: left;
-      text-align-last: left;
-    }
-    .page-presencial :where(header, section) p[class*="text-center"]:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]) {
-      text-align: center;
-      text-align-last: center;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphenate-limit-chars: 7 3 3;
     }
   }
   /* Light-background paragraph color refinement */

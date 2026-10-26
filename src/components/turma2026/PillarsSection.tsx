@@ -9,12 +9,12 @@ const pillars = [
   {
     n: "02",
     title: "O campo do pensamento",
-    body: "A neutralidade é a ausência de julgamentos — a permissão para que tudo seja como é, em conformidade com o fato tal qual ele ocorreu.",
+    body: "A neutralidade é a ausência de julgamentos, a permissão para que tudo seja como é, em conformidade com o fato tal qual ele ocorreu.",
   },
   {
     n: "03",
     title: "Não intencionalidade",
-    body: "É o respeito supremo àquilo que o movimento traz, e à decisão do cliente sobre seu destino. Não cabe buscar uma solução — cabe apenas olhar.",
+    body: "É o respeito supremo àquilo que o movimento traz, e à decisão do cliente sobre seu destino. Não cabe buscar uma solução. Cabe apenas olhar.",
   },
 ];
 
@@ -24,11 +24,11 @@ const PillarsSection = () => (
       <SectionTitle
         light
         eyebrow="As bases"
-        label="Para se tornar um agente sistêmico e facilitar constelações é preciso esvaziar-se"
+        label={<>Para se tornar um agente sistêmico e facilitar constelações é preciso <span className="whitespace-nowrap">esvaziar-se</span></>}
       />
       <div className="max-w-2xl mx-auto text-justify text-primary-foreground/90 text-[15px] md:text-[17px] leading-[1.7] md:leading-[1.8] font-body font-normal space-y-4 -mt-2 md:-mt-4 mb-4">
         <p>
-          Abordaremos os pressupostos da teoria sistêmica — não apenas a teoria
+          Abordaremos os pressupostos da teoria sistêmica, não apenas a teoria
           Hellingeriana das constelações, mas é preciso saber que não é a teoria
           que nos forma constelador. É necessário esvaziar-se, tornar-se neutro,
           ser permeado pelo todo. Desta forma, conduzir o inconsciente a trazer

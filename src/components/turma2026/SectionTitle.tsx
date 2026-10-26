@@ -15,7 +15,7 @@ const SectionTitle = ({ label, subtitle, light = false, eyebrow }: Props) => (
       </div>
     )}
     <h2
-      className={`font-display text-[26px] leading-[1.15] md:text-4xl md:leading-tight font-semibold tracking-tight ${
+      className={`font-display text-[26px] leading-[1.15] max-md:text-balance md:text-4xl md:leading-tight font-semibold tracking-tight ${
         light ? "text-primary-foreground" : "text-foreground"
       }`}
     >

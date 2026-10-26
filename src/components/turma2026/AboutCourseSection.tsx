@@ -9,12 +9,12 @@ const blocks = [
   {
     label: "Para que serve",
     title: "Te coloca no teu lugar e te faz tomar a vida",
-    body: "A formação para te transformar: te coloca no teu lugar e te faz tomar a vida. É isso exatamente o que tu buscas e precisas, mesmo sem saber. Tu vais sair de uma vida de obrigações, eliminar dúvidas e inseguranças, e mergulhar no sentido da tua vida. O sentido como direção — te mostra para onde ir — e como significado, te faz perceber o que vale a pena ser vivido.",
+    body: "A formação para te transformar: te coloca no teu lugar e te faz tomar a vida. É isso exatamente o que tu buscas e precisas, mesmo sem saber. Tu vais sair de uma vida de obrigações, eliminar dúvidas e inseguranças, e mergulhar no sentido da tua vida. O sentido como direção, te mostra para onde ir, e como significado, te faz perceber o que vale a pena ser vivido.",
   },
   {
     label: "Como acontece",
     title: "Uma experiência coletiva de 10 meses",
-    body: "É uma experiência coletiva onde trabalharemos durante 10 (dez) meses para o desenvolvimento dos aspectos fundamentais da construção de um constelador; a denominada postura sistêmica. Neste processo, desenvolveremos juntos a transcendência do ego, a ausência de intenção, o destemor e a confiança na vida — virtudes essenciais para que seja possível a construção de uma capacidade perceptiva fidedigna ao que o campo sistêmico requer do constelador.",
+    body: "É uma experiência coletiva onde trabalharemos durante 10 (dez) meses para o desenvolvimento dos aspectos fundamentais da construção de um constelador; a denominada postura sistêmica. Neste processo, desenvolveremos juntos a transcendência do ego, a ausência de intenção, o destemor e a confiança na vida: virtudes essenciais para que seja possível a construção de uma capacidade perceptiva fidedigna ao que o campo sistêmico requer do constelador.",
   },
 ];
 
