@@ -24,8 +24,8 @@ const ApplicationSection = () => {
         />
 
         <article className="card-elevated-accent flex flex-col h-full rounded-2xl p-5 md:p-7">
-          <div className="flex items-center justify-between gap-3 mb-3">
-            <span className="label-section text-[11px]">{presencial.tag}</span>
+          <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 mb-3">
+            <span className="label-section text-[11px] whitespace-nowrap">{presencial.tag}</span>
             {presencial.badge && (
               <span className="shrink-0 rounded-full bg-accent/10 text-accent text-[10.5px] uppercase tracking-[0.14em] font-body font-semibold px-2.5 py-1">
                 {presencial.badge}
@@ -47,7 +47,7 @@ const ApplicationSection = () => {
                 <dt className="text-[11px] uppercase tracking-wider text-muted-foreground font-body">
                   {s.k}
                 </dt>
-                <dd className="text-[14px] font-medium text-foreground font-body text-right">
+                <dd className="text-[14px] font-medium text-foreground font-body text-right max-md:text-balance">
                   {s.v}
                 </dd>
               </div>

@@ -13,7 +13,7 @@ import FaqSection from "@/components/turma2026/FaqSection";
 import CtaSection from "@/components/presencial/CtaSection";
 
 const Presencial = () => (
-  <main className="min-h-screen">
+  <main className="min-h-screen page-presencial">
     <HeroSection />
     <IdentificationSection />
     <AboutCourseSection />

@@ -7,7 +7,8 @@ export type Modality = "presencial" | "hibrida";
 
 export const CITY = "Balneário Camboriú";
 export const STATE = "Santa Catarina";
-export const VENUE = `${CITY} · ${STATE}`;
+// Espaço não separável antes do "·": se a linha quebrar no mobile, o ponto fica junto de "Camboriú".
+export const VENUE = `${CITY} · ${STATE}`;
 
 export const APPLY_URL: Record<Modality, string> = {
   presencial:

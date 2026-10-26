@@ -204,6 +204,19 @@ All colors MUST be HSL.
     -webkit-hyphens: none;
     word-break: normal;
   }
+  /* /presencial no mobile: em coluna estreita o justificado abre buracos entre as palavras.
+     Parágrafos vão à esquerda; os que já são centralizados (hero, subtítulos de seção) ficam centralizados.
+     Desktop (md+) continua justificado como antes. */
+  @media (max-width: 767px) {
+    .page-presencial :where(header, section) p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]) {
+      text-align: left;
+      text-align-last: left;
+    }
+    .page-presencial :where(header, section) p[class*="text-center"]:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]) {
+      text-align: center;
+      text-align-last: center;
+    }
+  }
   /* Light-background paragraph color refinement */
   .section-white p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]),
   .section-muted p:not([class*="font-display"]):not([class*="uppercase"]):not([class*="tabular-nums"]) {
