@@ -68,7 +68,7 @@ const InstructorSection = () => (
             {instructor.stats.map((s) => (
               <div key={s.l}>
                 <div className="font-display text-[22px] md:text-3xl text-primary font-semibold">{s.n}</div>
-                <div className="text-left text-[11px] md:text-xs text-muted-foreground mt-1 font-body leading-tight">{s.l}</div>
+                <div className="text-left text-[12.5px] md:text-xs text-muted-foreground mt-1 font-body leading-tight">{s.l}</div>
               </div>
             ))}
           </div>
